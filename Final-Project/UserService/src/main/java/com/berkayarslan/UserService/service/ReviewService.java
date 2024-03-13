@@ -13,11 +13,13 @@ public class ReviewService extends BaseEntityService<Review, ReviewRepository> {
         super(repository);
     }
 
-    public List<Review> findAllByRestaurantId(Long id){
+    public List<Review> findAllByRestaurantId(String id){
         return getRepository().findAllByRestaurantId(id);
     }
 
     public List<Review> findAllByUserId(Long id){
         return getRepository().findAllByUser_Id(id);
     }
+
+
 }

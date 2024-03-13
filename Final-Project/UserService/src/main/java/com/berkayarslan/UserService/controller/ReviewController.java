@@ -36,7 +36,7 @@ public class ReviewController {
     }
 
     @GetMapping("/restaurantId/{id}")
-    public ResponseEntity<RestResponse<List<ReviewDTO>>> findByRestaurantId(@PathVariable Long id){
+    public ResponseEntity<RestResponse<List<ReviewDTO>>> findByRestaurantId(@PathVariable String id){
         return ResponseEntity.ok(RestResponse.of(reviewControllerContract.findReviewsByRestaurantId(id)));
     }
 

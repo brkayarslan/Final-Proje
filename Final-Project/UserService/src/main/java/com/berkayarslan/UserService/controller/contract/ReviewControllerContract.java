@@ -9,7 +9,7 @@ import java.util.List;
 public interface ReviewControllerContract {
     List<ReviewDTO> findAllReviews();
     ReviewDTO findReviewById(Long id);
-    List<ReviewDTO> findReviewsByRestaurantId(Long id);
+    List<ReviewDTO> findReviewsByRestaurantId(String id);
     List<ReviewDTO> findReviewsByUserId(Long id);
     ReviewDTO saveReview(ReviewSaveRequest saveRequest);
     ReviewDTO updateReview(ReviewUpdateRequest updateRequest);

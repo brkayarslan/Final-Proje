@@ -6,7 +6,7 @@ import java.time.LocalDate;
 
 public record ReviewDTO(Long id,
                         String userName,
-                        Long restaurantId,
+                        String restaurantId,
                         Integer foodScore,
                         Integer presentationScore,
                         Integer deliveryScore,
