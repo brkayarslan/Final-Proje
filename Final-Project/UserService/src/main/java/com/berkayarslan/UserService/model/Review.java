@@ -24,7 +24,7 @@ public class Review extends BaseEntity {
     @ManyToOne
     private User user;
 
-    private Long restaurantId;
+    private String restaurantId;
 
     @Min(1)
     @Max(5)
@@ -42,7 +42,7 @@ public class Review extends BaseEntity {
 
     private LocalDate reviewDate;
 
-    public Review(User user, Long restaurantId, Integer foodScore, Integer presentationScore, Integer deliveryScore, String comment, LocalDate reviewDate) {
+    public Review(User user, String restaurantId, Integer foodScore, Integer presentationScore, Integer deliveryScore, String comment, LocalDate reviewDate) {
         this.user = user;
         this.restaurantId = restaurantId;
         this.foodScore = foodScore;
