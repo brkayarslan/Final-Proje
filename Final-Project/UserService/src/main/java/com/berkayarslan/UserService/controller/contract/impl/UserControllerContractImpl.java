@@ -2,6 +2,7 @@ package com.berkayarslan.UserService.controller.contract.impl;
 
 import com.berkayarslan.UserService.controller.contract.UserControllerContract;
 import com.berkayarslan.UserService.dto.UserDTO;
+import com.berkayarslan.UserService.dto.UserLocationDTO;
 import com.berkayarslan.UserService.mapper.UserMapper;
 import com.berkayarslan.UserService.model.User;
 import com.berkayarslan.UserService.request.UserSaveRequest;
@@ -37,6 +38,13 @@ public class UserControllerContractImpl implements UserControllerContract {
     public UserDTO getUserById(Long id) {
         User user = userService.findByIdWithControl(id);
         return UserMapper.INSTANCE.convertToUserDTO(user);
+    }
+
+    @Override
+    public UserLocationDTO getUserLocationById(Long id) {
+        UserDTO user = getUserById(id);
+        return new UserLocationDTO(user.latitude(), user.longitude() );
+
     }
 
     @Override

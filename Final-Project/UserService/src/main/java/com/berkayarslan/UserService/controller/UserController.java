@@ -2,6 +2,7 @@ package com.berkayarslan.UserService.controller;
 
 import com.berkayarslan.UserService.controller.contract.UserControllerContract;
 import com.berkayarslan.UserService.dto.UserDTO;
+import com.berkayarslan.UserService.dto.UserLocationDTO;
 import com.berkayarslan.UserService.general.RestResponse;
 import com.berkayarslan.UserService.request.UserSaveRequest;
 import com.berkayarslan.UserService.request.UserUpdateRequest;
@@ -11,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/v1/api/users")
+@RequestMapping("/api/v1/users")
 public class UserController {
 
     private final UserControllerContract userControllerContract;
@@ -30,13 +31,18 @@ public class UserController {
         return ResponseEntity.ok(RestResponse.of(userControllerContract.getUserById(id)));
     }
 
+    @GetMapping("/location/{id}")
+    public ResponseEntity<RestResponse<UserLocationDTO>> findUserLocationById(@PathVariable Long id){
+        return ResponseEntity.ok(RestResponse.of(userControllerContract.getUserLocationById(id)));
+    }
+
     @PostMapping
-    public ResponseEntity<RestResponse<UserDTO>> saveUser(UserSaveRequest saveRequest){
+    public ResponseEntity<RestResponse<UserDTO>> saveUser(@RequestBody UserSaveRequest saveRequest){
         return ResponseEntity.ok(RestResponse.of(userControllerContract.saveUser(saveRequest)));
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<RestResponse<UserDTO>> updateUser(UserUpdateRequest updateRequest){
+    public ResponseEntity<RestResponse<UserDTO>> updateUser(@RequestBody UserUpdateRequest updateRequest){
         return ResponseEntity.ok(RestResponse.of(userControllerContract.updateUser(updateRequest)));
     }
 

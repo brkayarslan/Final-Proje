@@ -1,6 +1,7 @@
 package com.berkayarslan.UserService.controller.contract;
 
 import com.berkayarslan.UserService.dto.UserDTO;
+import com.berkayarslan.UserService.dto.UserLocationDTO;
 import com.berkayarslan.UserService.request.UserSaveRequest;
 import com.berkayarslan.UserService.request.UserUpdateRequest;
 
@@ -11,6 +12,7 @@ public interface UserControllerContract {
     UserDTO saveUser(UserSaveRequest userSaveRequest);
     List<UserDTO> findAllUsers();
     UserDTO getUserById(Long id);
+    UserLocationDTO getUserLocationById(Long id);
     UserDTO updateUser(UserUpdateRequest userUpdateRequest);
     void deleteUser(Long id);
 }

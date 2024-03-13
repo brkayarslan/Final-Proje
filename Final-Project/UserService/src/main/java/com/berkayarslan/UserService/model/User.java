@@ -37,11 +37,11 @@ public class User extends BaseEntity {
     @Column(name = "PASSWORD", length = 400, nullable = false)
     private String password;
 
-    @NotBlank
+
     @Column(name = "LATITUDE", nullable = false)
     private Double latitude;
 
-    @NotBlank
+
     @Column(name = "LONGITUDE", nullable = false)
     private Double longitude;
 
