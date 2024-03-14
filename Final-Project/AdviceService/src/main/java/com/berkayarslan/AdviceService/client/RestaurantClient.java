@@ -1,7 +1,9 @@
 package com.berkayarslan.AdviceService.client;
 
 import com.berkayarslan.AdviceService.dto.RestaurantInfoDTO;
+import com.berkayarslan.AdviceService.response.RestResponse;
 import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -11,8 +13,8 @@ import java.util.List;
 public interface RestaurantClient {
 
     @GetMapping
-    List<RestaurantInfoDTO> getRestaurants();
+    ResponseEntity<RestResponse<List<RestaurantInfoDTO>>> getRestaurants();
 
     @GetMapping("/nearby")
-    List<RestaurantInfoDTO> getNearbyRestaurants(@RequestParam Double latitude, @RequestParam Double longitude);
+    ResponseEntity<RestResponse<List<RestaurantInfoDTO>>> getNearbyRestaurants(@RequestParam Double latitude, @RequestParam Double longitude);
 }
