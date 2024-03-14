@@ -1,9 +1,11 @@
 package com.berkayarslan.AdviceService.controller;
 
+import com.berkayarslan.AdviceService.Response.RestResponse;
 import com.berkayarslan.AdviceService.dto.RestaurantInfoDTO;
 import com.berkayarslan.AdviceService.dto.RestaurantResponseDTO;
 import com.berkayarslan.AdviceService.dto.UserLocationDTO;
 import com.berkayarslan.AdviceService.service.AdviceService;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,17 +24,17 @@ public class AdviceController {
     }
 
     @GetMapping
-    public List<RestaurantInfoDTO> getRestaurants(){
-        return adviceService.getRestaurants();
+    public ResponseEntity<RestResponse<List<RestaurantInfoDTO>>> getRestaurants(){
+        return ResponseEntity.ok(RestResponse.of(adviceService.getRestaurants()));
     }
 
     @GetMapping("/{id}")
-    public UserLocationDTO getUserLocation(@PathVariable Long id){
-        return adviceService.getUserLocationById(id);
+    public ResponseEntity<RestResponse<UserLocationDTO>> getUserLocation(@PathVariable Long id){
+        return ResponseEntity.ok(RestResponse.of(adviceService.getUserLocationById(id)));
     }
 
     @GetMapping("/advice/userId/{id}")
-    public List<RestaurantResponseDTO> getAdvisedRestaurants(@PathVariable Long id){
-        return adviceService.getAdviceRestaurantsByUserId(id);
+    public ResponseEntity<RestResponse<List<RestaurantResponseDTO>>> getAdvisedRestaurants(@PathVariable Long id){
+        return ResponseEntity.ok(RestResponse.of(adviceService.getAdviceRestaurantsByUserId(id)));
     }
 }
