@@ -1,8 +1,8 @@
 package com.berkayarslan.UserService.general;
 
+import com.berkayarslan.UserService.exceptions.ItemNotFoundException;
 import lombok.Getter;
 import org.springframework.data.jpa.repository.JpaRepository;
-
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
@@ -46,7 +46,7 @@ public abstract class BaseEntityService<E extends BaseEntity, R extends JpaRepos
         if(optionalE.isPresent()){
             entity = optionalE.get();
         }else {
-            throw new RuntimeException();
+            throw new ItemNotFoundException(GeneralErrorMessage.ITEM_NOT_FOUND);
         }
         return entity;
     }
