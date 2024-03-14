@@ -12,8 +12,7 @@ import java.util.List;
 @FeignClient(value = "restaurant",url = "http://localhost:8080/api/v1/restaurants")
 public interface RestaurantClient {
 
-    @GetMapping
-    ResponseEntity<RestResponse<List<RestaurantInfoDTO>>> getRestaurants();
+
 
     @GetMapping("/nearby")
     ResponseEntity<RestResponse<List<RestaurantInfoDTO>>> getNearbyRestaurants(@RequestParam Double latitude, @RequestParam Double longitude);

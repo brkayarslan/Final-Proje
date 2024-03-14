@@ -25,11 +25,6 @@ public class AdviceService {
         this.userClient = userClient;
     }
 
-    public List<RestaurantInfoDTO> getRestaurants(){
-        ResponseEntity<RestResponse<List<RestaurantInfoDTO>>> restaurants = restaurantClient.getRestaurants();
-        return restaurants.getBody().getData();
-    }
-
     public List<RestaurantInfoDTO> getNearbyRestaurants(Double latitude, Double longitude){
         ResponseEntity<RestResponse<List<RestaurantInfoDTO>>> nearbyRestaurants = restaurantClient.getNearbyRestaurants(latitude, longitude);
         return nearbyRestaurants.getBody().getData();

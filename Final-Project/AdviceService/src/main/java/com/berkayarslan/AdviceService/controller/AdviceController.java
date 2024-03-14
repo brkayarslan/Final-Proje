@@ -23,17 +23,7 @@ public class AdviceController {
         this.adviceService = adviceService;
     }
 
-    @GetMapping
-    public ResponseEntity<RestResponse<List<RestaurantInfoDTO>>> getRestaurants(){
-        return ResponseEntity.ok(RestResponse.of(adviceService.getRestaurants()));
-    }
-
-    @GetMapping("/{id}")
-    public ResponseEntity<RestResponse<UserLocationDTO>> getUserLocation(@PathVariable Long id){
-        return ResponseEntity.ok(RestResponse.of(adviceService.getUserLocationById(id)));
-    }
-
-    @GetMapping("/advice/userId/{id}")
+    @GetMapping("/userId/{id}")
     public ResponseEntity<RestResponse<List<RestaurantResponseDTO>>> getAdvisedRestaurants(@PathVariable Long id){
         return ResponseEntity.ok(RestResponse.of(adviceService.getAdviceRestaurantsByUserId(id)));
     }
