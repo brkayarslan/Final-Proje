@@ -8,6 +8,8 @@ import com.berkayarslan.RestaurantService.dto.RestaurantScoreDTO;
 import com.berkayarslan.RestaurantService.dto.RestaurantUpdateRequest;
 import com.berkayarslan.RestaurantService.model.Restaurant;
 import com.berkayarslan.RestaurantService.repository.RestaurantRepository;
+import com.berkayarslan.RestaurantService.response.RestResponse;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -24,26 +26,27 @@ public class RestaurantController {
 
 
     @GetMapping
-    public List<RestaurantDTO> getAllRestaurants(){
-        return restaurantControllerContract.findAllRestaurants();
+    public ResponseEntity<RestResponse<List<RestaurantDTO>>> getAllRestaurants(){
+        return ResponseEntity.ok(RestResponse.of(restaurantControllerContract.findAllRestaurants()));
     }
+
     @GetMapping("/nearby")
-    public List<RestaurantDTO> findRestaurantsWithin10Km(@RequestParam Double latitude, @RequestParam Double longitude) {
-        return restaurantControllerContract.findRestaurantsWithInTenKM(latitude,longitude);
+    public ResponseEntity<RestResponse<List<RestaurantDTO>>> findRestaurantsWithin10Km(@RequestParam Double latitude, @RequestParam Double longitude) {
+        return ResponseEntity.ok(RestResponse.of(restaurantControllerContract.findRestaurantsWithInTenKM(latitude,longitude)));
     }
 
     @GetMapping("/{id}")
-    public RestaurantDTO findRestaurantById(@PathVariable String id){
-        return restaurantControllerContract.findRestaurantById(id);
+    public ResponseEntity<RestResponse<RestaurantDTO>> findRestaurantById(@PathVariable String id){
+        return ResponseEntity.ok(RestResponse.of(restaurantControllerContract.findRestaurantById(id)));
     }
     @PostMapping
-    public RestaurantDTO saveRestaurant(@RequestBody RestaurantSaveRequest restaurantSaveRequest){
-        return restaurantControllerContract.saveRestaurant(restaurantSaveRequest);
+    public ResponseEntity<RestResponse<RestaurantDTO>> saveRestaurant(@RequestBody RestaurantSaveRequest restaurantSaveRequest){
+        return ResponseEntity.ok(RestResponse.of(restaurantControllerContract.saveRestaurant(restaurantSaveRequest)));
     }
 
     @PutMapping
-    public RestaurantDTO updateRestaurant(@RequestBody RestaurantUpdateRequest restaurantUpdateRequest){
-        return restaurantControllerContract.updateRestaurant(restaurantUpdateRequest);
+    public ResponseEntity<RestResponse<RestaurantDTO>> updateRestaurant(@RequestBody RestaurantUpdateRequest restaurantUpdateRequest){
+        return ResponseEntity.ok(RestResponse.of(restaurantControllerContract.updateRestaurant(restaurantUpdateRequest)));
     }
 
     @PostMapping("/score/{id}")
