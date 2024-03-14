@@ -1,5 +1,8 @@
 package com.berkayarslan.RestaurantService.service;
 
+import com.berkayarslan.RestaurantService.exceptionHandle.BaseErrorMessage;
+import com.berkayarslan.RestaurantService.exceptionHandle.GeneralErrorMessage;
+import com.berkayarslan.RestaurantService.exceptionHandle.ItemNotFoundException;
 import com.berkayarslan.RestaurantService.model.Restaurant;
 import com.berkayarslan.RestaurantService.repository.RestaurantRepository;
 import org.springframework.stereotype.Service;
@@ -31,7 +34,7 @@ public class RestaurantService {
         if(optionalRestaurant.isPresent()){
             restaurant = optionalRestaurant.get();
         }else {
-            throw new RuntimeException();
+            throw new ItemNotFoundException(GeneralErrorMessage.ITEM_NOT_FOUND);
         }
         return restaurant;
     }
