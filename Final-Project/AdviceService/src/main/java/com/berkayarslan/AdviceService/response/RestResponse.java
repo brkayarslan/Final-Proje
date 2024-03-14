@@ -1,4 +1,4 @@
-package com.berkayarslan.AdviceService.Response;
+package com.berkayarslan.AdviceService.response;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

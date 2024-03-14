@@ -1,6 +1,6 @@
 package com.berkayarslan.AdviceService.controller;
 
-import com.berkayarslan.AdviceService.Response.RestResponse;
+import com.berkayarslan.AdviceService.response.RestResponse;
 import com.berkayarslan.AdviceService.dto.RestaurantInfoDTO;
 import com.berkayarslan.AdviceService.dto.RestaurantResponseDTO;
 import com.berkayarslan.AdviceService.dto.UserLocationDTO;

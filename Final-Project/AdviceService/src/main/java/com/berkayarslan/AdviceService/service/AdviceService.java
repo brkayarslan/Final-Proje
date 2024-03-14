@@ -1,6 +1,6 @@
 package com.berkayarslan.AdviceService.service;
 
-import com.berkayarslan.AdviceService.Response.RestResponse;
+import com.berkayarslan.AdviceService.response.RestResponse;
 import com.berkayarslan.AdviceService.client.RestaurantClient;
 import com.berkayarslan.AdviceService.client.UserClient;
 import com.berkayarslan.AdviceService.dto.RestaurantInfoDTO;
@@ -26,12 +26,13 @@ public class AdviceService {
     }
 
     public List<RestaurantInfoDTO> getRestaurants(){
-        List<RestaurantInfoDTO> restaurants = restaurantClient.getRestaurants();
-        return restaurants;
+        ResponseEntity<RestResponse<List<RestaurantInfoDTO>>> restaurants = restaurantClient.getRestaurants();
+        return restaurants.getBody().getData();
     }
 
     public List<RestaurantInfoDTO> getNearbyRestaurants(Double latitude, Double longitude){
-        return restaurantClient.getNearbyRestaurants(latitude,longitude);
+        ResponseEntity<RestResponse<List<RestaurantInfoDTO>>> nearbyRestaurants = restaurantClient.getNearbyRestaurants(latitude, longitude);
+        return nearbyRestaurants.getBody().getData();
     }
     public UserLocationDTO getUserLocationById(Long id){
         ResponseEntity<RestResponse<UserLocationDTO>> user = userClient.getUserLocationById(id);

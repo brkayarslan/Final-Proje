@@ -1,6 +1,6 @@
 package com.berkayarslan.AdviceService.client;
 
-import com.berkayarslan.AdviceService.Response.RestResponse;
+import com.berkayarslan.AdviceService.response.RestResponse;
 import com.berkayarslan.AdviceService.dto.UserLocationDTO;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.ResponseEntity;
