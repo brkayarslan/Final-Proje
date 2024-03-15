@@ -1,7 +1,5 @@
 package com.example.KafkaService;
 
-
-import lombok.RequiredArgsConstructor;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.common.serialization.StringDeserializer;
 import org.springframework.context.annotation.Bean;
@@ -21,9 +19,8 @@ import java.util.Map;
 
 @Configuration
 @EnableKafka
-@RequiredArgsConstructor
 public class KafkaConsumerConfig {
-    private KafkaTemplate<String,String> kafkaTemplate;
+    private final KafkaTemplate<String,String> kafkaTemplate;
 
     public KafkaConsumerConfig(KafkaTemplate<String, String> kafkaTemplate) {
         this.kafkaTemplate = kafkaTemplate;
