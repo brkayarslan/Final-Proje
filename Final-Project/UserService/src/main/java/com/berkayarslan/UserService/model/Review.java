@@ -24,22 +24,28 @@ public class Review extends BaseEntity {
     @ManyToOne
     private User user;
 
+    @Column(name = "RESTAURANT_ID")
     private String restaurantId;
 
     @Min(1)
     @Max(5)
+    @Column(name = "FOOD_SCORE")
     private Integer foodScore;
 
     @Min(1)
     @Max(5)
+    @Column(name = "PRESENTATION_SCORE")
     private Integer presentationScore;
 
     @Min(1)
     @Max(5)
+    @Column(name = "DELIVERY_SCORE")
     private Integer deliveryScore;
 
+    @Column(name = "COMMENT")
     private String comment;
 
+    @Column(name = "REVIEW_DATE")
     private LocalDate reviewDate;
 
     public Review(User user, String restaurantId, Integer foodScore, Integer presentationScore, Integer deliveryScore, String comment, LocalDate reviewDate) {
