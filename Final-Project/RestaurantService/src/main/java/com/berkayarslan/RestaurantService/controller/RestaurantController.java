@@ -50,8 +50,9 @@ public class RestaurantController {
     }
 
     @PostMapping("/score/{id}")
-    public void updateRestaurantScore(@PathVariable String id, @RequestBody RestaurantScoreDTO restaurantScoreDTO){
+    public ResponseEntity<RestResponse<Boolean>> updateRestaurantScore(@PathVariable String id, @RequestBody RestaurantScoreDTO restaurantScoreDTO){
         restaurantControllerContract.updateRestaurantScore(id,restaurantScoreDTO);
+        return ResponseEntity.ok(RestResponse.of(true));
     }
 
     @DeleteMapping

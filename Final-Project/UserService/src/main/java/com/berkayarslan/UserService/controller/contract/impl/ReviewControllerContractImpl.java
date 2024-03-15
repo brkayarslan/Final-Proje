@@ -4,6 +4,9 @@ import com.berkayarslan.UserService.client.RestaurantClient;
 import com.berkayarslan.UserService.controller.contract.ReviewControllerContract;
 import com.berkayarslan.UserService.dto.ReviewDTO;
 import com.berkayarslan.UserService.dto.ReviewScoreDTO;
+import com.berkayarslan.UserService.exceptions.ItemNotFoundException;
+import com.berkayarslan.UserService.general.GeneralErrorMessage;
+import com.berkayarslan.UserService.general.RestResponse;
 import com.berkayarslan.UserService.mapper.ReviewConverter;
 import com.berkayarslan.UserService.model.Review;
 import com.berkayarslan.UserService.model.User;
@@ -11,6 +14,7 @@ import com.berkayarslan.UserService.request.ReviewSaveRequest;
 import com.berkayarslan.UserService.request.ReviewUpdateRequest;
 import com.berkayarslan.UserService.service.ReviewService;
 import com.berkayarslan.UserService.service.UserService;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -63,7 +67,10 @@ public class ReviewControllerContractImpl implements ReviewControllerContract {
         ReviewScoreDTO reviewScoreDTO = new ReviewScoreDTO(review.getFoodScore(),
                                                            review.getPresentationScore(),
                                                            review.getDeliveryScore());
-        restaurantClient.sendRestaurantScores(review.getRestaurantId(),reviewScoreDTO);
+        ResponseEntity<RestResponse<Boolean>> restResponseResponseEntity = restaurantClient.sendRestaurantScores(review.getRestaurantId(), reviewScoreDTO);
+        if (!restResponseResponseEntity.getBody().getData().equals(true)){
+            throw new ItemNotFoundException(GeneralErrorMessage.ITEM_NOT_FOUND);
+        }
     }
 
     @Override
