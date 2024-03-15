@@ -8,14 +8,16 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="AdviceService" />
-        <module name="UserService" />
+        <module name="KafkaService" />
         <module name="RestaurantService" />
+        <module name="UserService" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="AdviceService" options="-parameters" />
+      <module name="KafkaService" options="-parameters" />
       <module name="RestaurantService" options="-parameters" />
       <module name="UserService" options="-parameters" />
     </option>
