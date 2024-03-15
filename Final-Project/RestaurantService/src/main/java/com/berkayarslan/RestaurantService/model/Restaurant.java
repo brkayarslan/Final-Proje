@@ -5,7 +5,7 @@ import nonapi.io.github.classgraph.json.Id;
 import org.springframework.data.solr.core.mapping.Indexed;
 import org.springframework.data.solr.core.mapping.SolrDocument;
 
-@SolrDocument(solrCoreName = "restaurants")
+@SolrDocument(solrCoreName = "restaurants_shard1_replica_n1")
 public class Restaurant {
 
     @Id

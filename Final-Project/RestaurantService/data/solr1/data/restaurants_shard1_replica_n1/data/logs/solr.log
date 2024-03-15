@@ -1,0 +1,241 @@
+2024-03-15 06:02:06.881 INFO  (main) [c: s: r: x: t:] o.e.j.s.Server jetty-10.0.19; built: 2023-12-15T20:38:32.477Z; git: 8492d1c78f122bb30cce20aecfa07e7283facd47; jvm 17.0.10+7
+2024-03-15 06:02:07.300 WARN  (main) [c: s: r: x: t:] o.e.j.u.DeprecationWarning Using @Deprecated Class org.eclipse.jetty.servlet.listener.ELContextCleaner
+2024-03-15 06:02:07.346 INFO  (main) [c: s: r: x: t:] o.a.s.s.CoreContainerProvider Using logger factory org.apache.logging.slf4j.Log4jLoggerFactory
+2024-03-15 06:02:07.359 INFO  (main) [c: s: r: x: t:] o.a.s.s.CoreContainerProvider  ___      _       Welcome to Apache Solr™ version 9.5.0
+2024-03-15 06:02:07.360 INFO  (main) [c: s: r: x: t:] o.a.s.s.CoreContainerProvider / __| ___| |_ _   Starting in cloud mode on port 8983
+2024-03-15 06:02:07.360 INFO  (main) [c: s: r: x: t:] o.a.s.s.CoreContainerProvider \__ \/ _ \ | '_|  Install dir: /opt/solr-9.5.0
+2024-03-15 06:02:07.360 INFO  (main) [c: s: r: x: t:] o.a.s.s.CoreContainerProvider |___/\___/_|_|    Start time: 2024-03-15T06:02:07.360466400Z
+2024-03-15 06:02:07.366 INFO  (main) [c: s: r: x: t:] o.a.s.s.CoreContainerProvider Solr started with "-XX:+CrashOnOutOfMemoryError" that will crash on any OutOfMemoryError exception. The cause of the OOME will be logged in the crash file at the following path: /var/solr/logs/jvm_crash_14.log
+2024-03-15 06:02:07.400 INFO  (main) [c: s: r: x: t:] o.a.s.s.CoreContainerProvider Solr Home: /var/solr/data (source: system property: solr.solr.home)
+2024-03-15 06:02:07.437 WARN  (main) [c: s: r: x: t:] o.a.s.c.c.SolrZkClient Using default ZkCredentialsInjector. ZkCredentialsInjector is not secure, it creates an empty list of credentials which leads to 'OPEN_ACL_UNSAFE' ACLs to Zookeeper nodes
+2024-03-15 06:02:07.486 INFO  (main) [c: s: r: x: t:] o.a.s.c.c.ConnectionManager Waiting up to 30000ms for client to connect to ZooKeeper
+2024-03-15 06:02:07.538 INFO  (zkConnectionManagerCallback-2-thread-1) [c: s: r: x: t:] o.a.s.c.c.ConnectionManager zkClient has connected
+2024-03-15 06:02:07.538 INFO  (main) [c: s: r: x: t:] o.a.s.c.c.ConnectionManager Client is connected to ZooKeeper
+2024-03-15 06:02:07.538 WARN  (main) [c: s: r: x: t:] o.a.s.c.c.SolrZkClient Using default ZkACLProvider. DefaultZkACLProvider is not secure, it creates 'OPEN_ACL_UNSAFE' ACLs to Zookeeper nodes
+2024-03-15 06:02:07.659 INFO  (main) [c: s: r: x: t:] o.a.s.c.NodeConfig Loading solr.xml from SolrHome (not found in ZooKeeper)
+2024-03-15 06:02:07.660 INFO  (main) [c: s: r: x: t:] o.a.s.c.SolrXmlConfig solr.xml not found in SOLR_HOME, using built-in default
+2024-03-15 06:02:07.660 INFO  (main) [c: s: r: x: t:] o.a.s.c.SolrXmlConfig Loading solr.xml from /opt/solr-9.5.0/server/solr/solr.xml
+2024-03-15 06:02:07.723 INFO  (main) [c: s: r: x: t:] o.a.s.c.SolrResourceLoader Added 1 libs to classloader, from paths: [/opt/solr-9.5.0/lib]
+2024-03-15 06:02:08.860 INFO  (main) [c: s: r: x: t:] o.a.s.u.t.SimplePropagator Always-on trace id generation enabled.
+2024-03-15 06:02:09.261 WARN  (main) [c: s: r: x: t:] o.a.s.u.StartupLoggingUtils Jetty request logging enabled. Will retain logs for last 3 days. See chapter "Configuring Logging" in reference guide for how to configure.
+2024-03-15 06:02:09.261 INFO  (main) [c: s: r: x: t:] o.a.s.c.ZkContainer Zookeeper client=zoo1:2181
+2024-03-15 06:02:09.273 INFO  (main) [c: s: r: x: t:] o.a.s.c.DistributedClusterStateUpdater Creating DistributedClusterStateUpdater with useDistributedStateUpdate=false. Solr will be using Overseer based cluster state updates.
+2024-03-15 06:02:09.283 INFO  (main) [c: s: r: x: t:] o.a.s.c.c.ConnectionManager Waiting up to 15000ms for client to connect to ZooKeeper
+2024-03-15 06:02:09.293 INFO  (zkConnectionManagerCallback-12-thread-1) [c: s: r: x: t:] o.a.s.c.c.ConnectionManager zkClient has connected
+2024-03-15 06:02:09.293 INFO  (main) [c: s: r: x: t:] o.a.s.c.c.ConnectionManager Client is connected to ZooKeeper
+2024-03-15 06:02:09.498 WARN  (main) [c: s: r: x: t:] o.a.s.c.ZkController Contents of zookeeper /security.json are world-readable; consider setting up ACLs as described in https://solr.apache.org/guide/solr/latest/deployment-guide/zookeeper-access-control.html
+2024-03-15 06:02:09.535 INFO  (main) [c: s: r: x: t:] o.a.s.c.DistributedClusterStateUpdater Creating DistributedClusterStateUpdater with useDistributedStateUpdate=false. Solr will be using Overseer based cluster state updates.
+2024-03-15 06:02:09.563 INFO  (main) [c: s: r: x: t:] o.a.s.c.OverseerElectionContext I am going to be the leader 172.20.0.3:8983_solr
+2024-03-15 06:02:09.578 INFO  (main) [c: s: r: x: t:] o.a.s.c.Overseer Overseer (id=72057688747802625-172.20.0.3:8983_solr-n_0000000000) starting
+2024-03-15 06:02:09.671 INFO  (main) [c: s: r: x: t:] o.a.s.c.ZkController Register node as live in ZooKeeper:/live_nodes/172.20.0.3:8983_solr
+2024-03-15 06:02:09.672 INFO  (OverseerStateUpdate-72057688747802625-172.20.0.3:8983_solr-n_0000000000) [c: s: r: x: t:] o.a.s.c.Overseer Starting to work on the main queue : 172.20.0.3:8983_solr
+2024-03-15 06:02:09.693 INFO  (zkCallback-11-thread-1) [c: s: r: x: t:] o.a.s.c.c.ZkStateReader Updated live nodes from ZooKeeper... (0) -> (1)
+2024-03-15 06:02:09.751 WARN  (main) [c: s: r: x: t:] o.a.s.c.CoreContainer Not all security plugins configured!  authentication=disabled authorization=disabled.  Solr is only as secure as you make it. Consider configuring authentication/authorization before exposing Solr to users internal or external.  See https://s.apache.org/solrsecurity for more info
+2024-03-15 06:02:10.391 INFO  (main) [c: s: r: x: t:] o.a.s.c.CorePropertiesLocator Found 0 core definitions underneath /var/solr/data
+2024-03-15 06:02:10.679 WARN  (main) [c: s: r: x: t:] o.g.j.m.i.MessagingBinders A class jakarta.activation.DataSource for a default provider MessageBodyWriter<jakarta.activation.DataSource> was not found. The provider is not available.
+2024-03-15 06:02:11.185 INFO  (main) [c: s: r: x: t:] o.a.s.j.SolrRequestAuthorizer Creating a new SolrRequestAuthorizer
+2024-03-15 06:02:11.392 INFO  (main) [c: s: r: x: t:] o.e.j.s.h.ContextHandler Started o.e.j.w.WebAppContext@62d363ab{solr-jetty-context.xml,/solr,file:///opt/solr-9.5.0/server/solr-webapp/webapp/,AVAILABLE}{/opt/solr-9.5.0/server/solr-webapp/webapp}
+2024-03-15 06:02:11.407 INFO  (main) [c: s: r: x: t:] o.e.j.s.RequestLogWriter Opened /var/solr/logs/2024_03_15.request.log
+2024-03-15 06:02:11.412 INFO  (main) [c: s: r: x: t:] o.e.j.s.AbstractConnector Started ServerConnector@79da1ec0{HTTP/1.1, (http/1.1, h2c)}{0.0.0.0:8983}
+2024-03-15 06:02:11.413 INFO  (main) [c: s: r: x: t:] o.e.j.s.Server Started Server@277f7dd3{STARTING}[10.0.19,sto=0] @6213ms
+2024-03-15 06:02:34.535 INFO  (qtp738677855-19-null-2) [c: s: r: x: t:null-2] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1710482554428} status=0 QTime=48
+2024-03-15 06:02:35.133 INFO  (qtp738677855-20-null-3) [c: s: r: x: t:null-3] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1710482554428} status=0 QTime=13
+2024-03-15 06:02:35.155 INFO  (qtp738677855-25-null-4) [c: s: r: x: t:null-4] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=LIST&wt=json&_=1710482554428} status=0 QTime=10
+2024-03-15 06:02:35.166 INFO  (qtp738677855-19-null-5) [c: s: r: x: t:null-5] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=LISTALIASES&wt=json&_=1710482554428} status=0 QTime=3
+2024-03-15 06:02:36.137 INFO  (qtp738677855-21-null-6) [c: s: r: x: t:null-6] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1710482554428} status=0 QTime=0
+2024-03-15 06:02:37.670 INFO  (qtp738677855-19-null-7) [c: s: r: x: t:null-7] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1710482554428} status=0 QTime=0
+2024-03-15 06:02:37.678 INFO  (qtp738677855-26-null-9) [c: s: r: x: t:null-9] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=CLUSTERSTATUS&wt=json&_=1710482554428} status=0 QTime=5
+2024-03-15 06:02:37.687 INFO  (qtp738677855-21-null-8) [c: s: r: x: t:null-8] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/zookeeper params={path=/live_nodes&wt=json&_=1710482557645} status=0 QTime=14
+2024-03-15 06:02:37.707 INFO  (qtp738677855-25-null-10) [c: s: r: x: t:null-10] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=LISTALIASES&wt=json&_=1710482554428} status=0 QTime=1
+2024-03-15 06:02:38.702 INFO  (qtp738677855-22-null-11) [c: s: r: x: t:null-11] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/configs params={action=LIST&wt=json&_=1710482557645} status=0 QTime=2
+2024-03-15 06:02:39.717 INFO  (qtp738677855-23-null-12) [c: s: r: x: t:null-12] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1710482554428} status=0 QTime=7
+2024-03-15 06:02:39.727 INFO  (qtp738677855-19-null-13) [c: s: r: x: t:null-13] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=LIST&wt=json&_=1710482554428} status=0 QTime=0
+2024-03-15 06:02:39.736 INFO  (qtp738677855-50-null-14) [c: s: r: x: t:null-14] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=LISTALIASES&wt=json&_=1710482554428} status=0 QTime=1
+2024-03-15 06:02:40.179 INFO  (qtp738677855-19-null-16) [c: s: r: x: t:null-16] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1710482554428} status=0 QTime=1
+2024-03-15 06:02:40.185 INFO  (qtp738677855-21-null-17) [c: s: r: x: t:null-17] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=CLUSTERSTATUS&wt=json&_=1710482554428} status=0 QTime=7
+2024-03-15 06:02:40.192 INFO  (qtp738677855-25-null-15) [c: s: r: x: t:null-15] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1710482554428} status=0 QTime=14
+2024-03-15 06:02:40.224 INFO  (qtp738677855-50-null-20) [c: s: r: x: t:null-20] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=LIST&wt=json&_=1710482554428} status=0 QTime=0
+2024-03-15 06:02:40.267 INFO  (qtp738677855-20-null-22) [c: s: r: x: t:null-22] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=javabin&version=2&_=1710482554428} status=0 QTime=5
+2024-03-15 06:02:40.290 INFO  (qtp738677855-26-null-18) [c: s: r: x: t:null-18] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={nodes=172.20.0.3:8983_solr&wt=json&_=1710482554428} status=0 QTime=85
+2024-03-15 06:02:40.644 INFO  (qtp738677855-25-null-23) [c: s: r: x: t:null-23] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=LISTALIASES&wt=json&_=1710482554428} status=0 QTime=2
+2024-03-15 06:02:44.143 INFO  (qtp738677855-26-null-24) [c: s: r: x: t:null-24] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1710482554428} status=0 QTime=1
+2024-03-15 06:02:44.159 INFO  (qtp738677855-19-null-25) [c: s: r: x: t:null-25] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1710482554428} status=0 QTime=17
+2024-03-15 06:02:44.175 INFO  (qtp738677855-25-null-27) [c: s: r: x: t:null-27] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=LIST&wt=json&_=1710482554428} status=0 QTime=0
+2024-03-15 06:02:44.188 INFO  (qtp738677855-21-null-26) [c: s: r: x: t:null-26] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1710482554428} status=0 QTime=19
+2024-03-15 06:02:44.190 INFO  (qtp738677855-26-null-28) [c: s: r: x: t:null-28] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=LISTALIASES&wt=json&_=1710482554428} status=0 QTime=2
+2024-03-15 06:02:46.168 INFO  (qtp738677855-25-null-29) [c: s: r: x: t:null-29] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1710482554428} status=0 QTime=0
+2024-03-15 06:02:46.175 INFO  (qtp738677855-23-null-31) [c: s: r: x: t:null-31] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=CLUSTERSTATUS&wt=json&_=1710482554428} status=0 QTime=3
+2024-03-15 06:02:46.188 INFO  (qtp738677855-19-null-30) [c: s: r: x: t:null-30] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1710482554428} status=0 QTime=17
+2024-03-15 06:02:46.208 INFO  (qtp738677855-21-null-36) [c: s: r: x: t:null-36] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=LIST&wt=json&_=1710482554428} status=0 QTime=0
+2024-03-15 06:02:46.223 INFO  (qtp738677855-56-null-37) [c: s: r: x: t:null-37] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=LISTALIASES&wt=json&_=1710482554428} status=0 QTime=2
+2024-03-15 06:02:46.227 INFO  (qtp738677855-19-null-34) [c: s: r: x: t:null-34] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=javabin&version=2&_=1710482554428} status=0 QTime=23
+2024-03-15 06:02:46.231 INFO  (qtp738677855-50-null-32) [c: s: r: x: t:null-32] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={nodes=172.20.0.3:8983_solr&wt=json&_=1710482554428} status=0 QTime=36
+2024-03-15 06:02:47.750 INFO  (qtp738677855-23-null-38) [c: s: r: x: t:null-38] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1710482554428} status=0 QTime=0
+2024-03-15 06:02:47.769 INFO  (qtp738677855-19-null-40) [c: s: r: x: t:null-40] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1710482554428} status=0 QTime=16
+2024-03-15 06:02:47.785 INFO  (qtp738677855-56-null-41) [c: s: r: x: t:null-41] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=LIST&wt=json&_=1710482554428} status=0 QTime=0
+2024-03-15 06:02:47.797 INFO  (qtp738677855-19-null-42) [c: s: r: x: t:null-42] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=LISTALIASES&wt=json&_=1710482554428} status=0 QTime=3
+2024-03-15 06:02:47.889 INFO  (qtp738677855-21-null-39) [c: s: r: x: t:null-39] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/zookeeper params={wt=json&_=1710482557645} status=0 QTime=136
+2024-03-15 06:02:52.681 INFO  (qtp738677855-21-null-43) [c: s: r: x: t:null-43] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/zookeeper params={path=/configs&detail=true&wt=json&_=1710482557645} status=0 QTime=54
+2024-03-15 06:02:54.341 INFO  (qtp738677855-19-null-44) [c: s: r: x: t:null-44] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/zookeeper params={path=/configs&detail=true&wt=json&_=1710482557645} status=0 QTime=48
+2024-03-15 06:02:54.487 INFO  (qtp738677855-56-null-45) [c: s: r: x: t:null-45] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/zookeeper params={path=/configs&detail=true&wt=json&_=1710482557645} status=0 QTime=50
+2024-03-15 06:03:01.447 INFO  (qtp738677855-19-null-46) [c: s: r: x: t:null-46] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/zookeeper params={path=/node_roles/data/on/172.20.0.3:8983_solr&detail=true&wt=json&_=1710482557645} status=0 QTime=3
+2024-03-15 06:03:01.580 INFO  (qtp738677855-56-null-47) [c: s: r: x: t:null-47] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/zookeeper params={path=/node_roles/data/on/172.20.0.3:8983_solr&detail=true&wt=json&_=1710482557645} status=0 QTime=2
+2024-03-15 06:03:10.032 INFO  (qtp738677855-56-null-48) [c: s: r: x: t:null-48] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1710482554428} status=0 QTime=0
+2024-03-15 06:03:10.034 INFO  (qtp738677855-50-null-50) [c: s: r: x: t:null-50] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/properties params={wt=json&_=1710482590023} status=0 QTime=2
+2024-03-15 06:03:10.049 INFO  (qtp738677855-21-null-49) [c: s: r: x: t:null-49] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1710482554428} status=0 QTime=17
+2024-03-15 06:03:10.103 INFO  (qtp738677855-25-null-51) [c: s: r: x: t:null-51] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=LIST&wt=json&_=1710482554428} status=0 QTime=0
+2024-03-15 06:03:10.109 INFO  (qtp738677855-21-null-52) [c: s: r: x: t:null-52] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=LISTALIASES&wt=json&_=1710482554428} status=0 QTime=1
+2024-03-15 06:03:11.348 INFO  (qtp738677855-25-null-53) [c: s: r: x: t:null-53] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1710482554428} status=0 QTime=0
+2024-03-15 06:03:11.359 INFO  (qtp738677855-27-null-57) [c: s: r: x: t:null-57] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/configs params={action=LIST&wt=json&_=1710482557645} status=0 QTime=3
+2024-03-15 06:03:11.362 INFO  (qtp738677855-22-null-55) [c: s: r: x: t:null-55] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=CLUSTERSTATUS&wt=json&_=1710482554428} status=0 QTime=8
+2024-03-15 06:03:11.368 INFO  (qtp738677855-19-null-54) [c: s: r: x: t:null-54] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/zookeeper params={path=/live_nodes&wt=json&_=1710482557645} status=0 QTime=14
+2024-03-15 06:03:11.380 INFO  (qtp738677855-23-null-56) [c: s: r: x: t:null-56] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1710482554428} status=0 QTime=25
+2024-03-15 06:03:11.386 INFO  (qtp738677855-50-null-58) [c: s: r: x: t:null-58] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=LISTALIASES&wt=json&_=1710482554428} status=0 QTime=3
+2024-03-15 06:03:11.392 INFO  (qtp738677855-19-null-59) [c: s: r: x: t:null-59] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=LIST&wt=json&_=1710482554428} status=0 QTime=0
+2024-03-15 06:03:11.407 INFO  (qtp738677855-50-null-60) [c: s: r: x: t:null-60] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=LISTALIASES&wt=json&_=1710482554428} status=0 QTime=2
+2024-03-15 06:03:16.044 INFO  (OverseerThreadFactory-17-thread-1) [c:restaurants s: r: x: t:] o.a.s.c.a.c.CreateCollectionCmd Create collection restaurants
+2024-03-15 06:03:16.215 INFO  (OverseerStateUpdate-72057688747802625-172.20.0.3:8983_solr-n_0000000000) [c: s: r: x: t:] o.a.s.c.o.SliceMutator createReplica() {
+  "core":"restaurants_shard1_replica_n1",
+  "node_name":"172.20.0.3:8983_solr",
+  "base_url":"http://172.20.0.3:8983/solr",
+  "collection":"restaurants",
+  "shard":"shard1",
+  "state":"down",
+  "type":"NRT",
+  "operation":"ADDREPLICA",
+  "waitForFinalState":"false"} 
+2024-03-15 06:03:16.330 INFO  (zkCallback-11-thread-2) [c: s: r: x: t:] o.a.s.c.c.ZkStateReader A cluster state change: [WatchedEvent state:SyncConnected type:NodeDataChanged path:/collections/restaurants/state.json zxid: -1] for collection [restaurants] has occurred - updating... (live nodes size: [1])
+2024-03-15 06:03:16.404 INFO  (qtp738677855-23-null-62) [c: s: r: x:restaurants_shard1_replica_n1 t:null-62] o.a.s.h.a.CoreAdminOperation core create command qt=/admin/cores&collection.configName=_default&newCollection=true&collection=restaurants&version=2&replicaType=NRT&coreNodeName=core_node2&name=restaurants_shard1_replica_n1&action=CREATE&numShards=1&shard=shard1&wt=javabin
+2024-03-15 06:03:16.466 INFO  (qtp738677855-23-null-62) [c:restaurants s:shard1 r:core_node2 x:restaurants_shard1_replica_n1 t:null-62] o.a.s.c.SolrConfig Using Lucene MatchVersion: 9.9.0
+2024-03-15 06:03:16.535 INFO  (qtp738677855-23-null-62) [c:restaurants s:shard1 r:core_node2 x:restaurants_shard1_replica_n1 t:null-62] o.a.s.s.IndexSchema Schema name=default-config
+2024-03-15 06:03:16.850 INFO  (qtp738677855-23-null-62) [c:restaurants s:shard1 r:core_node2 x:restaurants_shard1_replica_n1 t:null-62] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
+2024-03-15 06:03:16.850 INFO  (qtp738677855-23-null-62) [c:restaurants s:shard1 r:core_node2 x:restaurants_shard1_replica_n1 t:null-62] o.a.s.c.CoreContainer Creating SolrCore 'restaurants_shard1_replica_n1' using configuration from configset _default, trusted=true
+2024-03-15 06:03:16.874 INFO  (qtp738677855-23-null-62) [c:restaurants s:shard1 r:core_node2 x:restaurants_shard1_replica_n1 t:null-62] o.a.s.c.SolrCore Opening new SolrCore at [/var/solr/data/restaurants_shard1_replica_n1], dataDir=[/var/solr/data/restaurants_shard1_replica_n1/data/]
+2024-03-15 06:03:17.512 INFO  (qtp738677855-23-null-62) [c:restaurants s:shard1 r:core_node2 x:restaurants_shard1_replica_n1 t:null-62] o.a.s.j.SolrRequestAuthorizer Creating a new SolrRequestAuthorizer
+2024-03-15 06:03:17.533 INFO  (qtp738677855-23-null-62) [c:restaurants s:shard1 r:core_node2 x:restaurants_shard1_replica_n1 t:null-62] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2024-03-15 06:03:17.533 INFO  (qtp738677855-23-null-62) [c:restaurants s:shard1 r:core_node2 x:restaurants_shard1_replica_n1 t:null-62] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2024-03-15 06:03:17.554 INFO  (qtp738677855-23-null-62) [c:restaurants s:shard1 r:core_node2 x:restaurants_shard1_replica_n1 t:null-62] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
+2024-03-15 06:03:17.555 INFO  (qtp738677855-23-null-62) [c:restaurants s:shard1 r:core_node2 x:restaurants_shard1_replica_n1 t:null-62] o.a.s.u.CommitTracker Soft AutoCommit: if uncommitted for 3000ms; 
+2024-03-15 06:03:17.639 INFO  (qtp738677855-23-null-62) [c:restaurants s:shard1 r:core_node2 x:restaurants_shard1_replica_n1 t:null-62] o.a.s.r.ManagedResourceStorage Configured ZooKeeperStorageIO with znodeBase: /configs/_default
+2024-03-15 06:03:17.642 INFO  (qtp738677855-23-null-62) [c:restaurants s:shard1 r:core_node2 x:restaurants_shard1_replica_n1 t:null-62] o.a.s.r.ManagedResourceStorage Loaded null at path _rest_managed.json using ZooKeeperStorageIO:path=/configs/_default
+2024-03-15 06:03:17.644 INFO  (qtp738677855-23-null-62) [c:restaurants s:shard1 r:core_node2 x:restaurants_shard1_replica_n1 t:null-62] o.a.s.s.ZkIndexSchemaReader Creating ZooKeeper watch for the managed schema at /configs/_default/managed-schema.xml
+2024-03-15 06:03:17.647 INFO  (qtp738677855-23-null-62) [c:restaurants s:shard1 r:core_node2 x:restaurants_shard1_replica_n1 t:null-62] o.a.s.s.ZkIndexSchemaReader Current schema version 0 is already the latest
+2024-03-15 06:03:17.661 INFO  (qtp738677855-23-null-62) [c:restaurants s:shard1 r:core_node2 x:restaurants_shard1_replica_n1 t:null-62] o.a.s.s.DirectSolrSpellChecker init: {name=default, field=_text_, classname=solr.DirectSolrSpellChecker, distanceMeasure=internal, accuracy=0.5, maxQueryFrequency=0.01, maxEdits=2, minPrefix=1, maxInspections=5, minQueryLength=4}
+2024-03-15 06:03:17.668 INFO  (qtp738677855-23-null-62) [c:restaurants s:shard1 r:core_node2 x:restaurants_shard1_replica_n1 t:null-62] o.a.s.h.ReplicationHandler Commits will be reserved for 10000 ms
+2024-03-15 06:03:17.675 INFO  (searcherExecutor-26-thread-1-processing-restaurants_shard1_replica_n1 null-62 core_node2 172.20.0.3:8983_solr restaurants shard1) [c:restaurants s:shard1 r:core_node2 x:restaurants_shard1_replica_n1 t:null-62] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2024-03-15 06:03:17.675 INFO  (searcherExecutor-26-thread-1-processing-restaurants_shard1_replica_n1 null-62 core_node2 172.20.0.3:8983_solr restaurants shard1) [c:restaurants s:shard1 r:core_node2 x:restaurants_shard1_replica_n1 t:null-62] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2024-03-15 06:03:17.682 INFO  (searcherExecutor-26-thread-1-processing-restaurants_shard1_replica_n1 null-62 core_node2 172.20.0.3:8983_solr restaurants shard1) [c:restaurants s:shard1 r:core_node2 x:restaurants_shard1_replica_n1 t:null-62] o.a.s.c.SolrCore Registered new searcher autowarm time: 0 ms
+2024-03-15 06:03:17.699 INFO  (qtp738677855-23-null-62) [c:restaurants s:shard1 r:core_node2 x:restaurants_shard1_replica_n1 t:null-62] o.a.s.c.ZkShardTerms Successful update of terms at /collections/restaurants/terms/shard1 to Terms{values={core_node2=0}, version=0} for registerTerm
+2024-03-15 06:03:17.701 INFO  (qtp738677855-23-null-62) [c:restaurants s:shard1 r:core_node2 x:restaurants_shard1_replica_n1 t:null-62] o.a.s.c.ShardLeaderElectionContextBase make sure parent is created /collections/restaurants/leaders/shard1
+2024-03-15 06:03:17.725 INFO  (qtp738677855-23-null-62) [c:restaurants s:shard1 r:core_node2 x:restaurants_shard1_replica_n1 t:null-62] o.a.s.c.ShardLeaderElectionContext Enough replicas found to continue.
+2024-03-15 06:03:17.725 INFO  (qtp738677855-23-null-62) [c:restaurants s:shard1 r:core_node2 x:restaurants_shard1_replica_n1 t:null-62] o.a.s.c.ShardLeaderElectionContext I may be the new leader - try and sync
+2024-03-15 06:03:17.726 INFO  (qtp738677855-23-null-62) [c:restaurants s:shard1 r:core_node2 x:restaurants_shard1_replica_n1 t:null-62] o.a.s.c.SyncStrategy Sync replicas to http://172.20.0.3:8983/solr/restaurants_shard1_replica_n1/
+2024-03-15 06:03:17.727 INFO  (qtp738677855-23-null-62) [c:restaurants s:shard1 r:core_node2 x:restaurants_shard1_replica_n1 t:null-62] o.a.s.c.SyncStrategy Sync Success - now sync replicas to me
+2024-03-15 06:03:17.728 INFO  (qtp738677855-23-null-62) [c:restaurants s:shard1 r:core_node2 x:restaurants_shard1_replica_n1 t:null-62] o.a.s.c.SyncStrategy http://172.20.0.3:8983/solr/restaurants_shard1_replica_n1/ has no replicas
+2024-03-15 06:03:17.729 INFO  (qtp738677855-23-null-62) [c:restaurants s:shard1 r:core_node2 x:restaurants_shard1_replica_n1 t:null-62] o.a.s.c.ShardLeaderElectionContextBase Creating leader registration node /collections/restaurants/leaders/shard1/leader after winning as /collections/restaurants/leader_elect/shard1/election/72057688747802625-core_node2-n_0000000000
+2024-03-15 06:03:17.741 INFO  (qtp738677855-23-null-62) [c:restaurants s:shard1 r:core_node2 x:restaurants_shard1_replica_n1 t:null-62] o.a.s.c.ShardLeaderElectionContext I am the new leader: http://172.20.0.3:8983/solr/restaurants_shard1_replica_n1/ shard1
+2024-03-15 06:03:17.849 INFO  (zkCallback-11-thread-2) [c: s: r: x: t:] o.a.s.c.c.ZkStateReader A cluster state change: [WatchedEvent state:SyncConnected type:NodeDataChanged path:/collections/restaurants/state.json zxid: -1] for collection [restaurants] has occurred - updating... (live nodes size: [1])
+2024-03-15 06:03:17.855 INFO  (qtp738677855-23-null-62) [c:restaurants s:shard1 r:core_node2 x:restaurants_shard1_replica_n1 t:null-62] o.a.s.c.ZkController I am the leader, no recovery necessary
+2024-03-15 06:03:17.869 INFO  (qtp738677855-23-null-62) [c: s: r: x: t:null-62] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={qt=/admin/cores&coreNodeName=core_node2&collection.configName=_default&newCollection=true&name=restaurants_shard1_replica_n1&action=CREATE&numShards=1&collection=restaurants&shard=shard1&wt=javabin&version=2&replicaType=NRT} status=0 QTime=1465
+2024-03-15 06:03:17.886 INFO  (qtp738677855-19-null-61) [c:restaurants s: r: x: t:null-61] o.a.s.h.a.CollectionsHandler Wait for new collection to be active for at most 45 seconds. Check all shard replicas
+2024-03-15 06:03:17.968 INFO  (zkCallback-11-thread-3) [c: s: r: x: t:] o.a.s.c.c.ZkStateReader A cluster state change: [WatchedEvent state:SyncConnected type:NodeDataChanged path:/collections/restaurants/state.json zxid: -1] for collection [restaurants] has occurred - updating... (live nodes size: [1])
+2024-03-15 06:03:17.968 INFO  (zkCallback-11-thread-2) [c: s: r: x: t:] o.a.s.c.c.ZkStateReader A cluster state change: [WatchedEvent state:SyncConnected type:NodeDataChanged path:/collections/restaurants/state.json zxid: -1] for collection [restaurants] has occurred - updating... (live nodes size: [1])
+2024-03-15 06:03:17.974 INFO  (qtp738677855-19-null-61) [c:restaurants s: r: x: t:null-61] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={replicationFactor=1&collection.configName=_default&name=restaurants&router.name=compositeId&action=CREATE&numShards=1&wt=json&_=1710482554428} status=0 QTime=1957
+2024-03-15 06:03:17.982 INFO  (qtp738677855-50-null-63) [c: s: r: x: t:null-63] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1710482554428} status=0 QTime=0
+2024-03-15 06:03:17.991 INFO  (qtp738677855-56-null-64) [c: s: r: x: t:null-64] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1710482554428} status=0 QTime=9
+2024-03-15 06:03:18.010 INFO  (qtp738677855-23-null-65) [c: s: r: x: t:null-65] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1710482554428} status=0 QTime=0
+2024-03-15 06:03:18.036 INFO  (qtp738677855-26-null-69) [c: s: r: x: t:null-69] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/configs params={action=LIST&wt=json&_=1710482557645} status=0 QTime=3
+2024-03-15 06:03:18.039 INFO  (qtp738677855-21-null-70) [c: s: r: x: t:null-70] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=LIST&wt=json&_=1710482554428} status=0 QTime=1
+2024-03-15 06:03:18.041 INFO  (qtp738677855-19-null-67) [c: s: r: x: t:null-67] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/zookeeper params={path=/live_nodes&wt=json&_=1710482557645} status=0 QTime=9
+2024-03-15 06:03:18.045 INFO  (qtp738677855-25-null-68) [c: s: r: x: t:null-68] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=CLUSTERSTATUS&wt=json&_=1710482554428} status=0 QTime=13
+2024-03-15 06:03:18.052 INFO  (OverseerCollectionConfigSetProcessor-72057688747802625-172.20.0.3:8983_solr-n_0000000000) [c: s: r: x: t:] o.a.s.c.OverseerTaskQueue Response ZK path: /overseer/collection-queue-work/qnr-0000000000 doesn't exist. Requestor may have disconnected from ZooKeeper
+2024-03-15 06:03:18.057 INFO  (qtp738677855-56-null-66) [c: s: r: x: t:null-66] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1710482554428} status=0 QTime=25
+2024-03-15 06:03:18.063 INFO  (qtp738677855-22-null-71) [c: s: r: x: t:null-71] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=LISTALIASES&wt=json&_=1710482554428} status=0 QTime=3
+2024-03-15 06:03:18.074 INFO  (qtp738677855-25-null-72) [c: s: r: x: t:null-72] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=LISTALIASES&wt=json&_=1710482554428} status=0 QTime=1
+2024-03-15 06:03:18.086 INFO  (qtp738677855-23-null-73) [c: s: r: x: t:null-73] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=LIST&wt=json&_=1710482554428} status=0 QTime=0
+2024-03-15 06:03:18.102 INFO  (qtp738677855-56-null-74) [c: s: r: x: t:null-74] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=LISTALIASES&wt=json&_=1710482554428} status=0 QTime=3
+2024-03-15 06:03:21.771 INFO  (qtp738677855-56-null-75) [c: s: r: x: t:null-75] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1710482554428} status=0 QTime=1
+2024-03-15 06:03:21.777 INFO  (qtp738677855-50-null-77) [c: s: r: x: t:null-77] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=CLUSTERSTATUS&wt=json&_=1710482554428} status=0 QTime=5
+2024-03-15 06:03:21.784 INFO  (qtp738677855-25-null-76) [c: s: r: x: t:null-76] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1710482554428} status=0 QTime=12
+2024-03-15 06:03:21.801 INFO  (qtp738677855-22-null-78) [c: s: r: x: t:null-78] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=LIST&wt=json&_=1710482554428} status=0 QTime=1
+2024-03-15 06:03:21.827 INFO  (qtp738677855-25-null-79) [c: s: r: x: t:null-79] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=LISTALIASES&wt=json&_=1710482554428} status=0 QTime=5
+2024-03-15 06:03:30.031 INFO  (qtp738677855-25-null-82) [c: s: r: x: t:null-82] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1710482554428} status=0 QTime=1
+2024-03-15 06:03:30.046 INFO  (qtp738677855-23-null-80) [c: s: r: x: t:null-80] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1710482554428} status=0 QTime=16
+2024-03-15 06:03:30.047 INFO  (qtp738677855-19-null-81) [c:restaurants s:shard1 r:core_node2 x:restaurants_shard1_replica_n1 t:null-81] o.a.s.c.S.Request webapp=/solr path=/admin/file params={wt=json&_=1710482610016} status=0 QTime=17
+2024-03-15 06:03:30.059 INFO  (qtp738677855-50-null-83) [c: s: r: x: t:null-83] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=LIST&wt=json&_=1710482554428} status=0 QTime=0
+2024-03-15 06:03:30.083 INFO  (qtp738677855-19-null-85) [c: s: r: x: t:null-85] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=LISTALIASES&wt=json&_=1710482554428} status=0 QTime=1
+2024-03-15 06:03:30.092 INFO  (qtp738677855-56-null-84) [c:restaurants s:shard1 r:core_node2 x:restaurants_shard1_replica_n1 t:null-84] o.a.s.c.S.Request webapp=/solr path=/admin/file params={file=lang&wt=json&_=1710482610016} status=0 QTime=30
+2024-03-15 06:03:31.028 INFO  (qtp738677855-56-null-87) [c: s: r: x: t:null-87] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1710482554428} status=0 QTime=0
+2024-03-15 06:03:31.044 INFO  (qtp738677855-50-null-86) [c: s: r: x: t:null-86] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1710482554428} status=0 QTime=16
+2024-03-15 06:03:31.060 INFO  (qtp738677855-19-null-88) [c: s: r: x: t:null-88] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=LIST&wt=json&_=1710482554428} status=0 QTime=1
+2024-03-15 06:03:31.084 INFO  (qtp738677855-50-null-89) [c: s: r: x: t:null-89] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=LISTALIASES&wt=json&_=1710482554428} status=0 QTime=3
+2024-03-15 06:03:31.699 INFO  (qtp738677855-50-null-90) [c: s: r: x: t:null-90] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1710482554428} status=0 QTime=0
+2024-03-15 06:03:31.706 INFO  (qtp738677855-23-null-91) [c: s: r: x: t:null-91] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1710482554428} status=0 QTime=7
+2024-03-15 06:03:31.736 INFO  (qtp738677855-23-null-92) [c: s: r: x: t:null-92] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=LIST&wt=json&_=1710482554428} status=0 QTime=0
+2024-03-15 06:03:31.762 INFO  (qtp738677855-19-null-93) [c: s: r: x: t:null-93] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=LISTALIASES&wt=json&_=1710482554428} status=0 QTime=1
+2024-03-15 06:03:32.891 INFO  (qtp738677855-23-null-94) [c: s: r: x: t:null-94] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1710482554428} status=0 QTime=0
+2024-03-15 06:03:32.907 INFO  (qtp738677855-56-null-95) [c: s: r: x: t:null-95] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1710482554428} status=0 QTime=13
+2024-03-15 06:03:32.921 INFO  (qtp738677855-50-null-96) [c: s: r: x: t:null-96] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=LIST&wt=json&_=1710482554428} status=0 QTime=0
+2024-03-15 06:03:32.943 INFO  (qtp738677855-56-null-97) [c: s: r: x: t:null-97] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=LISTALIASES&wt=json&_=1710482554428} status=0 QTime=1
+2024-03-15 06:03:33.270 INFO  (qtp738677855-56-null-98) [c: s: r: x: t:null-98] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1710482554428} status=0 QTime=0
+2024-03-15 06:03:33.274 INFO  (qtp738677855-22-null-100) [c:restaurants s:shard1 r:core_node2 x:restaurants_shard1_replica_n1 t:null-100] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1710482613248} status=0 QTime=4
+2024-03-15 06:03:33.278 INFO  (qtp738677855-19-null-99) [c: s: r: x: t:null-99] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1710482554428} status=0 QTime=8
+2024-03-15 06:03:33.310 INFO  (qtp738677855-22-null-101) [c: s: r: x: t:null-101] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=LIST&wt=json&_=1710482554428} status=0 QTime=1
+2024-03-15 06:03:33.332 INFO  (qtp738677855-23-null-102) [c: s: r: x: t:null-102] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=LISTALIASES&wt=json&_=1710482554428} status=0 QTime=1
+2024-03-15 06:03:36.107 INFO  (qtp738677855-22-null-103) [c: s: r: x: t:null-103] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1710482554428} status=0 QTime=0
+2024-03-15 06:03:36.110 INFO  (qtp738677855-55-null-105) [c:restaurants s:shard1 r:core_node2 x:restaurants_shard1_replica_n1 t:null-105] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1710482613248} status=0 QTime=0
+2024-03-15 06:03:36.121 INFO  (qtp738677855-50-null-104) [c: s: r: x: t:null-104] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1710482554428} status=0 QTime=11
+2024-03-15 06:03:36.152 INFO  (qtp738677855-19-null-107) [c: s: r: x: t:null-107] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=LIST&wt=json&_=1710482554428} status=0 QTime=1
+2024-03-15 06:03:36.175 INFO  (qtp738677855-50-null-108) [c: s: r: x: t:null-108] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=LISTALIASES&wt=json&_=1710482554428} status=0 QTime=1
+2024-03-15 06:03:36.188 INFO  (qtp738677855-56-null-106) [c:restaurants s:shard1 r:core_node2 x:restaurants_shard1_replica_n1 t:null-106] o.a.s.c.S.Request webapp=/solr path=/select params={q=*:*&indent=true&q.op=OR&useParams=&_=1710482611020} rid=null-106 hits=0 status=0 QTime=78
+2024-03-15 06:05:07.802 INFO  (JettyShutdownThread) [c: s: r: x: t:] o.e.j.s.Server Stopped Server@277f7dd3{STOPPING}[10.0.19,sto=0]
+2024-03-15 06:05:07.809 INFO  (JettyShutdownThread) [c: s: r: x: t:] o.e.j.s.AbstractConnector Stopped ServerConnector@79da1ec0{HTTP/1.1, (http/1.1, h2c)}{0.0.0.0:8983}
+2024-03-15 06:05:07.825 INFO  (JettyShutdownThread) [c: s: r: x: t:] o.a.s.c.CoreContainer Shutting down CoreContainer instance=1593245055
+2024-03-15 06:05:07.825 INFO  (JettyShutdownThread) [c: s: r: x: t:] o.a.s.c.ZkController Remove node as live in ZooKeeper:/live_nodes/172.20.0.3:8983_solr
+2024-03-15 06:05:07.830 INFO  (JettyShutdownThread) [c: s: r: x: t:] o.a.s.c.ZkController Publish this node as DOWN...
+2024-03-15 06:05:07.830 INFO  (JettyShutdownThread) [c: s: r: x: t:] o.a.s.c.ZkController Publish node=172.20.0.3:8983_solr as DOWN
+2024-03-15 06:05:07.832 INFO  (zkCallback-11-thread-5) [c: s: r: x: t:] o.a.s.c.c.ZkStateReader Updated live nodes from ZooKeeper... (1) -> (0)
+2024-03-15 06:05:07.843 INFO  (coreCloseExecutor-33-thread-1) [c:restaurants s:shard1 r:core_node2 x:restaurants_shard1_replica_n1 t:] o.a.s.c.SolrCore CLOSING SolrCore org.apache.solr.core.SolrCore@7d69af18 restaurants_shard1_replica_n1
+2024-03-15 06:05:07.844 INFO  (coreCloseExecutor-33-thread-1) [c:restaurants s:shard1 r:core_node2 x:restaurants_shard1_replica_n1 t:] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.restaurants.shard1.replica_n1 tag=SolrCore@7d69af18
+2024-03-15 06:05:07.847 INFO  (zkCallback-11-thread-5) [c: s: r: x: t:] o.a.s.c.c.ZkStateReader A cluster state change: [WatchedEvent state:SyncConnected type:NodeDataChanged path:/collections/restaurants/state.json zxid: -1] for collection [restaurants] has occurred - updating... (live nodes size: [0])
+2024-03-15 06:05:07.848 INFO  (zkCallback-11-thread-6) [c: s: r: x: t:] o.a.s.c.c.ZkStateReader A cluster state change: [WatchedEvent state:SyncConnected type:NodeDataChanged path:/collections/restaurants/state.json zxid: -1] for collection [restaurants] has occurred - updating... (live nodes size: [0])
+2024-03-15 06:05:07.875 INFO  (coreCloseExecutor-33-thread-1) [c:restaurants s:shard1 r:core_node2 x:restaurants_shard1_replica_n1 t:] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.collection.restaurants.shard1.leader tag=SolrCore@7d69af18
+2024-03-15 06:05:07.880 INFO  (coreCloseExecutor-33-thread-1) [c:restaurants s:shard1 r:core_node2 x:restaurants_shard1_replica_n1 t:] o.a.s.u.DirectUpdateHandler2 Committing on IndexWriter.close()  ... SKIPPED (unnecessary).
+2024-03-15 06:05:07.884 ERROR (coreCloseExecutor-33-thread-1) [c:restaurants s:shard1 r:core_node2 x:restaurants_shard1_replica_n1 t:] o.a.s.u.SolrIndexWriter Error closing IndexWriter => java.nio.file.NoSuchFileException: /var/solr/data/restaurants_shard1_replica_n1/data/index
+	at java.base/sun.nio.fs.UnixException.translateToIOException(Unknown Source)
+java.nio.file.NoSuchFileException: /var/solr/data/restaurants_shard1_replica_n1/data/index
+	at java.base/sun.nio.fs.UnixException.translateToIOException(Unknown Source) ~[?:?]
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(Unknown Source) ~[?:?]
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(Unknown Source) ~[?:?]
+	at java.base/sun.nio.fs.UnixFileSystemProvider.newDirectoryStream(Unknown Source) ~[?:?]
+	at java.base/java.nio.file.Files.newDirectoryStream(Unknown Source) ~[?:?]
+	at org.apache.lucene.store.FSDirectory.listAll(FSDirectory.java:180) ~[?:?]
+	at org.apache.lucene.store.FSDirectory.listAll(FSDirectory.java:199) ~[?:?]
+	at org.apache.lucene.store.NRTCachingDirectory.listAll(NRTCachingDirectory.java:112) ~[?:?]
+	at org.apache.lucene.store.FilterDirectory.listAll(FilterDirectory.java:60) ~[?:?]
+	at org.apache.lucene.index.IndexFileDeleter.refresh(IndexFileDeleter.java:470) ~[?:?]
+	at org.apache.lucene.index.IndexWriter.rollbackInternalNoCommit(IndexWriter.java:2537) ~[?:?]
+	at org.apache.lucene.index.IndexWriter.rollbackInternal(IndexWriter.java:2455) ~[?:?]
+	at org.apache.lucene.index.IndexWriter.shutdown(IndexWriter.java:1340) ~[?:?]
+	at org.apache.lucene.index.IndexWriter.close(IndexWriter.java:1368) ~[?:?]
+	at org.apache.solr.update.SolrIndexWriter.close(SolrIndexWriter.java:372) ~[?:?]
+	at org.apache.solr.update.DirectUpdateHandler2.closeWriter(DirectUpdateHandler2.java:1000) ~[?:?]
+	at org.apache.solr.update.DefaultSolrCoreState.closeIndexWriter(DefaultSolrCoreState.java:97) ~[?:?]
+	at org.apache.solr.update.DefaultSolrCoreState.close(DefaultSolrCoreState.java:412) ~[?:?]
+	at org.apache.solr.update.SolrCoreState.decrefSolrCoreState(SolrCoreState.java:105) ~[?:?]
+	at org.apache.solr.core.SolrCore.doClose(SolrCore.java:1800) ~[?:?]
+	at org.apache.solr.core.SolrCore.close(SolrCore.java:1732) ~[?:?]
+	at org.apache.solr.core.SolrCores.lambda$close$0(SolrCores.java:128) ~[?:?]
+	at org.apache.solr.common.util.ExecutorUtil$MDCAwareThreadPoolExecutor.lambda$execute$0(ExecutorUtil.java:299) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[?:?]
+	at java.base/java.lang.Thread.run(Unknown Source) [?:?]
+2024-03-15 06:05:07.894 INFO  (JettyShutdownThread) [c: s: r: x: t:] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.node tag=null
+2024-03-15 06:05:07.910 INFO  (JettyShutdownThread) [c: s: r: x: t:] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jvm tag=null
+2024-03-15 06:05:07.915 INFO  (JettyShutdownThread) [c: s: r: x: t:] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jetty tag=null
+2024-03-15 06:05:07.916 INFO  (JettyShutdownThread) [c: s: r: x: t:] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.cluster tag=null
+2024-03-15 06:05:07.919 INFO  (closeThreadPool-34-thread-1) [c: s: r: x: t:] o.a.s.c.Overseer Overseer (id=72057688747802625-172.20.0.3:8983_solr-n_0000000000) closing
+2024-03-15 06:05:07.920 INFO  (OverseerStateUpdate-72057688747802625-172.20.0.3:8983_solr-n_0000000000) [c: s: r: x: t:] o.a.s.c.Overseer Overseer Loop exiting : 172.20.0.3:8983_solr
+2024-03-15 06:05:07.920 INFO  (closeThreadPool-34-thread-2) [c: s: r: x: t:] o.a.s.c.Overseer Overseer (id=72057688747802625-172.20.0.3:8983_solr-n_0000000000) closing
+2024-03-15 06:05:08.028 INFO  (JettyShutdownThread) [c: s: r: x: t:] o.a.s.c.Overseer Overseer (id=72057688747802625-172.20.0.3:8983_solr-n_0000000000) closing
+2024-03-15 06:05:08.032 INFO  (JettyShutdownThread) [c: s: r: x: t:] o.e.j.s.h.ContextHandler Stopped o.e.j.w.WebAppContext@62d363ab{solr-jetty-context.xml,/solr,null,STOPPED}{/opt/solr-9.5.0/server/solr-webapp/webapp}
