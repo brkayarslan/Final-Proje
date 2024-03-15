@@ -45,7 +45,7 @@ public class ReviewController {
         return ResponseEntity.ok(RestResponse.of(reviewControllerContract.saveReview(saveRequest)));
     }
 
-    @PutMapping("/{id}")
+    @PutMapping()
     public ResponseEntity<RestResponse<ReviewDTO>> updateReview(ReviewUpdateRequest updateRequest){
         return ResponseEntity.ok(RestResponse.of(reviewControllerContract.updateReview(updateRequest)));
     }
