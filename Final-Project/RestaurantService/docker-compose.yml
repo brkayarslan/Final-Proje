@@ -5,8 +5,5 @@ services:
     container_name: solr1
     ports:
       - "8983:8983"
-    command:
-      - solr-precreate
-      - n11_products
     volumes:
       - ./data/solr1:/var/solr

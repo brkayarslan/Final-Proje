@@ -1,191 +1,68 @@
-2024-03-15 07:27:04.304 INFO  (main) [c: s: r: x: t:] o.e.j.s.Server jetty-10.0.19; built: 2023-12-15T20:38:32.477Z; git: 8492d1c78f122bb30cce20aecfa07e7283facd47; jvm 17.0.10+7
-2024-03-15 07:27:04.601 WARN  (main) [c: s: r: x: t:] o.e.j.u.DeprecationWarning Using @Deprecated Class org.eclipse.jetty.servlet.listener.ELContextCleaner
-2024-03-15 07:27:04.627 INFO  (main) [c: s: r: x: t:] o.a.s.s.CoreContainerProvider Using logger factory org.apache.logging.slf4j.Log4jLoggerFactory
-2024-03-15 07:27:04.633 INFO  (main) [c: s: r: x: t:] o.a.s.s.CoreContainerProvider  ___      _       Welcome to Apache Solr™ version 9.5.0
-2024-03-15 07:27:04.633 INFO  (main) [c: s: r: x: t:] o.a.s.s.CoreContainerProvider / __| ___| |_ _   Starting in cloud mode on port 8983
-2024-03-15 07:27:04.634 INFO  (main) [c: s: r: x: t:] o.a.s.s.CoreContainerProvider \__ \/ _ \ | '_|  Install dir: /opt/solr-9.5.0
-2024-03-15 07:27:04.634 INFO  (main) [c: s: r: x: t:] o.a.s.s.CoreContainerProvider |___/\___/_|_|    Start time: 2024-03-15T07:27:04.634074100Z
-2024-03-15 07:27:04.637 INFO  (main) [c: s: r: x: t:] o.a.s.s.CoreContainerProvider Solr started with "-XX:+CrashOnOutOfMemoryError" that will crash on any OutOfMemoryError exception. The cause of the OOME will be logged in the crash file at the following path: /var/solr/logs/jvm_crash_14.log
-2024-03-15 07:27:04.658 INFO  (main) [c: s: r: x: t:] o.a.s.s.CoreContainerProvider Solr Home: /var/solr/data (source: system property: solr.solr.home)
-2024-03-15 07:27:04.681 WARN  (main) [c: s: r: x: t:] o.a.s.c.c.SolrZkClient Using default ZkCredentialsInjector. ZkCredentialsInjector is not secure, it creates an empty list of credentials which leads to 'OPEN_ACL_UNSAFE' ACLs to Zookeeper nodes
-2024-03-15 07:27:04.710 INFO  (main) [c: s: r: x: t:] o.a.s.c.c.ConnectionManager Waiting up to 30000ms for client to connect to ZooKeeper
-2024-03-15 07:27:14.721 ERROR (main-SendThread()) [c: s: r: x: t:] o.a.z.c.StaticHostProvider Unable to resolve address: zoo1/<unresolved>:2181 => java.net.UnknownHostException: zoo1
-	at java.base/java.net.InetAddress$CachedAddresses.get(Unknown Source)
-java.net.UnknownHostException: zoo1
-	at java.base/java.net.InetAddress$CachedAddresses.get(Unknown Source) ~[?:?]
-	at java.base/java.net.InetAddress.getAllByName0(Unknown Source) ~[?:?]
-	at java.base/java.net.InetAddress.getAllByName(Unknown Source) ~[?:?]
-	at java.base/java.net.InetAddress.getAllByName(Unknown Source) ~[?:?]
-	at org.apache.zookeeper.client.StaticHostProvider$1.getAllByName(StaticHostProvider.java:88) ~[?:?]
-	at org.apache.zookeeper.client.StaticHostProvider.resolve(StaticHostProvider.java:141) ~[?:?]
-	at org.apache.zookeeper.client.StaticHostProvider.next(StaticHostProvider.java:368) ~[?:?]
-	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1189) ~[?:?]
-2024-03-15 07:27:14.724 WARN  (main-SendThread(zoo1:2181)) [c: s: r: x: t:] o.a.z.ClientCnxn Session 0x0 for server zoo1/<unresolved>:2181, Closing socket connection. Attempting reconnect except it is a SessionExpiredException. => java.lang.IllegalArgumentException: Unable to canonicalize address zoo1/<unresolved>:2181 because it's not resolvable
-	at org.apache.zookeeper.SaslServerPrincipal.getServerPrincipal(SaslServerPrincipal.java:78)
-java.lang.IllegalArgumentException: Unable to canonicalize address zoo1/<unresolved>:2181 because it's not resolvable
-	at org.apache.zookeeper.SaslServerPrincipal.getServerPrincipal(SaslServerPrincipal.java:78) ~[?:?]
-	at org.apache.zookeeper.SaslServerPrincipal.getServerPrincipal(SaslServerPrincipal.java:41) ~[?:?]
-	at org.apache.zookeeper.ClientCnxn$SendThread.startConnect(ClientCnxn.java:1142) ~[?:?]
-	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1192) ~[?:?]
-2024-03-15 07:27:15.825 ERROR (main-SendThread(zoo1:2181)) [c: s: r: x: t:] o.a.z.c.StaticHostProvider Unable to resolve address: zoo1/<unresolved>:2181 => java.net.UnknownHostException: zoo1
-	at java.base/java.net.InetAddress$CachedAddresses.get(Unknown Source)
-java.net.UnknownHostException: zoo1
-	at java.base/java.net.InetAddress$CachedAddresses.get(Unknown Source) ~[?:?]
-	at java.base/java.net.InetAddress.getAllByName0(Unknown Source) ~[?:?]
-	at java.base/java.net.InetAddress.getAllByName(Unknown Source) ~[?:?]
-	at java.base/java.net.InetAddress.getAllByName(Unknown Source) ~[?:?]
-	at org.apache.zookeeper.client.StaticHostProvider$1.getAllByName(StaticHostProvider.java:88) ~[?:?]
-	at org.apache.zookeeper.client.StaticHostProvider.resolve(StaticHostProvider.java:141) ~[?:?]
-	at org.apache.zookeeper.client.StaticHostProvider.next(StaticHostProvider.java:368) ~[?:?]
-	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1189) ~[?:?]
-2024-03-15 07:27:15.826 WARN  (main-SendThread(zoo1:2181)) [c: s: r: x: t:] o.a.z.ClientCnxn Session 0x0 for server zoo1/<unresolved>:2181, Closing socket connection. Attempting reconnect except it is a SessionExpiredException. => java.lang.IllegalArgumentException: Unable to canonicalize address zoo1/<unresolved>:2181 because it's not resolvable
-	at org.apache.zookeeper.SaslServerPrincipal.getServerPrincipal(SaslServerPrincipal.java:78)
-java.lang.IllegalArgumentException: Unable to canonicalize address zoo1/<unresolved>:2181 because it's not resolvable
-	at org.apache.zookeeper.SaslServerPrincipal.getServerPrincipal(SaslServerPrincipal.java:78) ~[?:?]
-	at org.apache.zookeeper.SaslServerPrincipal.getServerPrincipal(SaslServerPrincipal.java:41) ~[?:?]
-	at org.apache.zookeeper.ClientCnxn$SendThread.startConnect(ClientCnxn.java:1142) ~[?:?]
-	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1192) ~[?:?]
-2024-03-15 07:27:16.926 ERROR (main-SendThread(zoo1:2181)) [c: s: r: x: t:] o.a.z.c.StaticHostProvider Unable to resolve address: zoo1/<unresolved>:2181 => java.net.UnknownHostException: zoo1
-	at java.base/java.net.InetAddress$CachedAddresses.get(Unknown Source)
-java.net.UnknownHostException: zoo1
-	at java.base/java.net.InetAddress$CachedAddresses.get(Unknown Source) ~[?:?]
-	at java.base/java.net.InetAddress.getAllByName0(Unknown Source) ~[?:?]
-	at java.base/java.net.InetAddress.getAllByName(Unknown Source) ~[?:?]
-	at java.base/java.net.InetAddress.getAllByName(Unknown Source) ~[?:?]
-	at org.apache.zookeeper.client.StaticHostProvider$1.getAllByName(StaticHostProvider.java:88) ~[?:?]
-	at org.apache.zookeeper.client.StaticHostProvider.resolve(StaticHostProvider.java:141) ~[?:?]
-	at org.apache.zookeeper.client.StaticHostProvider.next(StaticHostProvider.java:368) ~[?:?]
-	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1189) ~[?:?]
-2024-03-15 07:27:16.926 WARN  (main-SendThread(zoo1:2181)) [c: s: r: x: t:] o.a.z.ClientCnxn Session 0x0 for server zoo1/<unresolved>:2181, Closing socket connection. Attempting reconnect except it is a SessionExpiredException. => java.lang.IllegalArgumentException: Unable to canonicalize address zoo1/<unresolved>:2181 because it's not resolvable
-	at org.apache.zookeeper.SaslServerPrincipal.getServerPrincipal(SaslServerPrincipal.java:78)
-java.lang.IllegalArgumentException: Unable to canonicalize address zoo1/<unresolved>:2181 because it's not resolvable
-	at org.apache.zookeeper.SaslServerPrincipal.getServerPrincipal(SaslServerPrincipal.java:78) ~[?:?]
-	at org.apache.zookeeper.SaslServerPrincipal.getServerPrincipal(SaslServerPrincipal.java:41) ~[?:?]
-	at org.apache.zookeeper.ClientCnxn$SendThread.startConnect(ClientCnxn.java:1142) ~[?:?]
-	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1192) ~[?:?]
-2024-03-15 07:27:18.027 ERROR (main-SendThread(zoo1:2181)) [c: s: r: x: t:] o.a.z.c.StaticHostProvider Unable to resolve address: zoo1/<unresolved>:2181 => java.net.UnknownHostException: zoo1
-	at java.base/java.net.InetAddress$CachedAddresses.get(Unknown Source)
-java.net.UnknownHostException: zoo1
-	at java.base/java.net.InetAddress$CachedAddresses.get(Unknown Source) ~[?:?]
-	at java.base/java.net.InetAddress.getAllByName0(Unknown Source) ~[?:?]
-	at java.base/java.net.InetAddress.getAllByName(Unknown Source) ~[?:?]
-	at java.base/java.net.InetAddress.getAllByName(Unknown Source) ~[?:?]
-	at org.apache.zookeeper.client.StaticHostProvider$1.getAllByName(StaticHostProvider.java:88) ~[?:?]
-	at org.apache.zookeeper.client.StaticHostProvider.resolve(StaticHostProvider.java:141) ~[?:?]
-	at org.apache.zookeeper.client.StaticHostProvider.next(StaticHostProvider.java:368) ~[?:?]
-	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1189) ~[?:?]
-2024-03-15 07:27:18.027 WARN  (main-SendThread(zoo1:2181)) [c: s: r: x: t:] o.a.z.ClientCnxn Session 0x0 for server zoo1/<unresolved>:2181, Closing socket connection. Attempting reconnect except it is a SessionExpiredException. => java.lang.IllegalArgumentException: Unable to canonicalize address zoo1/<unresolved>:2181 because it's not resolvable
-	at org.apache.zookeeper.SaslServerPrincipal.getServerPrincipal(SaslServerPrincipal.java:78)
-java.lang.IllegalArgumentException: Unable to canonicalize address zoo1/<unresolved>:2181 because it's not resolvable
-	at org.apache.zookeeper.SaslServerPrincipal.getServerPrincipal(SaslServerPrincipal.java:78) ~[?:?]
-	at org.apache.zookeeper.SaslServerPrincipal.getServerPrincipal(SaslServerPrincipal.java:41) ~[?:?]
-	at org.apache.zookeeper.ClientCnxn$SendThread.startConnect(ClientCnxn.java:1142) ~[?:?]
-	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1192) ~[?:?]
-2024-03-15 07:27:19.128 ERROR (main-SendThread(zoo1:2181)) [c: s: r: x: t:] o.a.z.c.StaticHostProvider Unable to resolve address: zoo1/<unresolved>:2181 => java.net.UnknownHostException: zoo1
-	at java.base/java.net.InetAddress$CachedAddresses.get(Unknown Source)
-java.net.UnknownHostException: zoo1
-	at java.base/java.net.InetAddress$CachedAddresses.get(Unknown Source) ~[?:?]
-	at java.base/java.net.InetAddress.getAllByName0(Unknown Source) ~[?:?]
-	at java.base/java.net.InetAddress.getAllByName(Unknown Source) ~[?:?]
-	at java.base/java.net.InetAddress.getAllByName(Unknown Source) ~[?:?]
-	at org.apache.zookeeper.client.StaticHostProvider$1.getAllByName(StaticHostProvider.java:88) ~[?:?]
-	at org.apache.zookeeper.client.StaticHostProvider.resolve(StaticHostProvider.java:141) ~[?:?]
-	at org.apache.zookeeper.client.StaticHostProvider.next(StaticHostProvider.java:368) ~[?:?]
-	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1189) ~[?:?]
-2024-03-15 07:27:19.128 WARN  (main-SendThread(zoo1:2181)) [c: s: r: x: t:] o.a.z.ClientCnxn Session 0x0 for server zoo1/<unresolved>:2181, Closing socket connection. Attempting reconnect except it is a SessionExpiredException. => java.lang.IllegalArgumentException: Unable to canonicalize address zoo1/<unresolved>:2181 because it's not resolvable
-	at org.apache.zookeeper.SaslServerPrincipal.getServerPrincipal(SaslServerPrincipal.java:78)
-java.lang.IllegalArgumentException: Unable to canonicalize address zoo1/<unresolved>:2181 because it's not resolvable
-	at org.apache.zookeeper.SaslServerPrincipal.getServerPrincipal(SaslServerPrincipal.java:78) ~[?:?]
-	at org.apache.zookeeper.SaslServerPrincipal.getServerPrincipal(SaslServerPrincipal.java:41) ~[?:?]
-	at org.apache.zookeeper.ClientCnxn$SendThread.startConnect(ClientCnxn.java:1142) ~[?:?]
-	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1192) ~[?:?]
-2024-03-15 07:27:20.229 ERROR (main-SendThread(zoo1:2181)) [c: s: r: x: t:] o.a.z.c.StaticHostProvider Unable to resolve address: zoo1/<unresolved>:2181 => java.net.UnknownHostException: zoo1
-	at java.base/java.net.InetAddress$CachedAddresses.get(Unknown Source)
-java.net.UnknownHostException: zoo1
-	at java.base/java.net.InetAddress$CachedAddresses.get(Unknown Source) ~[?:?]
-	at java.base/java.net.InetAddress.getAllByName0(Unknown Source) ~[?:?]
-	at java.base/java.net.InetAddress.getAllByName(Unknown Source) ~[?:?]
-	at java.base/java.net.InetAddress.getAllByName(Unknown Source) ~[?:?]
-	at org.apache.zookeeper.client.StaticHostProvider$1.getAllByName(StaticHostProvider.java:88) ~[?:?]
-	at org.apache.zookeeper.client.StaticHostProvider.resolve(StaticHostProvider.java:141) ~[?:?]
-	at org.apache.zookeeper.client.StaticHostProvider.next(StaticHostProvider.java:368) ~[?:?]
-	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1189) ~[?:?]
-2024-03-15 07:27:20.229 WARN  (main-SendThread(zoo1:2181)) [c: s: r: x: t:] o.a.z.ClientCnxn Session 0x0 for server zoo1/<unresolved>:2181, Closing socket connection. Attempting reconnect except it is a SessionExpiredException. => java.lang.IllegalArgumentException: Unable to canonicalize address zoo1/<unresolved>:2181 because it's not resolvable
-	at org.apache.zookeeper.SaslServerPrincipal.getServerPrincipal(SaslServerPrincipal.java:78)
-java.lang.IllegalArgumentException: Unable to canonicalize address zoo1/<unresolved>:2181 because it's not resolvable
-	at org.apache.zookeeper.SaslServerPrincipal.getServerPrincipal(SaslServerPrincipal.java:78) ~[?:?]
-	at org.apache.zookeeper.SaslServerPrincipal.getServerPrincipal(SaslServerPrincipal.java:41) ~[?:?]
-	at org.apache.zookeeper.ClientCnxn$SendThread.startConnect(ClientCnxn.java:1142) ~[?:?]
-	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1192) ~[?:?]
-2024-03-15 07:27:21.330 ERROR (main-SendThread(zoo1:2181)) [c: s: r: x: t:] o.a.z.c.StaticHostProvider Unable to resolve address: zoo1/<unresolved>:2181 => java.net.UnknownHostException: zoo1
-	at java.base/java.net.InetAddress$CachedAddresses.get(Unknown Source)
-java.net.UnknownHostException: zoo1
-	at java.base/java.net.InetAddress$CachedAddresses.get(Unknown Source) ~[?:?]
-	at java.base/java.net.InetAddress.getAllByName0(Unknown Source) ~[?:?]
-	at java.base/java.net.InetAddress.getAllByName(Unknown Source) ~[?:?]
-	at java.base/java.net.InetAddress.getAllByName(Unknown Source) ~[?:?]
-	at org.apache.zookeeper.client.StaticHostProvider$1.getAllByName(StaticHostProvider.java:88) ~[?:?]
-	at org.apache.zookeeper.client.StaticHostProvider.resolve(StaticHostProvider.java:141) ~[?:?]
-	at org.apache.zookeeper.client.StaticHostProvider.next(StaticHostProvider.java:368) ~[?:?]
-	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1189) ~[?:?]
-2024-03-15 07:27:21.330 WARN  (main-SendThread(zoo1:2181)) [c: s: r: x: t:] o.a.z.ClientCnxn Session 0x0 for server zoo1/<unresolved>:2181, Closing socket connection. Attempting reconnect except it is a SessionExpiredException. => java.lang.IllegalArgumentException: Unable to canonicalize address zoo1/<unresolved>:2181 because it's not resolvable
-	at org.apache.zookeeper.SaslServerPrincipal.getServerPrincipal(SaslServerPrincipal.java:78)
-java.lang.IllegalArgumentException: Unable to canonicalize address zoo1/<unresolved>:2181 because it's not resolvable
-	at org.apache.zookeeper.SaslServerPrincipal.getServerPrincipal(SaslServerPrincipal.java:78) ~[?:?]
-	at org.apache.zookeeper.SaslServerPrincipal.getServerPrincipal(SaslServerPrincipal.java:41) ~[?:?]
-	at org.apache.zookeeper.ClientCnxn$SendThread.startConnect(ClientCnxn.java:1142) ~[?:?]
-	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1192) ~[?:?]
-2024-03-15 07:27:22.431 ERROR (main-SendThread(zoo1:2181)) [c: s: r: x: t:] o.a.z.c.StaticHostProvider Unable to resolve address: zoo1/<unresolved>:2181 => java.net.UnknownHostException: zoo1
-	at java.base/java.net.InetAddress$CachedAddresses.get(Unknown Source)
-java.net.UnknownHostException: zoo1
-	at java.base/java.net.InetAddress$CachedAddresses.get(Unknown Source) ~[?:?]
-	at java.base/java.net.InetAddress.getAllByName0(Unknown Source) ~[?:?]
-	at java.base/java.net.InetAddress.getAllByName(Unknown Source) ~[?:?]
-	at java.base/java.net.InetAddress.getAllByName(Unknown Source) ~[?:?]
-	at org.apache.zookeeper.client.StaticHostProvider$1.getAllByName(StaticHostProvider.java:88) ~[?:?]
-	at org.apache.zookeeper.client.StaticHostProvider.resolve(StaticHostProvider.java:141) ~[?:?]
-	at org.apache.zookeeper.client.StaticHostProvider.next(StaticHostProvider.java:368) ~[?:?]
-	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1189) ~[?:?]
-2024-03-15 07:27:22.431 WARN  (main-SendThread(zoo1:2181)) [c: s: r: x: t:] o.a.z.ClientCnxn Session 0x0 for server zoo1/<unresolved>:2181, Closing socket connection. Attempting reconnect except it is a SessionExpiredException. => java.lang.IllegalArgumentException: Unable to canonicalize address zoo1/<unresolved>:2181 because it's not resolvable
-	at org.apache.zookeeper.SaslServerPrincipal.getServerPrincipal(SaslServerPrincipal.java:78)
-java.lang.IllegalArgumentException: Unable to canonicalize address zoo1/<unresolved>:2181 because it's not resolvable
-	at org.apache.zookeeper.SaslServerPrincipal.getServerPrincipal(SaslServerPrincipal.java:78) ~[?:?]
-	at org.apache.zookeeper.SaslServerPrincipal.getServerPrincipal(SaslServerPrincipal.java:41) ~[?:?]
-	at org.apache.zookeeper.ClientCnxn$SendThread.startConnect(ClientCnxn.java:1142) ~[?:?]
-	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1192) ~[?:?]
-2024-03-15 07:27:23.532 ERROR (main-SendThread(zoo1:2181)) [c: s: r: x: t:] o.a.z.c.StaticHostProvider Unable to resolve address: zoo1/<unresolved>:2181 => java.net.UnknownHostException: zoo1
-	at java.base/java.net.InetAddress$CachedAddresses.get(Unknown Source)
-java.net.UnknownHostException: zoo1
-	at java.base/java.net.InetAddress$CachedAddresses.get(Unknown Source) ~[?:?]
-	at java.base/java.net.InetAddress.getAllByName0(Unknown Source) ~[?:?]
-	at java.base/java.net.InetAddress.getAllByName(Unknown Source) ~[?:?]
-	at java.base/java.net.InetAddress.getAllByName(Unknown Source) ~[?:?]
-	at org.apache.zookeeper.client.StaticHostProvider$1.getAllByName(StaticHostProvider.java:88) ~[?:?]
-	at org.apache.zookeeper.client.StaticHostProvider.resolve(StaticHostProvider.java:141) ~[?:?]
-	at org.apache.zookeeper.client.StaticHostProvider.next(StaticHostProvider.java:368) ~[?:?]
-	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1189) ~[?:?]
-2024-03-15 07:27:23.532 WARN  (main-SendThread(zoo1:2181)) [c: s: r: x: t:] o.a.z.ClientCnxn Session 0x0 for server zoo1/<unresolved>:2181, Closing socket connection. Attempting reconnect except it is a SessionExpiredException. => java.lang.IllegalArgumentException: Unable to canonicalize address zoo1/<unresolved>:2181 because it's not resolvable
-	at org.apache.zookeeper.SaslServerPrincipal.getServerPrincipal(SaslServerPrincipal.java:78)
-java.lang.IllegalArgumentException: Unable to canonicalize address zoo1/<unresolved>:2181 because it's not resolvable
-	at org.apache.zookeeper.SaslServerPrincipal.getServerPrincipal(SaslServerPrincipal.java:78) ~[?:?]
-	at org.apache.zookeeper.SaslServerPrincipal.getServerPrincipal(SaslServerPrincipal.java:41) ~[?:?]
-	at org.apache.zookeeper.ClientCnxn$SendThread.startConnect(ClientCnxn.java:1142) ~[?:?]
-	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1192) ~[?:?]
-2024-03-15 07:27:24.633 ERROR (main-SendThread(zoo1:2181)) [c: s: r: x: t:] o.a.z.c.StaticHostProvider Unable to resolve address: zoo1/<unresolved>:2181 => java.net.UnknownHostException: zoo1
-	at java.base/java.net.InetAddress$CachedAddresses.get(Unknown Source)
-java.net.UnknownHostException: zoo1
-	at java.base/java.net.InetAddress$CachedAddresses.get(Unknown Source) ~[?:?]
-	at java.base/java.net.InetAddress.getAllByName0(Unknown Source) ~[?:?]
-	at java.base/java.net.InetAddress.getAllByName(Unknown Source) ~[?:?]
-	at java.base/java.net.InetAddress.getAllByName(Unknown Source) ~[?:?]
-	at org.apache.zookeeper.client.StaticHostProvider$1.getAllByName(StaticHostProvider.java:88) ~[?:?]
-	at org.apache.zookeeper.client.StaticHostProvider.resolve(StaticHostProvider.java:141) ~[?:?]
-	at org.apache.zookeeper.client.StaticHostProvider.next(StaticHostProvider.java:368) ~[?:?]
-	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1189) ~[?:?]
-2024-03-15 07:27:24.633 WARN  (main-SendThread(zoo1:2181)) [c: s: r: x: t:] o.a.z.ClientCnxn Session 0x0 for server zoo1/<unresolved>:2181, Closing socket connection. Attempting reconnect except it is a SessionExpiredException. => java.lang.IllegalArgumentException: Unable to canonicalize address zoo1/<unresolved>:2181 because it's not resolvable
-	at org.apache.zookeeper.SaslServerPrincipal.getServerPrincipal(SaslServerPrincipal.java:78)
-java.lang.IllegalArgumentException: Unable to canonicalize address zoo1/<unresolved>:2181 because it's not resolvable
-	at org.apache.zookeeper.SaslServerPrincipal.getServerPrincipal(SaslServerPrincipal.java:78) ~[?:?]
-	at org.apache.zookeeper.SaslServerPrincipal.getServerPrincipal(SaslServerPrincipal.java:41) ~[?:?]
-	at org.apache.zookeeper.ClientCnxn$SendThread.startConnect(ClientCnxn.java:1142) ~[?:?]
-	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1192) ~[?:?]
+2024-03-15 07:27:37.295 INFO  (main) [c: s: r: x: t:] o.e.j.s.Server jetty-10.0.19; built: 2023-12-15T20:38:32.477Z; git: 8492d1c78f122bb30cce20aecfa07e7283facd47; jvm 17.0.10+7
+2024-03-15 07:27:37.704 WARN  (main) [c: s: r: x: t:] o.e.j.u.DeprecationWarning Using @Deprecated Class org.eclipse.jetty.servlet.listener.ELContextCleaner
+2024-03-15 07:27:37.742 INFO  (main) [c: s: r: x: t:] o.a.s.s.CoreContainerProvider Using logger factory org.apache.logging.slf4j.Log4jLoggerFactory
+2024-03-15 07:27:37.750 INFO  (main) [c: s: r: x: t:] o.a.s.s.CoreContainerProvider  ___      _       Welcome to Apache Solr™ version 9.5.0
+2024-03-15 07:27:37.750 INFO  (main) [c: s: r: x: t:] o.a.s.s.CoreContainerProvider / __| ___| |_ _   Starting in standalone mode on port 8983
+2024-03-15 07:27:37.750 INFO  (main) [c: s: r: x: t:] o.a.s.s.CoreContainerProvider \__ \/ _ \ | '_|  Install dir: /opt/solr-9.5.0
+2024-03-15 07:27:37.750 INFO  (main) [c: s: r: x: t:] o.a.s.s.CoreContainerProvider |___/\___/_|_|    Start time: 2024-03-15T07:27:37.750669100Z
+2024-03-15 07:27:37.754 INFO  (main) [c: s: r: x: t:] o.a.s.s.CoreContainerProvider Solr started with "-XX:+CrashOnOutOfMemoryError" that will crash on any OutOfMemoryError exception. The cause of the OOME will be logged in the crash file at the following path: /var/solr/logs/jvm_crash_12.log
+2024-03-15 07:27:37.780 INFO  (main) [c: s: r: x: t:] o.a.s.s.CoreContainerProvider Solr Home: /var/solr/data (source: system property: solr.solr.home)
+2024-03-15 07:27:37.796 INFO  (main) [c: s: r: x: t:] o.a.s.c.SolrXmlConfig solr.xml not found in SOLR_HOME, using built-in default
+2024-03-15 07:27:37.796 INFO  (main) [c: s: r: x: t:] o.a.s.c.SolrXmlConfig Loading solr.xml from /opt/solr-9.5.0/server/solr/solr.xml
+2024-03-15 07:27:37.837 INFO  (main) [c: s: r: x: t:] o.a.s.c.SolrResourceLoader Added 1 libs to classloader, from paths: [/opt/solr-9.5.0/lib]
+2024-03-15 07:27:39.098 INFO  (main) [c: s: r: x: t:] o.a.s.u.t.SimplePropagator Always-on trace id generation enabled.
+2024-03-15 07:27:39.536 WARN  (main) [c: s: r: x: t:] o.a.s.u.StartupLoggingUtils Jetty request logging enabled. Will retain logs for last 3 days. See chapter "Configuring Logging" in reference guide for how to configure.
+2024-03-15 07:27:39.540 WARN  (main) [c: s: r: x: t:] o.a.s.c.CoreContainer Not all security plugins configured!  authentication=disabled authorization=disabled.  Solr is only as secure as you make it. Consider configuring authentication/authorization before exposing Solr to users internal or external.  See https://s.apache.org/solrsecurity for more info
+2024-03-15 07:27:39.941 INFO  (main) [c: s: r: x: t:] o.a.s.c.CorePropertiesLocator Found 2 core definitions underneath /var/solr/data
+2024-03-15 07:27:39.941 INFO  (main) [c: s: r: x: t:] o.a.s.c.CorePropertiesLocator Cores are: [n11_products, restaurants_shard1_replica_n1]
+2024-03-15 07:27:40.009 INFO  (coreLoadExecutor-11-thread-1) [c: s: r: x:n11_products t:] o.a.s.c.SolrConfig Using Lucene MatchVersion: 9.9.0
+2024-03-15 07:27:40.009 INFO  (coreLoadExecutor-11-thread-2) [c: s: r: x:restaurants_shard1_replica_n1 t:] o.a.s.c.SolrConfig Using Lucene MatchVersion: 9.9.0
+2024-03-15 07:27:40.135 INFO  (coreLoadExecutor-11-thread-1) [c: s: r: x:n11_products t:] o.a.s.s.IndexSchema Schema name=default-config
+2024-03-15 07:27:40.135 INFO  (coreLoadExecutor-11-thread-2) [c: s: r: x:restaurants_shard1_replica_n1 t:] o.a.s.s.IndexSchema Schema name=default-config
+2024-03-15 07:27:40.208 WARN  (main) [c: s: r: x: t:] o.g.j.m.i.MessagingBinders A class jakarta.activation.DataSource for a default provider MessageBodyWriter<jakarta.activation.DataSource> was not found. The provider is not available.
+2024-03-15 07:27:40.681 INFO  (main) [c: s: r: x: t:] o.a.s.j.SolrRequestAuthorizer Creating a new SolrRequestAuthorizer
+2024-03-15 07:27:40.884 INFO  (main) [c: s: r: x: t:] o.e.j.s.h.ContextHandler Started o.e.j.w.WebAppContext@655a5d9c{solr-jetty-context.xml,/solr,file:///opt/solr-9.5.0/server/solr-webapp/webapp/,AVAILABLE}{/opt/solr-9.5.0/server/solr-webapp/webapp}
+2024-03-15 07:27:40.908 INFO  (main) [c: s: r: x: t:] o.e.j.s.RequestLogWriter Opened /var/solr/logs/2024_03_15.request.log
+2024-03-15 07:27:40.914 INFO  (main) [c: s: r: x: t:] o.e.j.s.AbstractConnector Started ServerConnector@2b95e48b{HTTP/1.1, (http/1.1, h2c)}{0.0.0.0:8983}
+2024-03-15 07:27:40.915 INFO  (main) [c: s: r: x: t:] o.e.j.s.Server Started Server@376a312c{STARTING}[10.0.19,sto=0] @5512ms
+2024-03-15 07:27:41.226 INFO  (coreLoadExecutor-11-thread-1) [c: s: r: x:n11_products t:] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
+2024-03-15 07:27:41.226 INFO  (coreLoadExecutor-11-thread-1) [c: s: r: x:n11_products t:] o.a.s.c.CoreContainer Creating SolrCore 'n11_products' using configuration from instancedir /var/solr/data/n11_products, trusted=true
+2024-03-15 07:27:41.236 INFO  (coreLoadExecutor-11-thread-2) [c: s: r: x:restaurants_shard1_replica_n1 t:] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
+2024-03-15 07:27:41.236 INFO  (coreLoadExecutor-11-thread-2) [c: s: r: x:restaurants_shard1_replica_n1 t:] o.a.s.c.CoreContainer Creating SolrCore 'restaurants_shard1_replica_n1' using configuration from instancedir /var/solr/data/restaurants_shard1_replica_n1, trusted=true
+2024-03-15 07:27:41.285 INFO  (coreLoadExecutor-11-thread-1) [c: s: r: x:n11_products t:] o.a.s.c.SolrCore Opening new SolrCore at [/var/solr/data/n11_products], dataDir=[/var/solr/data/n11_products/data/]
+2024-03-15 07:27:41.285 INFO  (coreLoadExecutor-11-thread-2) [c: s: r: x:restaurants_shard1_replica_n1 t:] o.a.s.c.SolrCore Opening new SolrCore at [/var/solr/data/restaurants_shard1_replica_n1], dataDir=[/var/solr/data/restaurants_shard1_replica_n1/data/]
+2024-03-15 07:27:42.038 INFO  (coreLoadExecutor-11-thread-1) [c: s: r: x:n11_products t:] o.a.s.j.SolrRequestAuthorizer Creating a new SolrRequestAuthorizer
+2024-03-15 07:27:42.040 INFO  (coreLoadExecutor-11-thread-2) [c: s: r: x:restaurants_shard1_replica_n1 t:] o.a.s.j.SolrRequestAuthorizer Creating a new SolrRequestAuthorizer
+2024-03-15 07:27:42.064 INFO  (coreLoadExecutor-11-thread-2) [c: s: r: x:restaurants_shard1_replica_n1 t:] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2024-03-15 07:27:42.064 INFO  (coreLoadExecutor-11-thread-1) [c: s: r: x:n11_products t:] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2024-03-15 07:27:42.064 INFO  (coreLoadExecutor-11-thread-1) [c: s: r: x:n11_products t:] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2024-03-15 07:27:42.064 INFO  (coreLoadExecutor-11-thread-2) [c: s: r: x:restaurants_shard1_replica_n1 t:] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2024-03-15 07:27:42.088 INFO  (coreLoadExecutor-11-thread-1) [c: s: r: x:n11_products t:] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
+2024-03-15 07:27:42.088 INFO  (coreLoadExecutor-11-thread-1) [c: s: r: x:n11_products t:] o.a.s.u.CommitTracker Soft AutoCommit: if uncommitted for 3000ms; 
+2024-03-15 07:27:42.147 INFO  (coreLoadExecutor-11-thread-2) [c: s: r: x:restaurants_shard1_replica_n1 t:] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
+2024-03-15 07:27:42.147 INFO  (coreLoadExecutor-11-thread-2) [c: s: r: x:restaurants_shard1_replica_n1 t:] o.a.s.u.CommitTracker Soft AutoCommit: if uncommitted for 3000ms; 
+2024-03-15 07:27:42.186 INFO  (coreLoadExecutor-11-thread-1) [c: s: r: x:n11_products t:] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /var/solr/data/n11_products/conf
+2024-03-15 07:27:42.213 INFO  (coreLoadExecutor-11-thread-1) [c: s: r: x:n11_products t:] o.a.s.s.DirectSolrSpellChecker init: {maxEdits=2, minPrefix=1, maxInspections=5, minQueryLength=4, accuracy=0.5, maxQueryFrequency=0.01, name=default, field=_text_, classname=solr.DirectSolrSpellChecker, distanceMeasure=internal}
+2024-03-15 07:27:42.231 INFO  (coreLoadExecutor-11-thread-1) [c: s: r: x:n11_products t:] o.a.s.h.ReplicationHandler Commits will be reserved for 10000 ms
+2024-03-15 07:27:42.237 INFO  (searcherExecutor-15-thread-1-processing-n11_products) [c: s: r: x:n11_products t:] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2024-03-15 07:27:42.238 INFO  (searcherExecutor-15-thread-1-processing-n11_products) [c: s: r: x:n11_products t:] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2024-03-15 07:27:42.250 INFO  (searcherExecutor-15-thread-1-processing-n11_products) [c: s: r: x:n11_products t:] o.a.s.c.SolrCore Registered new searcher autowarm time: 0 ms
+2024-03-15 07:27:42.461 INFO  (coreLoadExecutor-11-thread-2) [c: s: r: x:restaurants_shard1_replica_n1 t:] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /var/solr/data/restaurants_shard1_replica_n1/conf
+2024-03-15 07:27:42.463 INFO  (coreLoadExecutor-11-thread-2) [c: s: r: x:restaurants_shard1_replica_n1 t:] o.a.s.s.DirectSolrSpellChecker init: {maxEdits=2, minPrefix=1, maxInspections=5, minQueryLength=4, accuracy=0.5, maxQueryFrequency=0.01, name=default, field=_text_, classname=solr.DirectSolrSpellChecker, distanceMeasure=internal}
+2024-03-15 07:27:42.464 INFO  (coreLoadExecutor-11-thread-2) [c: s: r: x:restaurants_shard1_replica_n1 t:] o.a.s.h.ReplicationHandler Commits will be reserved for 10000 ms
+2024-03-15 07:27:42.465 INFO  (searcherExecutor-14-thread-1-processing-restaurants_shard1_replica_n1) [c: s: r: x:restaurants_shard1_replica_n1 t:] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2024-03-15 07:27:42.465 INFO  (searcherExecutor-14-thread-1-processing-restaurants_shard1_replica_n1) [c: s: r: x:restaurants_shard1_replica_n1 t:] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2024-03-15 07:27:42.469 INFO  (searcherExecutor-14-thread-1-processing-restaurants_shard1_replica_n1) [c: s: r: x:restaurants_shard1_replica_n1 t:] o.a.s.c.SolrCore Registered new searcher autowarm time: 0 ms
+2024-03-15 07:28:04.630 INFO  (JettyShutdownThread) [c: s: r: x: t:] o.e.j.s.Server Stopped Server@376a312c{STOPPING}[10.0.19,sto=0]
+2024-03-15 07:28:04.634 INFO  (JettyShutdownThread) [c: s: r: x: t:] o.e.j.s.AbstractConnector Stopped ServerConnector@2b95e48b{HTTP/1.1, (http/1.1, h2c)}{0.0.0.0:8983}
+2024-03-15 07:28:04.642 INFO  (JettyShutdownThread) [c: s: r: x: t:] o.a.s.c.CoreContainer Shutting down CoreContainer instance=1537371824
+2024-03-15 07:28:04.645 INFO  (coreCloseExecutor-25-thread-1) [c: s: r: x:n11_products t:] o.a.s.c.SolrCore CLOSING SolrCore org.apache.solr.core.SolrCore@37cdd6b0 n11_products
+2024-03-15 07:28:04.645 INFO  (coreCloseExecutor-25-thread-2) [c: s: r: x:restaurants_shard1_replica_n1 t:] o.a.s.c.SolrCore CLOSING SolrCore org.apache.solr.core.SolrCore@791fadef restaurants_shard1_replica_n1
+2024-03-15 07:28:04.646 INFO  (coreCloseExecutor-25-thread-1) [c: s: r: x:n11_products t:] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.n11_products tag=SolrCore@37cdd6b0
+2024-03-15 07:28:04.668 INFO  (coreCloseExecutor-25-thread-2) [c: s: r: x:restaurants_shard1_replica_n1 t:] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.restaurants_shard1_replica_n1 tag=SolrCore@791fadef
+2024-03-15 07:28:04.675 INFO  (coreCloseExecutor-25-thread-1) [c: s: r: x:n11_products t:] o.a.s.u.DirectUpdateHandler2 Committing on IndexWriter.close()  ... SKIPPED (unnecessary).
+2024-03-15 07:28:04.688 INFO  (coreCloseExecutor-25-thread-2) [c: s: r: x:restaurants_shard1_replica_n1 t:] o.a.s.u.DirectUpdateHandler2 Committing on IndexWriter.close()  ... SKIPPED (unnecessary).
+2024-03-15 07:28:04.735 INFO  (JettyShutdownThread) [c: s: r: x: t:] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.node tag=null
+2024-03-15 07:28:04.746 INFO  (JettyShutdownThread) [c: s: r: x: t:] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jvm tag=null
+2024-03-15 07:28:04.752 INFO  (JettyShutdownThread) [c: s: r: x: t:] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jetty tag=null
+2024-03-15 07:28:04.763 INFO  (JettyShutdownThread) [c: s: r: x: t:] o.e.j.s.h.ContextHandler Stopped o.e.j.w.WebAppContext@655a5d9c{solr-jetty-context.xml,/solr,null,STOPPED}{/opt/solr-9.5.0/server/solr-webapp/webapp}
