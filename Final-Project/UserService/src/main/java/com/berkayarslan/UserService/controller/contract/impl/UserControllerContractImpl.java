@@ -9,6 +9,7 @@ import com.berkayarslan.UserService.request.UserSaveRequest;
 import com.berkayarslan.UserService.request.UserUpdateRequest;
 import com.berkayarslan.UserService.service.UserService;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
 
@@ -25,6 +26,7 @@ public class UserControllerContractImpl implements UserControllerContract {
     public UserDTO saveUser(UserSaveRequest userSaveRequest) {
         User user = UserMapper.INSTANCE.convertUserSaveRequestToUser(userSaveRequest);
         user = userService.save(user);
+
         return UserMapper.INSTANCE.convertToUserDTO(user);
     }
 

@@ -17,6 +17,12 @@ import java.time.LocalDateTime;
 @RestController
 public class GeneralControllerAdvice extends ResponseEntityExceptionHandler {
 
+    private final KafkaProducerService kafkaProducerService;
+
+    public GeneralControllerAdvice(KafkaProducerService kafkaProducerService) {
+        this.kafkaProducerService = kafkaProducerService;
+    }
+
     @ExceptionHandler
     public final ResponseEntity<Object> handleAllExceptions(Exception e, WebRequest request){
 
@@ -25,6 +31,8 @@ public class GeneralControllerAdvice extends ResponseEntityExceptionHandler {
 
         GeneralErrorMessages generalErrorMessages = new GeneralErrorMessages(LocalDateTime.now(), message, description);
         RestResponse<GeneralErrorMessages> restResponse = RestResponse.error(generalErrorMessages);
+
+        kafkaProducerService.sendMessage("errorLog", message);
 
         return new ResponseEntity<>(restResponse, HttpStatus.INTERNAL_SERVER_ERROR);
     }
@@ -36,6 +44,8 @@ public class GeneralControllerAdvice extends ResponseEntityExceptionHandler {
 
         GeneralErrorMessages generalErrorMessages = new GeneralErrorMessages(LocalDateTime.now(), message, description);
         RestResponse<GeneralErrorMessages> restResponse = RestResponse.error(generalErrorMessages);
+
+        kafkaProducerService.sendMessage("errorLog", message);
 
         return new ResponseEntity<>(restResponse, HttpStatus.INTERNAL_SERVER_ERROR);
     }
@@ -49,6 +59,8 @@ public class GeneralControllerAdvice extends ResponseEntityExceptionHandler {
         GeneralErrorMessages generalErrorMessages = new GeneralErrorMessages(LocalDateTime.now(), message, description);
         RestResponse<GeneralErrorMessages> restResponse = RestResponse.error(generalErrorMessages);
 
+        kafkaProducerService.sendMessage("errorLog", message);
+
         return new ResponseEntity<>(restResponse, HttpStatus.NOT_FOUND);
     }
 
@@ -58,6 +70,8 @@ public class GeneralControllerAdvice extends ResponseEntityExceptionHandler {
 
         GeneralErrorMessages generalErrorMessages = new GeneralErrorMessages(LocalDateTime.now(), message, description);
         RestResponse<GeneralErrorMessages> restResponse = RestResponse.error(generalErrorMessages);
+
+        kafkaProducerService.sendMessage("errorLog", message);
 
         return new ResponseEntity<>(restResponse, HttpStatus.NOT_FOUND);
     }
