@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
-@FeignClient(value = "restaurant",url = "http://localhost:8080/api/v1/restaurants")
+@FeignClient(value = "restaurant",url = "http://172.28.0.10:8080/api/v1/restaurants")
 public interface RestaurantClient {
 
 

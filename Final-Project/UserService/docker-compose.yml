@@ -8,7 +8,7 @@ services:
     ports:
       - "8081:8081"
     networks:
-      - open-weather-network
+      - user-service-network
     container_name: "user-service"
   prometheus:
     image: prom/prometheus:v2.35.0
@@ -21,7 +21,7 @@ services:
     command:
       - '--config.file=/etc/prometheus/prometheus.yml'
     networks:
-      - open-weather-network
+      - user-service-network
   grafana:
     image: grafana/grafana-oss:8.5.2
     pull_policy: always
@@ -35,6 +35,6 @@ services:
       - GF_SECURITY_ADMIN_PASSWORD=admin
       - GF_SERVER_DOMAIN=localhost
     networks:
-      - open-weather-network
+      - user-service-network
 networks:
-  open-weather-network:
+  user-service-network:
