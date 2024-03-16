@@ -1,68 +1,205 @@
-2024-03-15 07:27:37.295 INFO  (main) [c: s: r: x: t:] o.e.j.s.Server jetty-10.0.19; built: 2023-12-15T20:38:32.477Z; git: 8492d1c78f122bb30cce20aecfa07e7283facd47; jvm 17.0.10+7
-2024-03-15 07:27:37.704 WARN  (main) [c: s: r: x: t:] o.e.j.u.DeprecationWarning Using @Deprecated Class org.eclipse.jetty.servlet.listener.ELContextCleaner
-2024-03-15 07:27:37.742 INFO  (main) [c: s: r: x: t:] o.a.s.s.CoreContainerProvider Using logger factory org.apache.logging.slf4j.Log4jLoggerFactory
-2024-03-15 07:27:37.750 INFO  (main) [c: s: r: x: t:] o.a.s.s.CoreContainerProvider  ___      _       Welcome to Apache Solr™ version 9.5.0
-2024-03-15 07:27:37.750 INFO  (main) [c: s: r: x: t:] o.a.s.s.CoreContainerProvider / __| ___| |_ _   Starting in standalone mode on port 8983
-2024-03-15 07:27:37.750 INFO  (main) [c: s: r: x: t:] o.a.s.s.CoreContainerProvider \__ \/ _ \ | '_|  Install dir: /opt/solr-9.5.0
-2024-03-15 07:27:37.750 INFO  (main) [c: s: r: x: t:] o.a.s.s.CoreContainerProvider |___/\___/_|_|    Start time: 2024-03-15T07:27:37.750669100Z
-2024-03-15 07:27:37.754 INFO  (main) [c: s: r: x: t:] o.a.s.s.CoreContainerProvider Solr started with "-XX:+CrashOnOutOfMemoryError" that will crash on any OutOfMemoryError exception. The cause of the OOME will be logged in the crash file at the following path: /var/solr/logs/jvm_crash_12.log
-2024-03-15 07:27:37.780 INFO  (main) [c: s: r: x: t:] o.a.s.s.CoreContainerProvider Solr Home: /var/solr/data (source: system property: solr.solr.home)
-2024-03-15 07:27:37.796 INFO  (main) [c: s: r: x: t:] o.a.s.c.SolrXmlConfig solr.xml not found in SOLR_HOME, using built-in default
-2024-03-15 07:27:37.796 INFO  (main) [c: s: r: x: t:] o.a.s.c.SolrXmlConfig Loading solr.xml from /opt/solr-9.5.0/server/solr/solr.xml
-2024-03-15 07:27:37.837 INFO  (main) [c: s: r: x: t:] o.a.s.c.SolrResourceLoader Added 1 libs to classloader, from paths: [/opt/solr-9.5.0/lib]
-2024-03-15 07:27:39.098 INFO  (main) [c: s: r: x: t:] o.a.s.u.t.SimplePropagator Always-on trace id generation enabled.
-2024-03-15 07:27:39.536 WARN  (main) [c: s: r: x: t:] o.a.s.u.StartupLoggingUtils Jetty request logging enabled. Will retain logs for last 3 days. See chapter "Configuring Logging" in reference guide for how to configure.
-2024-03-15 07:27:39.540 WARN  (main) [c: s: r: x: t:] o.a.s.c.CoreContainer Not all security plugins configured!  authentication=disabled authorization=disabled.  Solr is only as secure as you make it. Consider configuring authentication/authorization before exposing Solr to users internal or external.  See https://s.apache.org/solrsecurity for more info
-2024-03-15 07:27:39.941 INFO  (main) [c: s: r: x: t:] o.a.s.c.CorePropertiesLocator Found 2 core definitions underneath /var/solr/data
-2024-03-15 07:27:39.941 INFO  (main) [c: s: r: x: t:] o.a.s.c.CorePropertiesLocator Cores are: [n11_products, restaurants_shard1_replica_n1]
-2024-03-15 07:27:40.009 INFO  (coreLoadExecutor-11-thread-1) [c: s: r: x:n11_products t:] o.a.s.c.SolrConfig Using Lucene MatchVersion: 9.9.0
-2024-03-15 07:27:40.009 INFO  (coreLoadExecutor-11-thread-2) [c: s: r: x:restaurants_shard1_replica_n1 t:] o.a.s.c.SolrConfig Using Lucene MatchVersion: 9.9.0
-2024-03-15 07:27:40.135 INFO  (coreLoadExecutor-11-thread-1) [c: s: r: x:n11_products t:] o.a.s.s.IndexSchema Schema name=default-config
-2024-03-15 07:27:40.135 INFO  (coreLoadExecutor-11-thread-2) [c: s: r: x:restaurants_shard1_replica_n1 t:] o.a.s.s.IndexSchema Schema name=default-config
-2024-03-15 07:27:40.208 WARN  (main) [c: s: r: x: t:] o.g.j.m.i.MessagingBinders A class jakarta.activation.DataSource for a default provider MessageBodyWriter<jakarta.activation.DataSource> was not found. The provider is not available.
-2024-03-15 07:27:40.681 INFO  (main) [c: s: r: x: t:] o.a.s.j.SolrRequestAuthorizer Creating a new SolrRequestAuthorizer
-2024-03-15 07:27:40.884 INFO  (main) [c: s: r: x: t:] o.e.j.s.h.ContextHandler Started o.e.j.w.WebAppContext@655a5d9c{solr-jetty-context.xml,/solr,file:///opt/solr-9.5.0/server/solr-webapp/webapp/,AVAILABLE}{/opt/solr-9.5.0/server/solr-webapp/webapp}
-2024-03-15 07:27:40.908 INFO  (main) [c: s: r: x: t:] o.e.j.s.RequestLogWriter Opened /var/solr/logs/2024_03_15.request.log
-2024-03-15 07:27:40.914 INFO  (main) [c: s: r: x: t:] o.e.j.s.AbstractConnector Started ServerConnector@2b95e48b{HTTP/1.1, (http/1.1, h2c)}{0.0.0.0:8983}
-2024-03-15 07:27:40.915 INFO  (main) [c: s: r: x: t:] o.e.j.s.Server Started Server@376a312c{STARTING}[10.0.19,sto=0] @5512ms
-2024-03-15 07:27:41.226 INFO  (coreLoadExecutor-11-thread-1) [c: s: r: x:n11_products t:] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
-2024-03-15 07:27:41.226 INFO  (coreLoadExecutor-11-thread-1) [c: s: r: x:n11_products t:] o.a.s.c.CoreContainer Creating SolrCore 'n11_products' using configuration from instancedir /var/solr/data/n11_products, trusted=true
-2024-03-15 07:27:41.236 INFO  (coreLoadExecutor-11-thread-2) [c: s: r: x:restaurants_shard1_replica_n1 t:] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
-2024-03-15 07:27:41.236 INFO  (coreLoadExecutor-11-thread-2) [c: s: r: x:restaurants_shard1_replica_n1 t:] o.a.s.c.CoreContainer Creating SolrCore 'restaurants_shard1_replica_n1' using configuration from instancedir /var/solr/data/restaurants_shard1_replica_n1, trusted=true
-2024-03-15 07:27:41.285 INFO  (coreLoadExecutor-11-thread-1) [c: s: r: x:n11_products t:] o.a.s.c.SolrCore Opening new SolrCore at [/var/solr/data/n11_products], dataDir=[/var/solr/data/n11_products/data/]
-2024-03-15 07:27:41.285 INFO  (coreLoadExecutor-11-thread-2) [c: s: r: x:restaurants_shard1_replica_n1 t:] o.a.s.c.SolrCore Opening new SolrCore at [/var/solr/data/restaurants_shard1_replica_n1], dataDir=[/var/solr/data/restaurants_shard1_replica_n1/data/]
-2024-03-15 07:27:42.038 INFO  (coreLoadExecutor-11-thread-1) [c: s: r: x:n11_products t:] o.a.s.j.SolrRequestAuthorizer Creating a new SolrRequestAuthorizer
-2024-03-15 07:27:42.040 INFO  (coreLoadExecutor-11-thread-2) [c: s: r: x:restaurants_shard1_replica_n1 t:] o.a.s.j.SolrRequestAuthorizer Creating a new SolrRequestAuthorizer
-2024-03-15 07:27:42.064 INFO  (coreLoadExecutor-11-thread-2) [c: s: r: x:restaurants_shard1_replica_n1 t:] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
-2024-03-15 07:27:42.064 INFO  (coreLoadExecutor-11-thread-1) [c: s: r: x:n11_products t:] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
-2024-03-15 07:27:42.064 INFO  (coreLoadExecutor-11-thread-1) [c: s: r: x:n11_products t:] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
-2024-03-15 07:27:42.064 INFO  (coreLoadExecutor-11-thread-2) [c: s: r: x:restaurants_shard1_replica_n1 t:] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
-2024-03-15 07:27:42.088 INFO  (coreLoadExecutor-11-thread-1) [c: s: r: x:n11_products t:] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
-2024-03-15 07:27:42.088 INFO  (coreLoadExecutor-11-thread-1) [c: s: r: x:n11_products t:] o.a.s.u.CommitTracker Soft AutoCommit: if uncommitted for 3000ms; 
-2024-03-15 07:27:42.147 INFO  (coreLoadExecutor-11-thread-2) [c: s: r: x:restaurants_shard1_replica_n1 t:] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
-2024-03-15 07:27:42.147 INFO  (coreLoadExecutor-11-thread-2) [c: s: r: x:restaurants_shard1_replica_n1 t:] o.a.s.u.CommitTracker Soft AutoCommit: if uncommitted for 3000ms; 
-2024-03-15 07:27:42.186 INFO  (coreLoadExecutor-11-thread-1) [c: s: r: x:n11_products t:] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /var/solr/data/n11_products/conf
-2024-03-15 07:27:42.213 INFO  (coreLoadExecutor-11-thread-1) [c: s: r: x:n11_products t:] o.a.s.s.DirectSolrSpellChecker init: {maxEdits=2, minPrefix=1, maxInspections=5, minQueryLength=4, accuracy=0.5, maxQueryFrequency=0.01, name=default, field=_text_, classname=solr.DirectSolrSpellChecker, distanceMeasure=internal}
-2024-03-15 07:27:42.231 INFO  (coreLoadExecutor-11-thread-1) [c: s: r: x:n11_products t:] o.a.s.h.ReplicationHandler Commits will be reserved for 10000 ms
-2024-03-15 07:27:42.237 INFO  (searcherExecutor-15-thread-1-processing-n11_products) [c: s: r: x:n11_products t:] o.a.s.c.QuerySenderListener QuerySenderListener done.
-2024-03-15 07:27:42.238 INFO  (searcherExecutor-15-thread-1-processing-n11_products) [c: s: r: x:n11_products t:] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
-2024-03-15 07:27:42.250 INFO  (searcherExecutor-15-thread-1-processing-n11_products) [c: s: r: x:n11_products t:] o.a.s.c.SolrCore Registered new searcher autowarm time: 0 ms
-2024-03-15 07:27:42.461 INFO  (coreLoadExecutor-11-thread-2) [c: s: r: x:restaurants_shard1_replica_n1 t:] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /var/solr/data/restaurants_shard1_replica_n1/conf
-2024-03-15 07:27:42.463 INFO  (coreLoadExecutor-11-thread-2) [c: s: r: x:restaurants_shard1_replica_n1 t:] o.a.s.s.DirectSolrSpellChecker init: {maxEdits=2, minPrefix=1, maxInspections=5, minQueryLength=4, accuracy=0.5, maxQueryFrequency=0.01, name=default, field=_text_, classname=solr.DirectSolrSpellChecker, distanceMeasure=internal}
-2024-03-15 07:27:42.464 INFO  (coreLoadExecutor-11-thread-2) [c: s: r: x:restaurants_shard1_replica_n1 t:] o.a.s.h.ReplicationHandler Commits will be reserved for 10000 ms
-2024-03-15 07:27:42.465 INFO  (searcherExecutor-14-thread-1-processing-restaurants_shard1_replica_n1) [c: s: r: x:restaurants_shard1_replica_n1 t:] o.a.s.c.QuerySenderListener QuerySenderListener done.
-2024-03-15 07:27:42.465 INFO  (searcherExecutor-14-thread-1-processing-restaurants_shard1_replica_n1) [c: s: r: x:restaurants_shard1_replica_n1 t:] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
-2024-03-15 07:27:42.469 INFO  (searcherExecutor-14-thread-1-processing-restaurants_shard1_replica_n1) [c: s: r: x:restaurants_shard1_replica_n1 t:] o.a.s.c.SolrCore Registered new searcher autowarm time: 0 ms
-2024-03-15 07:28:04.630 INFO  (JettyShutdownThread) [c: s: r: x: t:] o.e.j.s.Server Stopped Server@376a312c{STOPPING}[10.0.19,sto=0]
-2024-03-15 07:28:04.634 INFO  (JettyShutdownThread) [c: s: r: x: t:] o.e.j.s.AbstractConnector Stopped ServerConnector@2b95e48b{HTTP/1.1, (http/1.1, h2c)}{0.0.0.0:8983}
-2024-03-15 07:28:04.642 INFO  (JettyShutdownThread) [c: s: r: x: t:] o.a.s.c.CoreContainer Shutting down CoreContainer instance=1537371824
-2024-03-15 07:28:04.645 INFO  (coreCloseExecutor-25-thread-1) [c: s: r: x:n11_products t:] o.a.s.c.SolrCore CLOSING SolrCore org.apache.solr.core.SolrCore@37cdd6b0 n11_products
-2024-03-15 07:28:04.645 INFO  (coreCloseExecutor-25-thread-2) [c: s: r: x:restaurants_shard1_replica_n1 t:] o.a.s.c.SolrCore CLOSING SolrCore org.apache.solr.core.SolrCore@791fadef restaurants_shard1_replica_n1
-2024-03-15 07:28:04.646 INFO  (coreCloseExecutor-25-thread-1) [c: s: r: x:n11_products t:] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.n11_products tag=SolrCore@37cdd6b0
-2024-03-15 07:28:04.668 INFO  (coreCloseExecutor-25-thread-2) [c: s: r: x:restaurants_shard1_replica_n1 t:] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.restaurants_shard1_replica_n1 tag=SolrCore@791fadef
-2024-03-15 07:28:04.675 INFO  (coreCloseExecutor-25-thread-1) [c: s: r: x:n11_products t:] o.a.s.u.DirectUpdateHandler2 Committing on IndexWriter.close()  ... SKIPPED (unnecessary).
-2024-03-15 07:28:04.688 INFO  (coreCloseExecutor-25-thread-2) [c: s: r: x:restaurants_shard1_replica_n1 t:] o.a.s.u.DirectUpdateHandler2 Committing on IndexWriter.close()  ... SKIPPED (unnecessary).
-2024-03-15 07:28:04.735 INFO  (JettyShutdownThread) [c: s: r: x: t:] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.node tag=null
-2024-03-15 07:28:04.746 INFO  (JettyShutdownThread) [c: s: r: x: t:] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jvm tag=null
-2024-03-15 07:28:04.752 INFO  (JettyShutdownThread) [c: s: r: x: t:] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jetty tag=null
-2024-03-15 07:28:04.763 INFO  (JettyShutdownThread) [c: s: r: x: t:] o.e.j.s.h.ContextHandler Stopped o.e.j.w.WebAppContext@655a5d9c{solr-jetty-context.xml,/solr,null,STOPPED}{/opt/solr-9.5.0/server/solr-webapp/webapp}
+2024-03-15 07:29:47.890 INFO  (main) [c: s: r: x: t:] o.e.j.s.Server jetty-10.0.19; built: 2023-12-15T20:38:32.477Z; git: 8492d1c78f122bb30cce20aecfa07e7283facd47; jvm 17.0.10+7
+2024-03-15 07:29:48.216 WARN  (main) [c: s: r: x: t:] o.e.j.u.DeprecationWarning Using @Deprecated Class org.eclipse.jetty.servlet.listener.ELContextCleaner
+2024-03-15 07:29:48.245 INFO  (main) [c: s: r: x: t:] o.a.s.s.CoreContainerProvider Using logger factory org.apache.logging.slf4j.Log4jLoggerFactory
+2024-03-15 07:29:48.254 INFO  (main) [c: s: r: x: t:] o.a.s.s.CoreContainerProvider  ___      _       Welcome to Apache Solr™ version 9.5.0
+2024-03-15 07:29:48.254 INFO  (main) [c: s: r: x: t:] o.a.s.s.CoreContainerProvider / __| ___| |_ _   Starting in standalone mode on port 8983
+2024-03-15 07:29:48.254 INFO  (main) [c: s: r: x: t:] o.a.s.s.CoreContainerProvider \__ \/ _ \ | '_|  Install dir: /opt/solr-9.5.0
+2024-03-15 07:29:48.255 INFO  (main) [c: s: r: x: t:] o.a.s.s.CoreContainerProvider |___/\___/_|_|    Start time: 2024-03-15T07:29:48.255013400Z
+2024-03-15 07:29:48.259 INFO  (main) [c: s: r: x: t:] o.a.s.s.CoreContainerProvider Solr started with "-XX:+CrashOnOutOfMemoryError" that will crash on any OutOfMemoryError exception. The cause of the OOME will be logged in the crash file at the following path: /var/solr/logs/jvm_crash_12.log
+2024-03-15 07:29:48.285 INFO  (main) [c: s: r: x: t:] o.a.s.s.CoreContainerProvider Solr Home: /var/solr/data (source: system property: solr.solr.home)
+2024-03-15 07:29:48.301 INFO  (main) [c: s: r: x: t:] o.a.s.c.SolrXmlConfig solr.xml not found in SOLR_HOME, using built-in default
+2024-03-15 07:29:48.301 INFO  (main) [c: s: r: x: t:] o.a.s.c.SolrXmlConfig Loading solr.xml from /opt/solr-9.5.0/server/solr/solr.xml
+2024-03-15 07:29:48.339 INFO  (main) [c: s: r: x: t:] o.a.s.c.SolrResourceLoader Added 1 libs to classloader, from paths: [/opt/solr-9.5.0/lib]
+2024-03-15 07:29:49.179 INFO  (main) [c: s: r: x: t:] o.a.s.u.t.SimplePropagator Always-on trace id generation enabled.
+2024-03-15 07:29:49.426 WARN  (main) [c: s: r: x: t:] o.a.s.u.StartupLoggingUtils Jetty request logging enabled. Will retain logs for last 3 days. See chapter "Configuring Logging" in reference guide for how to configure.
+2024-03-15 07:29:49.429 WARN  (main) [c: s: r: x: t:] o.a.s.c.CoreContainer Not all security plugins configured!  authentication=disabled authorization=disabled.  Solr is only as secure as you make it. Consider configuring authentication/authorization before exposing Solr to users internal or external.  See https://s.apache.org/solrsecurity for more info
+2024-03-15 07:29:49.689 INFO  (main) [c: s: r: x: t:] o.a.s.c.CorePropertiesLocator Found 2 core definitions underneath /var/solr/data
+2024-03-15 07:29:49.690 INFO  (main) [c: s: r: x: t:] o.a.s.c.CorePropertiesLocator Cores are: [n11_products, restaurants_shard1_replica_n1]
+2024-03-15 07:29:49.761 INFO  (coreLoadExecutor-11-thread-2) [c: s: r: x:restaurants_shard1_replica_n1 t:] o.a.s.c.SolrConfig Using Lucene MatchVersion: 9.9.0
+2024-03-15 07:29:49.761 INFO  (coreLoadExecutor-11-thread-1) [c: s: r: x:n11_products t:] o.a.s.c.SolrConfig Using Lucene MatchVersion: 9.9.0
+2024-03-15 07:29:49.887 INFO  (coreLoadExecutor-11-thread-2) [c: s: r: x:restaurants_shard1_replica_n1 t:] o.a.s.s.IndexSchema Schema name=default-config
+2024-03-15 07:29:49.888 INFO  (coreLoadExecutor-11-thread-1) [c: s: r: x:n11_products t:] o.a.s.s.IndexSchema Schema name=default-config
+2024-03-15 07:29:49.940 WARN  (main) [c: s: r: x: t:] o.g.j.m.i.MessagingBinders A class jakarta.activation.DataSource for a default provider MessageBodyWriter<jakarta.activation.DataSource> was not found. The provider is not available.
+2024-03-15 07:29:50.279 INFO  (main) [c: s: r: x: t:] o.a.s.j.SolrRequestAuthorizer Creating a new SolrRequestAuthorizer
+2024-03-15 07:29:50.437 INFO  (main) [c: s: r: x: t:] o.e.j.s.h.ContextHandler Started o.e.j.w.WebAppContext@655a5d9c{solr-jetty-context.xml,/solr,file:///opt/solr-9.5.0/server/solr-webapp/webapp/,AVAILABLE}{/opt/solr-9.5.0/server/solr-webapp/webapp}
+2024-03-15 07:29:50.450 INFO  (main) [c: s: r: x: t:] o.e.j.s.RequestLogWriter Opened /var/solr/logs/2024_03_15.request.log
+2024-03-15 07:29:50.455 INFO  (main) [c: s: r: x: t:] o.e.j.s.AbstractConnector Started ServerConnector@2b95e48b{HTTP/1.1, (http/1.1, h2c)}{0.0.0.0:8983}
+2024-03-15 07:29:50.457 INFO  (main) [c: s: r: x: t:] o.e.j.s.Server Started Server@376a312c{STARTING}[10.0.19,sto=0] @3960ms
+2024-03-15 07:29:50.728 INFO  (coreLoadExecutor-11-thread-1) [c: s: r: x:n11_products t:] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
+2024-03-15 07:29:50.728 INFO  (coreLoadExecutor-11-thread-2) [c: s: r: x:restaurants_shard1_replica_n1 t:] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
+2024-03-15 07:29:50.728 INFO  (coreLoadExecutor-11-thread-2) [c: s: r: x:restaurants_shard1_replica_n1 t:] o.a.s.c.CoreContainer Creating SolrCore 'restaurants_shard1_replica_n1' using configuration from instancedir /var/solr/data/restaurants_shard1_replica_n1, trusted=true
+2024-03-15 07:29:50.728 INFO  (coreLoadExecutor-11-thread-1) [c: s: r: x:n11_products t:] o.a.s.c.CoreContainer Creating SolrCore 'n11_products' using configuration from instancedir /var/solr/data/n11_products, trusted=true
+2024-03-15 07:29:50.757 INFO  (coreLoadExecutor-11-thread-2) [c: s: r: x:restaurants_shard1_replica_n1 t:] o.a.s.c.SolrCore Opening new SolrCore at [/var/solr/data/restaurants_shard1_replica_n1], dataDir=[/var/solr/data/restaurants_shard1_replica_n1/data/]
+2024-03-15 07:29:50.757 INFO  (coreLoadExecutor-11-thread-1) [c: s: r: x:n11_products t:] o.a.s.c.SolrCore Opening new SolrCore at [/var/solr/data/n11_products], dataDir=[/var/solr/data/n11_products/data/]
+2024-03-15 07:29:51.664 INFO  (coreLoadExecutor-11-thread-1) [c: s: r: x:n11_products t:] o.a.s.j.SolrRequestAuthorizer Creating a new SolrRequestAuthorizer
+2024-03-15 07:29:51.667 INFO  (coreLoadExecutor-11-thread-2) [c: s: r: x:restaurants_shard1_replica_n1 t:] o.a.s.j.SolrRequestAuthorizer Creating a new SolrRequestAuthorizer
+2024-03-15 07:29:51.728 INFO  (coreLoadExecutor-11-thread-2) [c: s: r: x:restaurants_shard1_replica_n1 t:] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2024-03-15 07:29:51.728 INFO  (coreLoadExecutor-11-thread-1) [c: s: r: x:n11_products t:] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2024-03-15 07:29:51.729 INFO  (coreLoadExecutor-11-thread-2) [c: s: r: x:restaurants_shard1_replica_n1 t:] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2024-03-15 07:29:51.738 INFO  (coreLoadExecutor-11-thread-1) [c: s: r: x:n11_products t:] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2024-03-15 07:29:51.906 INFO  (coreLoadExecutor-11-thread-1) [c: s: r: x:n11_products t:] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
+2024-03-15 07:29:51.906 INFO  (coreLoadExecutor-11-thread-1) [c: s: r: x:n11_products t:] o.a.s.u.CommitTracker Soft AutoCommit: if uncommitted for 3000ms; 
+2024-03-15 07:29:52.109 INFO  (coreLoadExecutor-11-thread-2) [c: s: r: x:restaurants_shard1_replica_n1 t:] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
+2024-03-15 07:29:52.109 INFO  (coreLoadExecutor-11-thread-2) [c: s: r: x:restaurants_shard1_replica_n1 t:] o.a.s.u.CommitTracker Soft AutoCommit: if uncommitted for 3000ms; 
+2024-03-15 07:29:52.284 INFO  (coreLoadExecutor-11-thread-1) [c: s: r: x:n11_products t:] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /var/solr/data/n11_products/conf
+2024-03-15 07:29:52.327 INFO  (coreLoadExecutor-11-thread-1) [c: s: r: x:n11_products t:] o.a.s.s.DirectSolrSpellChecker init: {accuracy=0.5, maxQueryFrequency=0.01, name=default, field=_text_, classname=solr.DirectSolrSpellChecker, distanceMeasure=internal, maxEdits=2, minPrefix=1, maxInspections=5, minQueryLength=4}
+2024-03-15 07:29:52.359 INFO  (coreLoadExecutor-11-thread-1) [c: s: r: x:n11_products t:] o.a.s.h.ReplicationHandler Commits will be reserved for 10000 ms
+2024-03-15 07:29:52.362 INFO  (searcherExecutor-15-thread-1-processing-n11_products) [c: s: r: x:n11_products t:] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2024-03-15 07:29:52.362 INFO  (searcherExecutor-15-thread-1-processing-n11_products) [c: s: r: x:n11_products t:] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2024-03-15 07:29:52.387 INFO  (searcherExecutor-15-thread-1-processing-n11_products) [c: s: r: x:n11_products t:] o.a.s.c.SolrCore Registered new searcher autowarm time: 0 ms
+2024-03-15 07:29:52.651 INFO  (coreLoadExecutor-11-thread-2) [c: s: r: x:restaurants_shard1_replica_n1 t:] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /var/solr/data/restaurants_shard1_replica_n1/conf
+2024-03-15 07:29:52.654 INFO  (coreLoadExecutor-11-thread-2) [c: s: r: x:restaurants_shard1_replica_n1 t:] o.a.s.s.DirectSolrSpellChecker init: {accuracy=0.5, maxQueryFrequency=0.01, name=default, field=_text_, classname=solr.DirectSolrSpellChecker, distanceMeasure=internal, maxEdits=2, minPrefix=1, maxInspections=5, minQueryLength=4}
+2024-03-15 07:29:52.656 INFO  (coreLoadExecutor-11-thread-2) [c: s: r: x:restaurants_shard1_replica_n1 t:] o.a.s.h.ReplicationHandler Commits will be reserved for 10000 ms
+2024-03-15 07:29:52.658 INFO  (searcherExecutor-14-thread-1-processing-restaurants_shard1_replica_n1) [c: s: r: x:restaurants_shard1_replica_n1 t:] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2024-03-15 07:29:52.658 INFO  (searcherExecutor-14-thread-1-processing-restaurants_shard1_replica_n1) [c: s: r: x:restaurants_shard1_replica_n1 t:] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2024-03-15 07:29:52.663 INFO  (searcherExecutor-14-thread-1-processing-restaurants_shard1_replica_n1) [c: s: r: x:restaurants_shard1_replica_n1 t:] o.a.s.c.SolrCore Registered new searcher autowarm time: 0 ms
+2024-03-15 07:29:58.095 INFO  (qtp693267461-26-null-2) [c: s: r: x: t:null-2] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1710487797999} status=0 QTime=22
+2024-03-15 07:29:58.112 INFO  (qtp693267461-48-null-3) [c: s: r: x: t:null-3] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1710487797999} status=0 QTime=43
+2024-03-15 07:29:58.145 INFO  (qtp693267461-19-null-4) [c: s: r: x: t:null-4] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1710487797999} status=0 QTime=6
+2024-03-15 07:30:00.583 INFO  (qtp693267461-26-null-6) [c: s: r: x: t:null-6] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1710487797999} status=0 QTime=2
+2024-03-15 07:30:00.606 INFO  (qtp693267461-27-null-5) [c: s: r: x: t:null-5] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1710487797999} status=0 QTime=24
+2024-03-15 07:30:00.609 INFO  (qtp693267461-20-null-7) [c: s: r: x:restaurants_shard1_replica_n1 t:null-7] o.a.s.c.S.Request webapp=/solr path=/admin/ping params={action=status&wt=json&_=1710487797999&ts=1710487797999} status=503 QTime=5
+2024-03-15 07:30:01.656 INFO  (qtp693267461-21-null-8) [c: s: r: x:restaurants_shard1_replica_n1 t:null-8] o.a.s.c.S.Request webapp=/solr path=/admin/system params={wt=json&_=1710487800572} status=0 QTime=5
+2024-03-15 07:30:02.728 INFO  (qtp693267461-22-null-9) [c: s: r: x:restaurants_shard1_replica_n1 t:null-9] o.a.s.c.S.Request webapp=/solr path=/replication params={wt=json&command=details&_=1710487800572} status=0 QTime=68
+2024-03-15 07:30:03.671 INFO  (qtp693267461-23-null-10) [c: s: r: x:restaurants_shard1_replica_n1 t:null-10] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1710487800572} status=0 QTime=2
+2024-03-15 07:30:05.998 INFO  (qtp693267461-19-null-11) [c: s: r: x: t:null-11] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1710487797999} status=0 QTime=0
+2024-03-15 07:30:06.006 INFO  (qtp693267461-27-null-12) [c: s: r: x: t:null-12] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1710487797999} status=0 QTime=8
+2024-03-15 07:30:06.059 INFO  (qtp693267461-20-null-13) [c: s: r: x:restaurants_shard1_replica_n1 t:null-13] o.a.s.c.S.Request webapp=/solr path=/replication params={wt=json&command=details&_=1710487800572} status=0 QTime=57
+2024-03-15 07:30:08.269 INFO  (qtp693267461-21-null-14) [c: s: r: x: t:null-14] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1710487797999} status=0 QTime=0
+2024-03-15 07:30:08.281 INFO  (qtp693267461-19-null-17) [c: s: r: x:restaurants_shard1_replica_n1 t:null-17] o.a.s.c.S.Request webapp=/solr path=/config params={wt=json&_=1710487808249} status=0 QTime=11
+2024-03-15 07:30:08.287 INFO  (qtp693267461-22-null-15) [c: s: r: x: t:null-15] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1710487797999} status=0 QTime=18
+2024-03-15 07:30:08.291 INFO  (qtp693267461-23-null-16) [c: s: r: x:restaurants_shard1_replica_n1 t:null-16] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1710487800572} status=0 QTime=21
+2024-03-15 07:30:08.350 INFO  (qtp693267461-27-null-18) [c: s: r: x:restaurants_shard1_replica_n1 t:null-18] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1710487800572} status=0 QTime=19
+2024-03-15 07:30:12.964 INFO  (qtp693267461-25-null-19) [c: s: r: x:restaurants_shard1_replica_n1 t:null-19] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1710487812934} status=0 QTime=0
+2024-03-15 07:30:12.964 INFO  (qtp693267461-23-null-21) [c: s: r: x: t:null-21] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1710487797999} status=0 QTime=0
+2024-03-15 07:30:12.970 INFO  (qtp693267461-26-null-20) [c: s: r: x: t:null-20] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1710487797999} status=0 QTime=7
+2024-03-15 07:30:14.321 INFO  (qtp693267461-19-null-22) [c: s: r: x: t:null-22] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1710487797999} status=0 QTime=0
+2024-03-15 07:30:14.323 INFO  (qtp693267461-20-null-24) [c: s: r: x:restaurants_shard1_replica_n1 t:null-24] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1710487812934} status=0 QTime=0
+2024-03-15 07:30:14.340 INFO  (qtp693267461-22-null-23) [c: s: r: x: t:null-23] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1710487797999} status=0 QTime=18
+2024-03-15 07:30:14.492 INFO  (qtp693267461-27-null-25) [c: s: r: x:restaurants_shard1_replica_n1 t:null-25] o.a.s.c.S.Request webapp=/solr path=/select params={q=*:*&indent=true&q.op=OR&useParams=&_=1710487812934} hits=23 status=0 QTime=169
+2024-03-15 07:30:33.530 INFO  (qtp693267461-25-null-26) [c: s: r: x: t:null-26] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1710487797999} status=0 QTime=0
+2024-03-15 07:30:33.548 INFO  (qtp693267461-21-null-27) [c: s: r: x: t:null-27] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1710487797999} status=0 QTime=18
+2024-03-15 07:30:33.642 INFO  (qtp693267461-27-null-28) [c: s: r: x:restaurants_shard1_replica_n1 t:null-28] o.a.s.c.S.Request webapp=/solr path=/admin/segments params={wt=json&_=1710487833513} status=0 QTime=112
+2024-03-15 07:30:33.896 INFO  (qtp693267461-22-null-29) [c: s: r: x: t:null-29] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1710487797999} status=0 QTime=0
+2024-03-15 07:30:33.907 INFO  (qtp693267461-26-null-32) [c: s: r: x:restaurants_shard1_replica_n1 t:null-32] o.a.s.c.S.Request webapp=/solr path=/config params={wt=json&_=1710487808249} status=0 QTime=0
+2024-03-15 07:30:33.909 INFO  (qtp693267461-20-null-31) [c: s: r: x:restaurants_shard1_replica_n1 t:null-31] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1710487800572} status=0 QTime=5
+2024-03-15 07:30:33.919 INFO  (qtp693267461-23-null-30) [c: s: r: x: t:null-30] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1710487797999} status=0 QTime=14
+2024-03-15 07:30:33.953 INFO  (qtp693267461-22-null-33) [c: s: r: x:restaurants_shard1_replica_n1 t:null-33] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1710487800572} status=0 QTime=7
+2024-03-15 07:30:39.195 INFO  (qtp693267461-20-null-34) [c: s: r: x: t:null-34] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1710487797999} status=0 QTime=1
+2024-03-15 07:30:39.216 INFO  (qtp693267461-25-null-36) [c: s: r: x:restaurants_shard1_replica_n1 t:null-36] o.a.s.c.S.Request webapp=/solr path=/config params={wt=json&_=1710487808249} status=0 QTime=0
+2024-03-15 07:30:39.223 INFO  (qtp693267461-22-null-37) [c: s: r: x:restaurants_shard1_replica_n1 t:null-37] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1710487800572} status=0 QTime=8
+2024-03-15 07:30:39.234 INFO  (qtp693267461-21-null-35) [c: s: r: x: t:null-35] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1710487797999} status=0 QTime=19
+2024-03-15 07:30:39.262 INFO  (qtp693267461-20-null-38) [c: s: r: x:restaurants_shard1_replica_n1 t:null-38] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1710487800572} status=0 QTime=4
+2024-03-15 07:31:31.291 INFO  (qtp693267461-22-null-40) [c: s: r: x: t:null-40] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1710487797999} status=0 QTime=2
+2024-03-15 07:31:31.297 INFO  (qtp693267461-27-null-43) [c: s: r: x:restaurants_shard1_replica_n1 t:null-43] o.a.s.c.S.Request webapp=/solr path=/config params={wt=json&_=1710487808249} status=0 QTime=3
+2024-03-15 07:31:31.306 INFO  (qtp693267461-23-null-42) [c: s: r: x:restaurants_shard1_replica_n1 t:null-42] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1710487800572} status=0 QTime=12
+2024-03-15 07:31:31.313 INFO  (qtp693267461-26-null-41) [c: s: r: x: t:null-41] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1710487797999} status=0 QTime=19
+2024-03-15 07:31:31.343 INFO  (qtp693267461-19-null-44) [c: s: r: x:restaurants_shard1_replica_n1 t:null-44] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1710487800572} status=0 QTime=4
+2024-03-15 07:31:34.200 INFO  (qtp693267461-23-null-45) [c: s: r: x: t:null-45] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1710487797999} status=0 QTime=0
+2024-03-15 07:31:34.218 INFO  (qtp693267461-49-null-47) [c: s: r: x:restaurants_shard1_replica_n1 t:null-47] o.a.s.c.S.Request webapp=/solr path=/config params={wt=json&_=1710487808249} status=0 QTime=0
+2024-03-15 07:31:34.222 INFO  (qtp693267461-19-null-46) [c: s: r: x:restaurants_shard1_replica_n1 t:null-46] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1710487800572} status=0 QTime=4
+2024-03-15 07:31:34.231 INFO  (qtp693267461-25-null-48) [c: s: r: x: t:null-48] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1710487797999} status=0 QTime=13
+2024-03-15 07:31:34.253 INFO  (qtp693267461-23-null-49) [c: s: r: x:restaurants_shard1_replica_n1 t:null-49] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1710487800572} status=0 QTime=3
+2024-03-15 07:31:40.533 INFO  (qtp693267461-19-null-50) [c: s: r: x: t:null-50] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1710487797999} status=0 QTime=0
+2024-03-15 07:31:40.552 INFO  (qtp693267461-26-null-53) [c: s: r: x:restaurants_shard1_replica_n1 t:null-53] o.a.s.c.S.Request webapp=/solr path=/config params={wt=json&_=1710487808249} status=0 QTime=0
+2024-03-15 07:31:40.560 INFO  (qtp693267461-23-null-52) [c: s: r: x:restaurants_shard1_replica_n1 t:null-52] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1710487800572} status=0 QTime=8
+2024-03-15 07:31:40.570 INFO  (qtp693267461-27-null-51) [c: s: r: x: t:null-51] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1710487797999} status=0 QTime=18
+2024-03-15 07:31:40.595 INFO  (qtp693267461-19-null-54) [c: s: r: x:restaurants_shard1_replica_n1 t:null-54] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1710487800572} status=0 QTime=4
+2024-03-15 07:33:08.221 INFO  (qtp693267461-23-null-55) [c: s: r: x: t:null-55] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1710487797999} status=0 QTime=0
+2024-03-15 07:33:08.223 INFO  (qtp693267461-49-null-57) [c: s: r: x:restaurants_shard1_replica_n1 t:null-57] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1710487812934} status=0 QTime=0
+2024-03-15 07:33:08.239 INFO  (qtp693267461-25-null-56) [c: s: r: x: t:null-56] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1710487797999} status=0 QTime=16
+2024-03-15 07:33:10.298 INFO  (qtp693267461-27-null-58) [c: s: r: x: t:null-58] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1710487797999} status=0 QTime=0
+2024-03-15 07:33:10.301 INFO  (qtp693267461-20-null-59) [c: s: r: x:restaurants_shard1_replica_n1 t:null-59] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1710487812934} status=0 QTime=0
+2024-03-15 07:33:10.314 INFO  (qtp693267461-26-null-60) [c: s: r: x: t:null-60] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1710487797999} status=0 QTime=13
+2024-03-15 07:33:10.318 INFO  (qtp693267461-21-null-61) [c: s: r: x:restaurants_shard1_replica_n1 t:null-61] o.a.s.c.S.Request webapp=/solr path=/select params={q=*:*&indent=true&q.op=OR&useParams=&_=1710487812934} hits=23 status=0 QTime=17
+2024-03-15 07:33:44.441 INFO  (qtp693267461-27-null-62) [c: s: r: x: t:null-62] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1710487797999} status=0 QTime=0
+2024-03-15 07:33:44.444 INFO  (qtp693267461-25-null-64) [c: s: r: x:restaurants_shard1_replica_n1 t:null-64] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1710487812934} status=0 QTime=0
+2024-03-15 07:33:44.450 INFO  (qtp693267461-23-null-63) [c: s: r: x: t:null-63] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1710487797999} status=0 QTime=6
+2024-03-15 07:33:44.452 INFO  (qtp693267461-49-null-65) [c: s: r: x:restaurants_shard1_replica_n1 t:null-65] o.a.s.c.S.Request webapp=/solr path=/select params={q=*:*&indent=true&q.op=OR&rows=100&useParams=&_=1710487812934} hits=23 status=0 QTime=7
+2024-03-15 07:34:08.212 INFO  (qtp693267461-18-null-66) [c: s: r: x:restaurants_shard1_replica_n1 t:null-66] o.a.s.c.S.Request webapp=/solr path=/select params={q=*:*&start=0&rows=0&wt=javabin&version=2} hits=23 status=0 QTime=0
+2024-03-15 07:34:08.248 INFO  (qtp693267461-49-null-67) [c: s: r: x:restaurants_shard1_replica_n1 t:null-67] o.a.s.c.S.Request webapp=/solr path=/select params={q=*:*&start=0&rows=23&wt=javabin&version=2} hits=23 status=0 QTime=0
+2024-03-15 07:34:20.692 ERROR (qtp693267461-18-null-68) [c: s: r: x:restaurants_shard1_replica_n1 t:null-68] o.a.s.h.RequestHandlerBase Client exception => org.apache.solr.common.SolrException: undefined field: "location"
+	at org.apache.solr.schema.IndexSchema.getField(IndexSchema.java:1423)
+org.apache.solr.common.SolrException: undefined field: "location"
+	at org.apache.solr.schema.IndexSchema.getField(IndexSchema.java:1423) ~[?:?]
+	at org.apache.solr.search.SpatialFilterQParser.parse(SpatialFilterQParser.java:73) ~[?:?]
+	at org.apache.solr.search.QParser.getQuery(QParser.java:188) ~[?:?]
+	at org.apache.solr.parser.SolrQueryParserBase.getLocalParams(SolrQueryParserBase.java:1355) ~[?:?]
+	at org.apache.solr.parser.QueryParser.Clause(QueryParser.java:342) ~[?:?]
+	at org.apache.solr.parser.QueryParser.Query(QueryParser.java:235) ~[?:?]
+	at org.apache.solr.parser.QueryParser.TopLevelQuery(QueryParser.java:143) ~[?:?]
+	at org.apache.solr.parser.SolrQueryParserBase.parse(SolrQueryParserBase.java:276) ~[?:?]
+	at org.apache.solr.search.LuceneQParser.parse(LuceneQParser.java:51) ~[?:?]
+	at org.apache.solr.search.QParser.getQuery(QParser.java:188) ~[?:?]
+	at org.apache.solr.handler.component.QueryComponent.prepare(QueryComponent.java:173) ~[?:?]
+	at org.apache.solr.handler.component.SearchHandler.handleRequestBody(SearchHandler.java:431) ~[?:?]
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:226) ~[?:?]
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2884) ~[?:?]
+	at org.apache.solr.servlet.HttpSolrCall.executeCoreRequest(HttpSolrCall.java:875) ~[?:?]
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:561) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.dispatch(SolrDispatchFilter.java:262) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.lambda$doFilter$0(SolrDispatchFilter.java:219) ~[?:?]
+	at org.apache.solr.servlet.ServletUtils.traceHttpRequestExecution2(ServletUtils.java:249) ~[?:?]
+	at org.apache.solr.servlet.ServletUtils.rateLimitRequest(ServletUtils.java:215) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:213) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:195) ~[?:?]
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:210) ~[jetty-servlet-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1635) ~[jetty-servlet-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:527) ~[jetty-servlet-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:131) ~[jetty-server-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:598) ~[jetty-security-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122) ~[jetty-server-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:223) ~[jetty-server-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1580) ~[jetty-server-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221) ~[jetty-server-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1384) ~[jetty-server-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176) ~[jetty-server-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484) ~[jetty-servlet-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1553) ~[jetty-server-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174) ~[jetty-server-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1306) ~[jetty-server-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129) ~[jetty-server-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:149) ~[jetty-server-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.server.handler.InetAccessHandler.handle(InetAccessHandler.java:228) ~[jetty-server-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:141) ~[jetty-server-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122) ~[jetty-server-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:301) ~[jetty-rewrite-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122) ~[jetty-server-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:822) ~[jetty-server-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122) ~[jetty-server-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.server.Server.handle(Server.java:563) ~[jetty-server-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.server.HttpChannel$RequestDispatchable.dispatch(HttpChannel.java:1598) ~[jetty-server-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:753) ~[jetty-server-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:501) ~[jetty-server-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:287) ~[jetty-server-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314) ~[jetty-io-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100) ~[jetty-io-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53) ~[jetty-io-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:421) ~[jetty-util-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:390) ~[jetty-util-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:277) ~[jetty-util-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.run(AdaptiveExecutionStrategy.java:199) ~[jetty-util-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:411) ~[jetty-util-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969) ~[jetty-util-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194) ~[jetty-util-10.0.19.jar:10.0.19]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149) ~[jetty-util-10.0.19.jar:10.0.19]
+	at java.base/java.lang.Thread.run(Unknown Source) [?:?]
+2024-03-15 07:34:20.692 INFO  (qtp693267461-18-null-68) [c: s: r: x:restaurants_shard1_replica_n1 t:null-68] o.a.s.c.S.Request webapp=/solr path=/select params={q=fq%3D{!geofilt+sfield%3Dlocation+pt%3D41.042053050451806,28.952559792762784+d%3D10}&start=0&rows=0&wt=javabin&version=2} status=400 QTime=16
+2024-03-15 07:35:46.044 INFO  (qtp693267461-20-null-69) [c: s: r: x: t:null-69] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1710487797999} status=0 QTime=0
+2024-03-15 07:35:47.060 INFO  (qtp693267461-18-null-70) [c: s: r: x:restaurants_shard1_replica_n1 t:null-70] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1710487800572} status=0 QTime=4
+2024-03-15 07:35:47.079 INFO  (qtp693267461-20-null-71) [c: s: r: x:restaurants_shard1_replica_n1 t:null-71] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1710487800572} status=0 QTime=2
+2024-03-15 07:35:48.077 INFO  (qtp693267461-49-null-72) [c: s: r: x:restaurants_shard1_replica_n1 t:null-72] o.a.s.c.S.Request webapp=/solr path=/config params={wt=json&_=1710487808249} status=0 QTime=0
+2024-03-15 07:35:49.091 INFO  (qtp693267461-19-null-73) [c: s: r: x: t:null-73] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1710487797999} status=0 QTime=5
+2024-03-15 07:41:03.320 INFO  (JettyShutdownThread) [c: s: r: x: t:] o.e.j.s.Server Stopped Server@376a312c{STOPPING}[10.0.19,sto=0]
+2024-03-15 07:41:03.323 INFO  (JettyShutdownThread) [c: s: r: x: t:] o.e.j.s.AbstractConnector Stopped ServerConnector@2b95e48b{HTTP/1.1, (http/1.1, h2c)}{0.0.0.0:8983}
+2024-03-15 07:41:03.339 INFO  (JettyShutdownThread) [c: s: r: x: t:] o.a.s.c.CoreContainer Shutting down CoreContainer instance=1537371824
+2024-03-15 07:41:03.342 INFO  (coreCloseExecutor-25-thread-1) [c: s: r: x:n11_products t:] o.a.s.c.SolrCore CLOSING SolrCore org.apache.solr.core.SolrCore@792892e n11_products
+2024-03-15 07:41:03.342 INFO  (coreCloseExecutor-25-thread-2) [c: s: r: x:restaurants_shard1_replica_n1 t:] o.a.s.c.SolrCore CLOSING SolrCore org.apache.solr.core.SolrCore@474fa13a restaurants_shard1_replica_n1
+2024-03-15 07:41:03.343 INFO  (coreCloseExecutor-25-thread-2) [c: s: r: x:restaurants_shard1_replica_n1 t:] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.restaurants_shard1_replica_n1 tag=SolrCore@474fa13a
+2024-03-15 07:41:03.364 INFO  (coreCloseExecutor-25-thread-1) [c: s: r: x:n11_products t:] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.n11_products tag=SolrCore@792892e
+2024-03-15 07:41:03.369 INFO  (coreCloseExecutor-25-thread-2) [c: s: r: x:restaurants_shard1_replica_n1 t:] o.a.s.u.DirectUpdateHandler2 Committing on IndexWriter.close()  ... SKIPPED (unnecessary).
+2024-03-15 07:41:03.391 INFO  (coreCloseExecutor-25-thread-1) [c: s: r: x:n11_products t:] o.a.s.u.DirectUpdateHandler2 Committing on IndexWriter.close()  ... SKIPPED (unnecessary).
+2024-03-15 07:41:03.408 INFO  (JettyShutdownThread) [c: s: r: x: t:] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.node tag=null
+2024-03-15 07:41:03.417 INFO  (JettyShutdownThread) [c: s: r: x: t:] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jvm tag=null
+2024-03-15 07:41:03.424 INFO  (JettyShutdownThread) [c: s: r: x: t:] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jetty tag=null
+2024-03-15 07:41:03.432 INFO  (JettyShutdownThread) [c: s: r: x: t:] o.e.j.s.h.ContextHandler Stopped o.e.j.w.WebAppContext@655a5d9c{solr-jetty-context.xml,/solr,null,STOPPED}{/opt/solr-9.5.0/server/solr-webapp/webapp}
