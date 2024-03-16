@@ -4,6 +4,7 @@ import com.berkayarslan.UserService.client.RestaurantClient;
 import com.berkayarslan.UserService.controller.contract.ReviewControllerContract;
 import com.berkayarslan.UserService.dto.ReviewDTO;
 import com.berkayarslan.UserService.dto.ReviewScoreDTO;
+import com.berkayarslan.UserService.dto.ReviewUpdateScoreDTO;
 import com.berkayarslan.UserService.exceptions.ItemNotFoundException;
 import com.berkayarslan.UserService.general.GeneralErrorMessage;
 import com.berkayarslan.UserService.general.RestResponse;
@@ -12,6 +13,7 @@ import com.berkayarslan.UserService.model.Review;
 import com.berkayarslan.UserService.model.User;
 import com.berkayarslan.UserService.request.ReviewSaveRequest;
 import com.berkayarslan.UserService.request.ReviewUpdateRequest;
+import com.berkayarslan.UserService.service.ReviewScoreSenderService;
 import com.berkayarslan.UserService.service.ReviewService;
 import com.berkayarslan.UserService.service.UserService;
 import org.springframework.http.ResponseEntity;
@@ -25,13 +27,13 @@ public class ReviewControllerContractImpl implements ReviewControllerContract {
     private final ReviewService reviewService;
     private final ReviewConverter reviewConverter;
     private final UserService userService;
-    private final RestaurantClient restaurantClient;
+    private final ReviewScoreSenderService reviewScoreSenderService;
 
-    public ReviewControllerContractImpl(ReviewService reviewService, ReviewConverter reviewConverter, UserService userService, RestaurantClient restaurantClient) {
+    public ReviewControllerContractImpl(ReviewService reviewService, ReviewConverter reviewConverter, UserService userService, ReviewScoreSenderService reviewScoreSenderService) {
         this.reviewService = reviewService;
         this.reviewConverter = reviewConverter;
         this.userService = userService;
-        this.restaurantClient = restaurantClient;
+        this.reviewScoreSenderService = reviewScoreSenderService;
     }
 
     @Override
@@ -58,26 +60,30 @@ public class ReviewControllerContractImpl implements ReviewControllerContract {
     public ReviewDTO saveReview(ReviewSaveRequest saveRequest) {
         User user = userService.findByIdWithControl(saveRequest.userId());
         Review review = reviewConverter.convertToReview(user,saveRequest);
-        review = reviewService.save(review);
-        sendReviewScoresToRestaurant(review);
-        return reviewConverter.convertToDTO(review);
-    }
-
-    private void sendReviewScoresToRestaurant(Review review){
-        ReviewScoreDTO reviewScoreDTO = new ReviewScoreDTO(review.getFoodScore(),
-                                                           review.getPresentationScore(),
-                                                           review.getDeliveryScore());
-        ResponseEntity<RestResponse<Boolean>> restResponseResponseEntity = restaurantClient.sendRestaurantScores(review.getRestaurantId(), reviewScoreDTO);
-        if (!restResponseResponseEntity.getBody().getData().equals(true)){
-            throw new ItemNotFoundException(GeneralErrorMessage.ITEM_NOT_FOUND);
+        boolean b = reviewScoreSenderService.sendReviewScoresToRestaurant(review);
+        if(b){
+            review = reviewService.save(review);
         }
+        return reviewConverter.convertToDTO(review);
     }
 
     @Override
     public ReviewDTO updateReview(ReviewUpdateRequest updateRequest) {
         Review review = reviewService.findByIdWithControl(updateRequest.id());
-        review = reviewConverter.updateReview(review,updateRequest);
-        review = reviewService.save(review);
+        boolean b = false;
+        if (!review.getFoodScore().equals(updateRequest.foodScore()) || !review.getDeliveryScore().equals(updateRequest.deliveryScore()) || !review.getPresentationScore().equals(updateRequest.presentationScore())){
+            ReviewUpdateScoreDTO reviewUpdateScoreDTO = new ReviewUpdateScoreDTO(review.getFoodScore(),
+                                                                                 review.getPresentationScore(),
+                                                                                 review.getDeliveryScore(),
+                                                                                 updateRequest.foodScore(),
+                                                                                 updateRequest.presentationScore(),
+                                                                                 updateRequest.deliveryScore());
+            b = reviewScoreSenderService.sendUpdateReviewScoreToRestaurant(review.getRestaurantId(), reviewUpdateScoreDTO);
+        }
+        if (b){
+            review = reviewConverter.updateReview(review,updateRequest);
+            review = reviewService.save(review);
+        }
         return reviewConverter.convertToDTO(review);
     }
 
