@@ -2,12 +2,11 @@ package com.berkayarslan.RestaurantService.controller;
 
 
 import com.berkayarslan.RestaurantService.controller.contract.RestaurantControllerContract;
+import com.berkayarslan.RestaurantService.dto.UpdateRestaurantScoreDTO;
 import com.berkayarslan.RestaurantService.dto.RestaurantDTO;
 import com.berkayarslan.RestaurantService.dto.RestaurantSaveRequest;
 import com.berkayarslan.RestaurantService.dto.RestaurantScoreDTO;
 import com.berkayarslan.RestaurantService.dto.RestaurantUpdateRequest;
-import com.berkayarslan.RestaurantService.model.Restaurant;
-import com.berkayarslan.RestaurantService.repository.RestaurantRepository;
 import com.berkayarslan.RestaurantService.response.RestResponse;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -50,8 +49,14 @@ public class RestaurantController {
     }
 
     @PostMapping("/score/{id}")
-    public ResponseEntity<RestResponse<Boolean>> updateRestaurantScore(@PathVariable String id, @RequestBody RestaurantScoreDTO restaurantScoreDTO){
-        restaurantControllerContract.updateRestaurantScore(id,restaurantScoreDTO);
+    public ResponseEntity<RestResponse<Boolean>> saveRestaurantScore(@PathVariable String id, @RequestBody RestaurantScoreDTO restaurantScoreDTO){
+        restaurantControllerContract.saveRestaurantScore(id,restaurantScoreDTO);
+        return ResponseEntity.ok(RestResponse.of(true));
+    }
+
+    @PutMapping("/score/{id}")
+    public ResponseEntity<RestResponse<Boolean>> updateRestaurantScore(@PathVariable String id, @RequestBody UpdateRestaurantScoreDTO updateRestaurantScoreDTO){
+        restaurantControllerContract.updateRestaurantScore(id, updateRestaurantScoreDTO);
         return ResponseEntity.ok(RestResponse.of(true));
     }
 

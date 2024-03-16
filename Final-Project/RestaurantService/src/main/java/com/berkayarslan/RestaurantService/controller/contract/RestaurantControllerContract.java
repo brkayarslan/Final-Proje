@@ -1,5 +1,6 @@
 package com.berkayarslan.RestaurantService.controller.contract;
 
+import com.berkayarslan.RestaurantService.dto.UpdateRestaurantScoreDTO;
 import com.berkayarslan.RestaurantService.dto.RestaurantDTO;
 import com.berkayarslan.RestaurantService.dto.RestaurantSaveRequest;
 import com.berkayarslan.RestaurantService.dto.RestaurantScoreDTO;
@@ -15,5 +16,6 @@ public interface RestaurantControllerContract {
     RestaurantDTO saveRestaurant(RestaurantSaveRequest restaurantSaveRequest);
     RestaurantDTO updateRestaurant(RestaurantUpdateRequest restaurantUpdateRequest);
     void deleteRestaurant(String restaurantId);
-    void updateRestaurantScore(String id, RestaurantScoreDTO restaurantScoreDTO);
+    void saveRestaurantScore(String id, RestaurantScoreDTO restaurantScoreDTO);
+    void updateRestaurantScore(String id, UpdateRestaurantScoreDTO updateRestaurantScoreDTO);
 }

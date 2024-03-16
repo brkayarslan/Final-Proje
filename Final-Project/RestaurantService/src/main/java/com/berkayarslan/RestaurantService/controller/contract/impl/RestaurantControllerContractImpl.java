@@ -1,10 +1,7 @@
 package com.berkayarslan.RestaurantService.controller.contract.impl;
 
 import com.berkayarslan.RestaurantService.controller.contract.RestaurantControllerContract;
-import com.berkayarslan.RestaurantService.dto.RestaurantDTO;
-import com.berkayarslan.RestaurantService.dto.RestaurantSaveRequest;
-import com.berkayarslan.RestaurantService.dto.RestaurantScoreDTO;
-import com.berkayarslan.RestaurantService.dto.RestaurantUpdateRequest;
+import com.berkayarslan.RestaurantService.dto.*;
 import com.berkayarslan.RestaurantService.mapper.RestaurantMapper;
 import com.berkayarslan.RestaurantService.model.Restaurant;
 import com.berkayarslan.RestaurantService.service.RestaurantService;
@@ -44,7 +41,7 @@ public class RestaurantControllerContractImpl implements RestaurantControllerCon
     @Override
     public RestaurantDTO saveRestaurant(RestaurantSaveRequest restaurantSaveRequest) {
         Restaurant restaurant = restaurantMapper.convertSaveRequestToRestaurant(restaurantSaveRequest);
-        restaurant = restaurantService.saveRestaurant(restaurant);
+        restaurant = restaurantService.firestSaveOfRestaurant(restaurant);
         return restaurantMapper.convertRestaurantToRestaurantDTO(restaurant);
     }
 
@@ -52,12 +49,12 @@ public class RestaurantControllerContractImpl implements RestaurantControllerCon
     public RestaurantDTO updateRestaurant(RestaurantUpdateRequest restaurantUpdateRequest) {
         Restaurant restaurant = restaurantService.findByIdWithControl(restaurantUpdateRequest.id());
         restaurant = restaurantMapper.convertUpdateRequestToRestaurant(restaurant,restaurantUpdateRequest);
-        restaurant = restaurantService.updateRestaurant(restaurant);
+        restaurant = restaurantService.saveRestaurant(restaurant);
         return restaurantMapper.convertRestaurantToRestaurantDTO(restaurant);
     }
 
     @Override
-    public void updateRestaurantScore(String id, RestaurantScoreDTO restaurantScoreDTO) {
+    public void saveRestaurantScore(String id, RestaurantScoreDTO restaurantScoreDTO) {
 
         Restaurant restaurant = restaurantService.findByIdWithControl(id);
         Integer reviewCount = restaurant.getReviewCount();
@@ -86,7 +83,29 @@ public class RestaurantControllerContractImpl implements RestaurantControllerCon
         }
         restaurant.setReviewCount(restaurant.getReviewCount()+1);
 
-        restaurantService.updateRestaurant(restaurant);
+        restaurantService.saveRestaurant(restaurant);
+    }
+
+    public void updateRestaurantScore(String id, UpdateRestaurantScoreDTO updateRestaurantScoreDTO){
+
+        Restaurant restaurant = restaurantService.findByIdWithControl(id);
+        Integer reviewCount = restaurant.getReviewCount();
+
+        Integer reviewFoodScore = updateRestaurantScoreDTO.newFoodScore() - updateRestaurantScoreDTO.oldFoodScore();
+        Integer reviewPresentationScore = updateRestaurantScoreDTO.newPresentationScore() - updateRestaurantScoreDTO.oldPresentationScore();
+        Integer reviewDeliveryScore = updateRestaurantScoreDTO.newDeliveryScore() - updateRestaurantScoreDTO.oldDeliveryScore();
+
+        Double foodScore = (double) ((reviewCount * restaurant.getFoodScore() + (reviewFoodScore * 100)) / (reviewCount));
+        Double presentationScore = (double) ((reviewCount * restaurant.getPresentationScore() + (reviewPresentationScore * 100)) / (reviewCount));
+        Double deliveryScore = (double) ((reviewCount * restaurant.getDeliveryScore() + (reviewDeliveryScore * 100)) / (reviewCount));
+        Double avarageScore = (foodScore + presentationScore + deliveryScore) / 3;
+
+        restaurant.setFoodScore(foodScore.intValue());
+        restaurant.setPresentationScore(presentationScore.intValue());
+        restaurant.setDeliveryScore(deliveryScore.intValue());
+        restaurant.setAvarageScore(avarageScore.intValue());
+
+        restaurantService.saveRestaurant(restaurant);
     }
 
     @Override

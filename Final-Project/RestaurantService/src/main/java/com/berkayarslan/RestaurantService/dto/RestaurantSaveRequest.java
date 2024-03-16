@@ -1,8 +1,8 @@
 package com.berkayarslan.RestaurantService.dto;
 
-public record RestaurantSaveRequest(                            String name,
-                                                                String description,
+public record RestaurantSaveRequest( String name,
+                                     String description,
 
-                                                                Double latitude,
-                                                                Double longitude) {
+                                     Double latitude,
+                                     Double longitude) {
 }

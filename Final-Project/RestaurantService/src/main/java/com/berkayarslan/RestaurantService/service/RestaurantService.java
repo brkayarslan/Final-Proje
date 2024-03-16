@@ -43,7 +43,7 @@ public class RestaurantService {
         return restaurantsWithInTenKm;
     }
 
-    public Restaurant saveRestaurant(Restaurant restaurant){
+    public Restaurant firestSaveOfRestaurant(Restaurant restaurant){
         restaurant.setFoodScore(0);
         restaurant.setDeliveryScore(0);
         restaurant.setPresentationScore(0);
@@ -52,9 +52,11 @@ public class RestaurantService {
         return restaurantRepository.save(restaurant);
     }
 
-    public Restaurant updateRestaurant(Restaurant restaurant){
+    public Restaurant saveRestaurant(Restaurant restaurant){
         return restaurantRepository.save(restaurant);
     }
+
+
 
     public void deleteRestaurantById(String id){
         restaurantRepository.deleteById(id);
