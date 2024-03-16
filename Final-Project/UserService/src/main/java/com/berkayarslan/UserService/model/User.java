@@ -6,7 +6,12 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@AllArgsConstructor
+@NoArgsConstructor
 @Data
 @Entity
 @Table(name = "USER_TABLE")
@@ -45,4 +50,14 @@ public class User extends BaseEntity {
     @Column(name = "LONGITUDE", nullable = false)
     private Double longitude;
 
+
+    public User(String firstName, String lastName, String telephone, String e_mail, String password, Double latitude, Double longitude) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.telephone = telephone;
+        this.e_mail = e_mail;
+        this.password = password;
+        this.latitude = latitude;
+        this.longitude = longitude;
+    }
 }
