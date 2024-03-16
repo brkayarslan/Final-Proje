@@ -70,7 +70,7 @@ public class ReviewControllerContractImpl implements ReviewControllerContract {
     @Override
     public ReviewDTO updateReview(ReviewUpdateRequest updateRequest) {
         Review review = reviewService.findByIdWithControl(updateRequest.id());
-        boolean b = false;
+        boolean isUpdateSuccessful  = false;
         if (!review.getFoodScore().equals(updateRequest.foodScore()) || !review.getDeliveryScore().equals(updateRequest.deliveryScore()) || !review.getPresentationScore().equals(updateRequest.presentationScore())){
             ReviewUpdateScoreDTO reviewUpdateScoreDTO = new ReviewUpdateScoreDTO(review.getFoodScore(),
                                                                                  review.getPresentationScore(),
@@ -78,12 +78,25 @@ public class ReviewControllerContractImpl implements ReviewControllerContract {
                                                                                  updateRequest.foodScore(),
                                                                                  updateRequest.presentationScore(),
                                                                                  updateRequest.deliveryScore());
-            b = reviewScoreSenderService.sendUpdateReviewScoreToRestaurant(review.getRestaurantId(), reviewUpdateScoreDTO);
+            isUpdateSuccessful  = reviewScoreSenderService.sendUpdateReviewScoreToRestaurant(review.getRestaurantId(), reviewUpdateScoreDTO);
         }
-        if (b){
-            review = reviewConverter.updateReview(review,updateRequest);
-            review = reviewService.save(review);
+
+        try{
+            if (isUpdateSuccessful ){
+                review = reviewConverter.updateReview(review,updateRequest);
+                review = reviewService.save(review);
+            }
+        }catch (Exception e){
+            ReviewUpdateScoreDTO reviewRevertScoreDTO = new ReviewUpdateScoreDTO(updateRequest.foodScore(),
+                                                                                 updateRequest.presentationScore(),
+                                                                                 updateRequest.deliveryScore(),
+                                                                                 review.getFoodScore(),
+                                                                                 review.getPresentationScore(),
+                                                                                 review.getDeliveryScore());
+            reviewScoreSenderService.sendUpdateReviewScoreToRestaurant(review.getRestaurantId(),reviewRevertScoreDTO);
+            throw new RuntimeException("Review update process failed.",e);
         }
+
         return reviewConverter.convertToDTO(review);
     }
 
