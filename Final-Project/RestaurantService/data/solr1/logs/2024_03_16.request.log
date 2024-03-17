@@ -55,3 +55,12 @@
 172.28.0.10 - - [16/Mar/2024:16:37:13 +0000] "GET /solr/restaurants_shard1_replica_n1/select?q=fq%3D%7B%21geofilt+sfield%3Dlocation+pt%3D40.98943505081282%2C29.0466367474288+d%3D10%7D&start=0&rows=13&wt=javabin&version=2 HTTP/1.1" 200 2333
 172.28.0.10 - - [16/Mar/2024:16:37:20 +0000] "GET /solr/restaurants_shard1_replica_n1/select?q=fq%3D%7B%21geofilt+sfield%3Dlocation+pt%3D41.047138054718985%2C28.948942422598577+d%3D10%7D&start=0&rows=0&wt=javabin&version=2 HTTP/1.1" 200 187
 172.28.0.10 - - [16/Mar/2024:16:37:20 +0000] "GET /solr/restaurants_shard1_replica_n1/select?q=fq%3D%7B%21geofilt+sfield%3Dlocation+pt%3D41.047138054718985%2C28.948942422598577+d%3D10%7D&start=0&rows=19&wt=javabin&version=2 HTTP/1.1" 200 3217
+172.28.0.10 - - [16/Mar/2024:16:39:58 +0000] "GET /solr/restaurants_shard1_replica_n1/select?q=fq%3D%7B%21geofilt+sfield%3Dlocation+pt%3D41.042053050451806%2C28.952559792762784+d%3D10%7D&start=0&rows=0&wt=javabin&version=2 HTTP/1.1" 200 187
+172.28.0.10 - - [16/Mar/2024:16:39:58 +0000] "GET /solr/restaurants_shard1_replica_n1/select?q=fq%3D%7B%21geofilt+sfield%3Dlocation+pt%3D41.042053050451806%2C28.952559792762784+d%3D10%7D&start=0&rows=20&wt=javabin&version=2 HTTP/1.1" 200 3369
+172.28.0.10 - - [16/Mar/2024:16:40:06 +0000] "GET /solr/restaurants_shard1_replica_n1/select?q=*%3A*&start=0&rows=0&wt=javabin&version=2 HTTP/1.1" 200 114
+172.28.0.10 - - [16/Mar/2024:16:40:06 +0000] "GET /solr/restaurants_shard1_replica_n1/select?q=*%3A*&start=0&rows=24&wt=javabin&version=2 HTTP/1.1" 200 3913
+172.28.0.10 - - [16/Mar/2024:16:40:14 +0000] "GET /solr/restaurants_shard1_replica_n1/select?q=id%3Ac0dbef49%5C-69b4%5C-4e81%5C-8695%5C-811677077f5b&start=0&rows=1&wt=javabin&version=2 HTTP/1.1" 200 438
+172.28.0.1 - - [16/Mar/2024:16:40:19 +0000] "GET /solr/admin/cores?_=1710606856831&indexInfo=false&wt=json HTTP/1.1" 200 464
+172.28.0.1 - - [16/Mar/2024:16:40:20 +0000] "GET /solr/admin/info/system?_=1710606856831&wt=json HTTP/1.1" 200 1452
+172.28.0.1 - - [16/Mar/2024:16:40:21 +0000] "GET /solr/restaurants_shard1_replica_n1/select?_=1710606856869&indent=true&q=*:*&q.op=OR&useParams= HTTP/1.1" 200 1303
+172.28.0.1 - - [16/Mar/2024:16:40:22 +0000] "GET /solr/restaurants_shard1_replica_n1/config/params?_=1710606856869&wt=json HTTP/1.1" 200 101
