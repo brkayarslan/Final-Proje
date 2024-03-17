@@ -59,4 +59,5 @@ public class Review extends BaseEntity {
         this.comment = comment;
         this.reviewDate = reviewDate;
     }
+
 }

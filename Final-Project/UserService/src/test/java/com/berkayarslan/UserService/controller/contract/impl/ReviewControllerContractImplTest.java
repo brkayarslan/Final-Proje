@@ -39,7 +39,7 @@ class ReviewControllerContractImplTest {
     @InjectMocks
     private ReviewControllerContractImpl reviewControllerContract;
     @Test
-    void saveReview() {
+    void shouldSaveReview() {
         ReviewSaveRequest reviewSaveRequest = new ReviewSaveRequest(1L,
                                                                     "restaurantId",
                                                                     5 ,
@@ -84,7 +84,7 @@ class ReviewControllerContractImplTest {
     }
 
     @Test
-    void updateReview() {
+    void shouldUpdateReview() {
         ReviewUpdateRequest reviewUpdateRequest = new ReviewUpdateRequest(1L,
                 5 ,
                 5 ,

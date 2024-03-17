@@ -68,7 +68,7 @@ class UserControllerContractImplTest {
     }
 
     @Test
-    void findAllUsers() {
+    void shouldFindAllUsers() {
 
         List<User> users = Arrays.asList(new User(12L,
                                                   "firstName",
@@ -100,7 +100,7 @@ class UserControllerContractImplTest {
     }
 
     @Test
-    void getUserById() {
+    void shouldGetUserById() {
 
         User user = new User();
         UserDTO userDTO = new UserDTO(12L,
@@ -121,7 +121,7 @@ class UserControllerContractImplTest {
     }
 
     @Test
-    void getUserLocationById() {
+    void shouldGetUserLocationById() {
         User user = new User(12L, "firstName", "lastName", "0123456789", "example@gmail.com", "987456123", 12.123456, 12.123456);
 
         when(userService.findByIdWithControl(1L)).thenReturn(user);
@@ -135,7 +135,7 @@ class UserControllerContractImplTest {
 
 
     @Test
-    void updateUser() {
+    void shouldUpdateUser() {
 
         UserUpdateRequest updateRequest = new UserUpdateRequest(1L,
                                                                 "firstName",

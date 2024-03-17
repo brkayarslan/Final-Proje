@@ -10,6 +10,7 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.ExampleObject;
 import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,6 +18,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/reviews")
+@Tag(name = "Review Controller", description = "Provides endpoints for managing reviews, including operations for retrieving, creating, updating, and deleting reviews.")
 public class ReviewController {
 
     private final ReviewControllerContract reviewControllerContract;
