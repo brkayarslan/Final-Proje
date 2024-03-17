@@ -29,7 +29,7 @@ bir servis ağı kullanır.
 
 ### Restoran Önerileri:
 - Öneri servisi (advice service), bir kullanıcıya restoran önerisi yapmadan önce, kullanıcının konum bilgilerini almak için kullanıcı servisine (user service) başvurur.
-- Alınan konum bilgileri ile restoran servisi, kullanıcının bulunduğu konuma en yakın 10 kilometre içerisindeki restoranları bulmak için Solr adlı arama motorunu kullanarak bir sorgu yapar.
+- Alınan konum bilgileri ile restoran servisi, kullanıcının bulunduğu konuma en yakın 10 kilometre içerisindeki restoranları bulmak için Solr arama motorunu kullanarak sorgu yapar. ( fq={!geofilt sfield=location pt=?0,?1 d=10} )
 - Bu sorgu, kullanıcının tam konumunu (latitude, longitude) ve aranacak maksimum mesafeyi (10 km) parametre olarak alır.
 - Restoran servisinden gelen veriler, öneri servisine iletilir.
 - Öneri servisi, kullanıcının konumu ile her bir restoran arasındaki mesafeyi Haversine formülü ile hesaplar. Sonra, restoranların uzaklığına %30, ortalama puanlarına ise %70 ağırlık vererek her bir restoran için bir puan hesaplar.
