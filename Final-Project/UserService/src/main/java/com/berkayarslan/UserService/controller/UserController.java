@@ -70,8 +70,8 @@ public class UserController {
                                                             + "  \"telephone\": \"5763333873\",\n"
                                                             + "  \"e_mail\": \"john@gmail.com\",\n"
                                                             + "  \"password\": \"123456\",\n"
-                                                            + "  \"latitude\": \"41.02208020801947\",\n"
-                                                            + "  \"longitude\": \"28.999552954557206\"\n"
+                                                            + "  \"latitude\": 41.02208020801947,\n"
+                                                            + "  \"longitude\": 28.999552954557206\n"
                                                             + "}"
                                             )
                                     }
@@ -108,8 +108,8 @@ public class UserController {
                                                             + "  \"telephone\": \"5763333873\",\n"
                                                             + "  \"e_mail\": \"john@gmail.com\",\n"
                                                             + "  \"password\": \"123456\",\n"
-                                                            + "  \"latitude\": \"41.02208020801947\",\n"
-                                                            + "  \"longitude\": \"28.999552954557206\"\n"
+                                                            + "  \"latitude\": 41.02208020801947,\n"
+                                                            + "  \"longitude\": 28.999552954557206\n"
                                                             + "}"
                                             )
                                     }
