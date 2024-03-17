@@ -19,6 +19,13 @@ bir servis ağı kullanır.
 - **Prometheus ve Grafana ile İzleme**: Servislerin sağlığını ve performansını izlemek için metrikleri takip etmeyi ve görselleştirmeyi sağlar.
 
 
+## Bazı Önemli Businesslar
+- User servisine yeni gelen veya güncellenen yorumların puanları (food score, delivery score, presentation score) restaurant servisine restaurant id'si ile birlikte post edilir. Eğer yorum güncellenmişse kullanıcının güncellediği puan farkına bakılır puan farkı varsa restaurant servisine post edilir.
+- Restaurant servisine yeni gelen yorum puanları ilgili id'li restaurant için güncellenir. Eğer yorum güncellenmişse bir önceki puan ile yeni puan arasındaki fark hesaplanır ve yorum sayısı arttırılmaz.
+- Advice serviste ilk olarak user bilgilerini almak için user servise ilgili id'li userın konum bilgileri alınır. Gelen konum bilgilerine göre restaurant servisten 10 km içerisindeki resturantlar istenir.
+- Restaurant servisine gelen konum bilgilerine göre restorant dataları Solr'dan ( fq={!geofilt sfield=location pt=?0,?1 d=10} ) sorgusu ile alınır ve advice servise döülür.
+- Advice servise resturant tarafından gelen 10 km içerisindeki restaurantlarla kullanıcının uzaklığını Haversine Calculator ile hesaplar. Restaurantların uzaklığına %30 , restaurantların avarage scoruna %70 ağırlık vererek yeni her bir restaurant için bir core oluşturur ve en iyi 3 resturantı kullanıcıya tavsiye olarak verir.
+
 ## Teknolojiler ve Araçlar
 
 - Spring Boot: 3.2.3

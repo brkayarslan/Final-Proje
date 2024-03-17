@@ -61,3 +61,13 @@
 2024-03-17 15:09:52.857 INFO  (qtp693267461-23-null-22) [c: s: r: x:restaurants_shard1_replica_n1 t:null-22] o.a.s.c.S.Request webapp=/solr path=/select params={q=fq%3D{!geofilt+sfield%3Dlocation+pt%3D41.0976102816418,28.87874273979854+d%3D10}&start=0&rows=10&wt=javabin&version=2} hits=10 status=0 QTime=1
 2024-03-17 15:19:47.161 INFO  (qtp693267461-26-null-23) [c: s: r: x:restaurants_shard1_replica_n1 t:null-23] o.a.s.c.S.Request webapp=/solr path=/select params={q=fq%3D{!geofilt+sfield%3Dlocation+pt%3D41.0976102816418,28.87874273979854+d%3D10}&start=0&rows=0&wt=javabin&version=2} hits=10 status=0 QTime=2
 2024-03-17 15:19:47.168 INFO  (qtp693267461-25-null-24) [c: s: r: x:restaurants_shard1_replica_n1 t:null-24] o.a.s.c.S.Request webapp=/solr path=/select params={q=fq%3D{!geofilt+sfield%3Dlocation+pt%3D41.0976102816418,28.87874273979854+d%3D10}&start=0&rows=10&wt=javabin&version=2} hits=10 status=0 QTime=1
+2024-03-17 15:31:01.903 INFO  (JettyShutdownThread) [c: s: r: x: t:] o.e.j.s.Server Stopped Server@376a312c{STOPPING}[10.0.19,sto=0]
+2024-03-17 15:31:01.912 INFO  (JettyShutdownThread) [c: s: r: x: t:] o.e.j.s.AbstractConnector Stopped ServerConnector@2b95e48b{HTTP/1.1, (http/1.1, h2c)}{0.0.0.0:8983}
+2024-03-17 15:31:02.138 INFO  (JettyShutdownThread) [c: s: r: x: t:] o.a.s.c.CoreContainer Shutting down CoreContainer instance=1537371824
+2024-03-17 15:31:02.195 INFO  (coreCloseExecutor-19-thread-1) [c: s: r: x:restaurants_shard1_replica_n1 t:] o.a.s.c.SolrCore CLOSING SolrCore org.apache.solr.core.SolrCore@415d1de1 restaurants_shard1_replica_n1
+2024-03-17 15:31:02.198 INFO  (coreCloseExecutor-19-thread-1) [c: s: r: x:restaurants_shard1_replica_n1 t:] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.restaurants_shard1_replica_n1 tag=SolrCore@415d1de1
+2024-03-17 15:31:02.294 INFO  (coreCloseExecutor-19-thread-1) [c: s: r: x:restaurants_shard1_replica_n1 t:] o.a.s.u.DirectUpdateHandler2 Committing on IndexWriter.close()  ... SKIPPED (unnecessary).
+2024-03-17 15:31:02.589 INFO  (JettyShutdownThread) [c: s: r: x: t:] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.node tag=null
+2024-03-17 15:31:02.615 INFO  (JettyShutdownThread) [c: s: r: x: t:] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jvm tag=null
+2024-03-17 15:31:02.666 INFO  (JettyShutdownThread) [c: s: r: x: t:] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jetty tag=null
+2024-03-17 15:31:02.924 INFO  (JettyShutdownThread) [c: s: r: x: t:] o.e.j.s.h.ContextHandler Stopped o.e.j.w.WebAppContext@655a5d9c{solr-jetty-context.xml,/solr,null,STOPPED}{/opt/solr-9.5.0/server/solr-webapp/webapp}
