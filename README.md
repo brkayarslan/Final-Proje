@@ -19,13 +19,21 @@ bir servis ağı kullanır.
 - **Prometheus ve Grafana ile İzleme**: Servislerin sağlığını ve performansını izlemek için metrikleri takip etmeyi ve görselleştirmeyi sağlar.
 
 
-## Bazı Önemli Businesslar
-- User servisine yeni gelen veya güncellenen yorumların puanları (food score, delivery score, presentation score) restaurant servisine restaurant id'si ile birlikte post edilir. Eğer yorum güncellenmişse kullanıcının güncellediği puan farkına bakılır puan farkı varsa restaurant servisine post edilir.
-- Restaurant servisine yeni gelen yorum puanları ilgili id'li restaurant için güncellenir. Eğer yorum güncellenmişse bir önceki puan ile yeni puan arasındaki fark hesaplanır ve yorum sayısı arttırılmaz.
-- Advice serviste ilk olarak user bilgilerini almak için user servise ilgili id'li userın konum bilgileri alınır. Gelen konum bilgilerine göre restaurant servisten 10 km içerisindeki resturantlar istenir.
-- Restaurant servisine gelen konum bilgilerine göre restorant dataları Solr'dan ( fq={!geofilt sfield=location pt=?0,?1 d=10} ) sorgusu ile alınır ve advice servise döülür.
-- Advice servise resturant tarafından gelen 10 km içerisindeki restaurantlarla kullanıcının uzaklığını Haversine Calculator ile hesaplar. Restaurantların uzaklığına %30 , restaurantların avarage scoruna %70 ağırlık vererek yeni her bir restaurant için bir core oluşturur ve en iyi 3 resturantı kullanıcıya tavsiye olarak verir.
+## Restoran Değerlendirme ve Öneri Sistemi İş Akışı
+### Yorum Puanlarının İşlenmesi:
 
+- Kullanıcılar, bir restoran için yorum yapar ve bu yorumlar içinde yemeğin kalitesi, teslimatın hızı ve sunumun kalitesi gibi çeşitli puanlamalar yer alır. Bu puanlar; yiyecek puanı (food score), teslimat puanı (delivery score) ve sunum puanı (presentation score) olarak adlandırılır.
+- Yeni bir yorum yapıldığında veya var olan bir yorum güncellendiğinde, bu puanlar restoran servisine restoranın ID'si ile birlikte gönderilir.
+- Eğer bir yorum güncellenirse, kullanıcının güncellenen puanları arasındaki farka bakılır. Eğer puanlarda bir fark varsa, bu fark restoran servisine bildirilir.
+- Restoran servisinde, yeni yorum puanları ilgili restoranın kaydını güncellerken, eğer bir yorum güncellenmişse, yeni ve eski puanlar arasındaki fark hesaplanır ve bu farka göre güncelleme yapılır ancak yorum sayısı artırılmaz.
+
+### Restoran Önerileri:
+- Öneri servisi (advice service), bir kullanıcıya restoran önerisi yapmadan önce, kullanıcının konum bilgilerini almak için kullanıcı servisine (user service) başvurur.
+- Alınan konum bilgileri ile restoran servisi, kullanıcının bulunduğu konuma en yakın 10 kilometre içerisindeki restoranları bulmak için Solr adlı arama motorunu kullanarak bir sorgu yapar.
+- Bu sorgu, kullanıcının tam konumunu (latitude, longitude) ve aranacak maksimum mesafeyi (10 km) parametre olarak alır.
+- Restoran servisinden gelen veriler, öneri servisine iletilir.
+- Öneri servisi, kullanıcının konumu ile her bir restoran arasındaki mesafeyi Haversine formülü ile hesaplar. Sonra, restoranların uzaklığına %30, ortalama puanlarına ise %70 ağırlık vererek her bir restoran için bir puan hesaplar.
+- Hesaplanan puanlara göre, en iyi skoru alan ilk 3 restoran, kullanıcıya öneri olarak sunulur.
 ## Teknolojiler ve Araçlar
 
 - Spring Boot: 3.2.3
