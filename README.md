@@ -51,29 +51,38 @@ docker-compose up --build -d
 ``
 
 ## Temel Endpoint'ler
-### User Service
 
-- POST /api/v1/users: Yeni bir kullanıcı oluşturur.
+### User Service
+http://localhost:8081/swagger-ui/index.html#/
+- GET /api/v1/users: Tüm kullancıları getirir.
 - GET /api/v1/users/{id}: Belirli bir ID'ye sahip kullanıcıyı getirir.
+- GET /api/v1/users/location/{id}: Belirli bir ID'ye sahip kullanıcının konum bilgisini getirir.
+- POST /api/v1/users: Yeni bir kullanıcı oluşturur.
 - PUT /api/v1/users: Mevcut bir kullanıcıyı günceller.
 - DELETE /api/v1/users/{id}: Belirli bir ID'ye sahip kullanıcıyı siler.
-
-### Restaurant Service
-
-- GET /api/v1/restaurants: Tüm restoranları listeler.
-- GET /api/v1/restaurants/nearby: Kullanıcının konumuna göre yakındaki restoranları listeler.
-- POST /api/v1/restaurants: Yeni bir restoran oluşturur.
-- PUT /api/v1/restaurants: Mevcut bir restoranı günceller.
-
+- 
 ### Review Service
-
-- POST /api/v1/reviews: Yeni bir yorum oluşturur.
+http://localhost:8081/swagger-ui/index.html#/
+- GET /api/v1/reviews: Tüm yorumları getirir.
 - GET /api/v1/reviews/{id}: Belirli bir ID'ye sahip yorumu getirir.
 - GET /api/v1/reviews/userId/{id}: Belirli bir ID'ye sahip kullancının yorumlarını getirir.
 - GET /api/v1/reviews/restaurantId{id}: Belirli bir ID'ye sahip restaurantın yorumlarını getirir.
+- POST /api/v1/reviews: Yeni bir yorum oluşturur.
 - PUT /api/v1/reviews: Mevcut bir yorumu günceller.
 - DELETE /api/v1/reviews/{id}: Belirli bir ID'ye sahip yorumu siler.
 
-### Tavsiye Servisi
+### Restaurant Service
+http://localhost:8080/swagger-ui/index.html#/
+- GET /api/v1/restaurants: Tüm restoranları getirir.
+- GET /api/v1/restaurants/{id}: Belirli bir ID'ye sahip restaurantı getirir.
+- GET /api/v1/restaurants/nearby: Kullanıcının konumuna göre yakındaki restoranları listeler.
+- POST /api/v1/restaurants: Yeni bir restoran oluşturur.
+- POST /api/v1/restaurants/score/{id}: Restauranta gelen yorumun puanlarını kaydeder.
+- PUT /api/v1/restaurants: Mevcut bir restoranı günceller.
+- PUT /api/v1/restaurants/score/{id}: Güncellenen yorumu update eder.
+- DELETE /api/v1/restaurants/{id}: Belirli bir ID'ye sahip restaurantı siler.
 
+
+### Advice Service
+http://localhost:8082/swagger-ui/index.html#/
 - GET /api/v1/advices/userId/{id}: Belirli bir kullanıcı ID'si için önerilen restoranları listeler. (10 km içerisindeki, kullanıcı için en yüksek uygunluktaki restaurantlar)

@@ -59,3 +59,7 @@
 172.28.0.10 - - [17/Mar/2024:15:09:52 +0000] "GET /solr/restaurants_shard1_replica_n1/select?q=fq%3D%7B%21geofilt+sfield%3Dlocation+pt%3D41.0976102816418%2C28.87874273979854+d%3D10%7D&start=0&rows=10&wt=javabin&version=2 HTTP/1.1" 200 1818
 172.28.0.10 - - [17/Mar/2024:15:19:47 +0000] "GET /solr/restaurants_shard1_replica_n1/select?q=fq%3D%7B%21geofilt+sfield%3Dlocation+pt%3D41.0976102816418%2C28.87874273979854+d%3D10%7D&start=0&rows=0&wt=javabin&version=2 HTTP/1.1" 200 183
 172.28.0.10 - - [17/Mar/2024:15:19:47 +0000] "GET /solr/restaurants_shard1_replica_n1/select?q=fq%3D%7B%21geofilt+sfield%3Dlocation+pt%3D41.0976102816418%2C28.87874273979854+d%3D10%7D&start=0&rows=10&wt=javabin&version=2 HTTP/1.1" 200 1818
+172.28.0.10 - - [17/Mar/2024:21:20:56 +0000] "GET /solr/restaurants_shard1_replica_n1/select?q=*%3A*&start=0&rows=0&wt=javabin&version=2 HTTP/1.1" 200 115
+172.28.0.10 - - [17/Mar/2024:21:20:56 +0000] "GET /solr/restaurants_shard1_replica_n1/select?q=*%3A*&start=0&rows=24&wt=javabin&version=2 HTTP/1.1" 200 3913
+172.28.0.10 - - [17/Mar/2024:21:21:04 +0000] "GET /solr/restaurants_shard1_replica_n1/select?q=fq%3D%7B%21geofilt+sfield%3Dlocation+pt%3D41.0976102816418%2C28.87874273979854+d%3D10%7D&start=0&rows=0&wt=javabin&version=2 HTTP/1.1" 200 184
+172.28.0.10 - - [17/Mar/2024:21:21:04 +0000] "GET /solr/restaurants_shard1_replica_n1/select?q=fq%3D%7B%21geofilt+sfield%3Dlocation+pt%3D41.0976102816418%2C28.87874273979854+d%3D10%7D&start=0&rows=10&wt=javabin&version=2 HTTP/1.1" 200 1818
