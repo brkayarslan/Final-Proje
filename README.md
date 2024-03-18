@@ -86,3 +86,16 @@ http://localhost:8080/swagger-ui/index.html#/
 ### Advice Service
 http://localhost:8082/swagger-ui/index.html#/
 - GET /api/v1/advices/userId/{id}: Belirli bir kullanıcı ID'si için önerilen restoranları listeler. (10 km içerisindeki, kullanıcı için en yüksek uygunluktaki restaurantlar)
+
+### Solr
+http://localhost:8983/solr
+
+### Kafka Database
+http://localhost:8083/h2-console/login.do?jsessionid=d8e3fa1b6412c2769c3137723dc24a00
+
+### Grafana 
+http://localhost:3000/login
+
+### Prometheus
+http://localhost:9090
+
